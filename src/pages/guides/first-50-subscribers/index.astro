@@ -99,6 +99,11 @@ import Layout from '../../../layouts/Layout.astro';
       <p><strong>You don't need scale, you need 50 real people.</strong> Most people never start because they're picturing the end state — thousands of subscribers, a "real" newsletter. You don't need that to start. You need 50 people who said yes once. That's a week, not a year.</p>
       <p><strong>"Boring" doesn't disqualify you.</strong> If a regulated finance team can move 725 people off LinkedIn with nothing fancy, your niche isn't the problem. The plumbing is the same no matter what you talk about.</p>
       <p>This guide lays out the exact 3 steps — pick a gift, set up your home base, go get your first 50. No pitch, no upsell. Just the plan.</p>
+      <div class="sq-why-quote">
+        <p>"When I was just getting started with my email newsletter, I didn't have much experience or confidence. Corey walked me through the early steps, gave me clear advice, and helped me find my footing. He made the whole process feel simple and doable.</p>
+        <p>Thanks to his coaching, I now have a newsletter that basically runs on autopilot, and it's working great!"</p>
+        <p class="sq-why-quote-attr">— Dustin Hauer, founder of Social Media Bites</p>
+      </div>
       <div class="sq-why-cta">
         <a href="#top" class="sq-why-btn">Get Access to the Guide &rarr;</a>
       </div>
@@ -442,6 +447,32 @@ import Layout from '../../../layouts/Layout.astro';
 
   .sq-why-container p strong {
     color: var(--text);
+  }
+
+  .sq-why-quote {
+    margin: 36px 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--blue);
+    background: #fff;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .sq-why-quote p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 0.85rem;
+  }
+
+  .sq-why-quote p:last-child {
+    margin-bottom: 0;
+  }
+
+  .sq-why-quote-attr {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: normal !important;
   }
 
   .sq-why-cta {
