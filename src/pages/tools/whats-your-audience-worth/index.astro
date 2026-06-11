@@ -1,0 +1,1023 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="What's Your Audience Worth? | Redefining Retirement"
+  description="Curious what your audience could actually be worth as an email list? This free calculator shows you the number — and what you're risking by not having one."
+  type="website"
+>
+  <article class="section">
+    <div class="container narrow">
+
+      <!-- ── HERO ─────────────────────────────────────────────────── -->
+      <header class="article-header">
+        <span class="tag">Free Calculator</span>
+        <h1 class="article-title">What's Your Audience Worth?</h1>
+        <p class="article-deck">
+          Curious what your following could actually be worth as an email list? So was I, so I built this.
+        </p>
+      </header>
+
+      <!-- Hero image — src swapped in once image is approved -->
+      <div class="hero-img-wrap">
+        <img
+          src="/tools/audience-worth-hero.jpg"
+          alt=""
+          class="hero-img"
+          aria-hidden="true"
+          onerror="this.parentElement.style.display='none'"
+        />
+      </div>
+
+      <!-- ── INTRO COPY ─────────────────────────────────────────── -->
+      <div class="prose intro-prose">
+        <p>I've built a few email lists over the years, so I know roughly what they're worth. But what kept catching my eye was all these creators out there — big YouTube followings, solid TikTok numbers — with zero email list. None.</p>
+        <p>And I started thinking: do they even know what they're sitting on? Or more to the point — what they're <em>risking</em> by not having it?</p>
+        <p>So I built this. Answer a few quick questions about your audience, and I'll show you roughly what it could be worth as an email list — the kind of number that's hard to un-see once you've seen it.</p>
+        <p class="jerry-line"><em>You know the line from Jerry Maguire. Stop wondering. Let's see your number.</em></p>
+      </div>
+
+      <!-- ── CALCULATOR ────────────────────────────────────────────── -->
+      <div class="calc-card">
+        <form id="calc-form" novalidate>
+
+          <div class="field">
+            <label for="niche">What's your topic, niche, or profession?</label>
+            <input
+              type="text"
+              id="niche"
+              name="niche"
+              placeholder="e.g. Fitness Coach, Personal Finance, Productivity Coach, Parenting Blogger"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="field">
+            <label>Do you have a social media audience?</label>
+            <div class="radio-group">
+              <label class="radio-opt">
+                <input type="radio" name="has_social" value="yes" />
+                Yes
+              </label>
+              <label class="radio-opt">
+                <input type="radio" name="has_social" value="no" />
+                Not yet
+              </label>
+            </div>
+          </div>
+
+          <div class="field conditional hidden" id="social-size-wrap">
+            <label for="social_size">Approx. total social followers (all platforms combined)</label>
+            <select id="social_size" name="social_size">
+              <option value="">Pick a range</option>
+              <option value="under-1k">Less than 1,000</option>
+              <option value="1k-5k">1,000 – 5,000</option>
+              <option value="5k-10k">5,000 – 10,000</option>
+              <option value="10k-plus">10,000+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Do you have a newsletter or email list?</label>
+            <div class="radio-group">
+              <label class="radio-opt">
+                <input type="radio" name="has_email" value="yes" />
+                Yes
+              </label>
+              <label class="radio-opt">
+                <input type="radio" name="has_email" value="no" />
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="field conditional hidden" id="email-size-wrap">
+            <label for="email_size">How many subscribers do you have?</label>
+            <select id="email_size" name="email_size">
+              <option value="">Pick a range</option>
+              <option value="under-1k">Less than 1,000</option>
+              <option value="1k-5k">1,000 – 5,000</option>
+              <option value="5k-10k">5,000 – 10,000</option>
+              <option value="10k-plus">10,000+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>
+              Monetization paths you'd want to explore
+              <span class="field-note">— select all that apply</span>
+            </label>
+            <div class="check-group">
+              <label class="check-opt">
+                <input type="checkbox" name="monetization" value="service" />
+                <span>
+                  Service-Based Offers
+                  <span class="check-desc">Coaching, consulting, or fully managed done-for-you work</span>
+                </span>
+              </label>
+              <label class="check-opt">
+                <input type="checkbox" name="monetization" value="recurring" />
+                <span>
+                  Recurring Revenue
+                  <span class="check-desc">Subscriptions, sponsorships, and affiliate income</span>
+                </span>
+              </label>
+              <label class="check-opt">
+                <input type="checkbox" name="monetization" value="education" />
+                <span>
+                  Education-Based Offers
+                  <span class="check-desc">Courses, workshops, and coaching programs</span>
+                </span>
+              </label>
+              <label class="check-opt">
+                <input type="checkbox" name="monetization" value="digital" />
+                <span>
+                  Additional Revenue Streams
+                  <span class="check-desc">Digital products, sponsored content, and merch</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-error hidden" id="form-error" role="alert"></div>
+
+          <button type="submit" class="btn btn-calc">Show Me The Money →</button>
+        </form>
+      </div>
+
+      <!-- ── RESULTS (injected by JS) ──────────────────────────────── -->
+      <div id="results" class="results hidden" aria-live="polite"></div>
+
+      <!-- ── CTAS ──────────────────────────────────────────────────── -->
+      <div class="ctas-section">
+
+        <div class="cta-divider"><span>What now?</span></div>
+
+        <!-- CTA 1: Beehiiv signup -->
+        <div class="cta-card cta-beehiiv">
+          <div class="cta-card__label">Ready to start?</div>
+          <h2>Here's where I moved mine.</h2>
+          <p>I landed on Beehiiv — strong analytics, a built-in referral system, and they don't take a cut of your paid subscribers. I'm not going anywhere.</p>
+          <p>Use my link and the code <strong class="coupon">MIGRATE</strong> for 20% off your first three months.</p>
+          <a
+            href="https://www.beehiiv.com?via=MIGRATE"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Start on Beehiiv →
+          </a>
+          <p class="cta-note">Free plan available. Affiliate link — I earn a small commission at no cost to you.</p>
+        </div>
+
+        <!-- CTA 2: First 50 Subscribers quick-start (free) -->
+        <div class="cta-card cta-quickstart">
+          <div class="cta-card__label">Free guide</div>
+          <h2>Here's how to close that gap — on me.</h2>
+          <p>The exact 3-step plan to get your first 50 subscribers in a week, starting from zero. Same steps I'd use myself. No fluff, no paywall.</p>
+          <div class="cta-form">
+            <div data-beehiiv-form-id="c7512ec6-96c4-497a-851a-3d8b9f59c108"></div>
+            <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="c7512ec6-96c4-497a-851a-3d8b9f59c108"></script>
+            <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </article>
+
+  <script>
+    // ── BENCHMARKS ────────────────────────────────────────────────────
+    // Source: Neil Patel study of 2,501 marketers
+    const SOCIAL_PER_1K = 79;
+    const EMAIL_PER_1K  = 582;
+
+    // Income range: low (~30% of avg) and high (~180% of avg)
+    const RANGE_LOW  = 0.30;
+    const RANGE_HIGH = 1.80;
+
+    const MIDPOINTS: Record<string, number> = {
+      'under-1k': 500,
+      '1k-5k':    2500,
+      '5k-10k':   7500,
+      '10k-plus': 15000,
+    };
+
+    const MONO_LABELS: Record<string, string> = {
+      service:   'Service-Based Offers',
+      recurring: 'Recurring Revenue',
+      education: 'Education-Based Offers',
+      digital:   'Additional Revenue Streams',
+    };
+
+    const MONO_COPY: Record<string, string> = {
+      service:
+        'High-ticket, low-volume — the sweet spot for email. A list of 500 engaged subscribers and one offer at $500 is $2,500 if just 1% buy. The math works at small scale in a way it never does on social.',
+      recurring:
+        'The compounding play. The difference between a one-time sale and recurring income is the difference between starting over every month and not having to.',
+      education:
+        'High-margin and scales well — teach what you know once, sell it indefinitely. An email list is how you fill it without spending money on ads.',
+      digital:
+        'Builds slowly but compounds. Best paired with a higher-ticket model so you\'re not depending on volume alone.',
+    };
+
+    const MONO_ITEMS: Record<string, { label: string; desc: string }[]> = {
+      service: [
+        { label: 'Done by You ($)', desc: 'Coaching, consulting, or small digital services you deliver yourself.' },
+        { label: 'Done with You ($$)', desc: 'Hands-on mentorship or group coaching programs.' },
+        { label: 'Done for You ($$$)', desc: 'Fully managed services where you or your team execute for clients.' },
+      ],
+      recurring: [
+        { label: 'Subscriptions', desc: 'Premium content, exclusive reports, or a private community.' },
+        { label: 'Partnerships & Ads', desc: 'Sponsors or ads placed in your newsletter.' },
+        { label: 'Affiliate Marketing', desc: 'Recommend tools or products you use and earn a commission.' },
+      ],
+      education: [
+        { label: 'Courses', desc: 'Teach what you know through an online course or workshop.' },
+        { label: 'Coaching', desc: 'One-on-one or group sessions to help subscribers reach a goal.' },
+      ],
+      digital: [
+        { label: 'Digital Products', desc: 'Templates, checklists, or ebooks.' },
+        { label: 'Sponsored Content', desc: 'Get paid to feature relevant products or services in your newsletter.' },
+        { label: 'Physical Merchandise', desc: 'Print-on-demand branded products — t-shirts, hats, mugs, and more.' },
+      ],
+    };
+
+    const MILESTONES = [500, 1000, 5000, 10000];
+
+    // ── FORMATTING ────────────────────────────────────────────────────
+    function fmtRange(count: number): string {
+      const low  = Math.max(50, Math.round((count / 1000) * EMAIL_PER_1K * RANGE_LOW  / 50) * 50);
+      const high = Math.round((count / 1000) * EMAIL_PER_1K * RANGE_HIGH / 50) * 50;
+      return '$' + low.toLocaleString() + ' – $' + high.toLocaleString() + '/mo';
+    }
+
+    function fmtMid(count: number): string {
+      const mid = Math.max(50, Math.round((count / 1000) * EMAIL_PER_1K / 50) * 50);
+      return '$' + mid.toLocaleString() + '/mo';
+    }
+
+    function fmtSocial(count: number): string {
+      const val = Math.max(10, Math.round((count / 1000) * SOCIAL_PER_1K / 10) * 10);
+      return '$' + val.toLocaleString() + '/mo';
+    }
+
+    function fmtCount(n: number): string {
+      return n.toLocaleString();
+    }
+
+    // ── SHOW/HIDE ─────────────────────────────────────────────────────
+    function show(el: HTMLElement | null) { el?.classList.remove('hidden'); }
+    function hide(el: HTMLElement | null) { el?.classList.add('hidden'); }
+
+    // ── CONDITIONAL FIELDS ────────────────────────────────────────────
+    const socialWrap = document.getElementById('social-size-wrap') as HTMLElement;
+    const emailWrap  = document.getElementById('email-size-wrap')  as HTMLElement;
+
+    document.querySelectorAll('[name="has_social"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        const r = radio as HTMLInputElement;
+        if (r.value === 'yes') { show(socialWrap); }
+        else { hide(socialWrap); (document.getElementById('social_size') as HTMLSelectElement).value = ''; }
+      });
+    });
+
+    document.querySelectorAll('[name="has_email"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        const r = radio as HTMLInputElement;
+        if (r.value === 'yes') { show(emailWrap); }
+        else { hide(emailWrap); (document.getElementById('email_size') as HTMLSelectElement).value = ''; }
+      });
+    });
+
+    // ── FORM SUBMIT ────────────────────────────────────────────────────
+    document.getElementById('calc-form')!.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const niche      = (document.getElementById('niche') as HTMLInputElement).value.trim() || 'your niche';
+      const hasSocial  = (document.querySelector('[name="has_social"]:checked') as HTMLInputElement | null)?.value;
+      const socialSize = (document.getElementById('social_size') as HTMLSelectElement).value;
+      const hasEmail   = (document.querySelector('[name="has_email"]:checked') as HTMLInputElement | null)?.value;
+      const emailSize  = (document.getElementById('email_size') as HTMLSelectElement).value;
+      const monoPaths  = [...document.querySelectorAll('[name="monetization"]:checked')]
+        .map((el) => (el as HTMLInputElement).value);
+
+      const errorEl = document.getElementById('form-error')!;
+      if (!hasSocial || !hasEmail) {
+        errorEl.textContent = 'Please answer all the yes/no questions above.';
+        show(errorEl); return;
+      }
+      if (hasSocial === 'yes' && !socialSize) {
+        errorEl.textContent = 'Please select your approximate social audience size.';
+        show(errorEl); return;
+      }
+      if (hasEmail === 'yes' && !emailSize) {
+        errorEl.textContent = 'Please select your approximate subscriber count.';
+        show(errorEl); return;
+      }
+      hide(errorEl);
+      errorEl.textContent = '';
+
+      const socialCount = hasSocial === 'yes' ? (MIDPOINTS[socialSize] ?? 0) : 0;
+      const emailCount  = hasEmail  === 'yes' ? (MIDPOINTS[emailSize]  ?? 0) : 0;
+
+      renderResults({ niche, hasSocial, hasEmail, socialCount, emailCount, monoPaths });
+
+      setTimeout(() => {
+        document.getElementById('results')!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    });
+
+    // ── RENDER ─────────────────────────────────────────────────────────
+    interface CalcData {
+      niche: string; hasSocial: string; hasEmail: string;
+      socialCount: number; emailCount: number; monoPaths: string[];
+    }
+
+    function renderResults(d: CalcData) {
+      const resultsEl = document.getElementById('results')!;
+
+      // Honest note
+      const honestNote = `
+        <div class="honest-note">
+          <strong>A quick disclaimer:</strong> These are estimates based on industry averages — not a guarantee of what you'll earn. Your actual results depend on your niche, your offer, and what you do with the list. Nothing here is financial advice. Think of it as a benchmark, not a contract.
+        </div>
+      `;
+
+      // Opener
+      const openerHTML = `<p class="result-opener-line">You asked for it. Here it is.</p>`;
+
+      // Headline number + situation + narrative — 4 scenarios
+      let headlineHTML = '';
+      let situationHTML = '';
+      let narrativeHTML = '';
+
+      if (d.hasSocial === 'yes' && d.hasEmail === 'no') {
+        headlineHTML = `
+          <div class="result-headline-block">
+            <p class="rh-label">Your ${fmtCount(d.socialCount)} followers — as an email list — could be worth</p>
+            <p class="rh-number">${fmtMid(d.socialCount)}</p>
+            <p class="rh-range">Realistic range: ${fmtRange(d.socialCount)}</p>
+          </div>
+        `;
+        situationHTML = `
+          <div class="result-section">
+            <p class="result-section-label">Your starting point</p>
+            <div class="prose result-prose">
+              <p>You've got <strong>${fmtCount(d.socialCount)} social followers</strong> in ${d.niche} and no email list yet. Your social audience is worth roughly <strong>${fmtSocial(d.socialCount)}</strong> in estimated platform value — but that number lives on someone else's server, subject to someone else's algorithm.</p>
+              <p>The same audience, migrated to email? Closer to ${fmtMid(d.socialCount)} a month on average — and it's yours to keep.</p>
+            </div>
+          </div>
+        `;
+        const gap = Math.max(0, Math.round(((d.socialCount / 1000) * EMAIL_PER_1K - (d.socialCount / 1000) * SOCIAL_PER_1K) / 50) * 50);
+        narrativeHTML = `
+          <div class="result-section">
+            <p class="result-section-label">What this means</p>
+            <div class="prose result-prose">
+              <p>You've done the hard part — built an audience who pays attention. The gap between where you are and where you could be isn't effort. It's infrastructure. You need a place to send people that you own outright.</p>
+              <p>Every day without a list, you're building on rented land. Platforms have changed their rules before. They'll do it again. The list is the thing that doesn't disappear when they do.</p>
+              ${gap > 100 ? `<p>The monthly gap between your current social value and your email list potential: roughly <strong>$${gap.toLocaleString()}</strong>. It grows every time you add a subscriber.</p>` : ''}
+            </div>
+          </div>
+        `;
+      }
+
+      else if (d.hasSocial === 'yes' && d.hasEmail === 'yes') {
+        headlineHTML = `
+          <div class="result-headline-block">
+            <p class="rh-label">Your ${fmtCount(d.emailCount)}-subscriber list in ${d.niche} is worth</p>
+            <p class="rh-number">${fmtMid(d.emailCount)}</p>
+            <p class="rh-range">Realistic range: ${fmtRange(d.emailCount)}</p>
+          </div>
+        `;
+        situationHTML = `
+          <div class="result-section">
+            <p class="result-section-label">Your starting point</p>
+            <div class="prose result-prose">
+              <p>You've got <strong>${fmtCount(d.emailCount)} email subscribers</strong> and <strong>${fmtCount(d.socialCount)} social followers</strong> in ${d.niche}. You're already ahead of most creators — you have an asset you own, not just an audience you're renting.</p>
+              <p>Your social reach represents additional upside: if those ${fmtCount(d.socialCount)} followers were on your list too, you'd be looking at roughly ${fmtMid(d.socialCount)} a month from that segment alone.</p>
+            </div>
+          </div>
+        `;
+        narrativeHTML = `
+          <div class="result-section">
+            <p class="result-section-label">What this means</p>
+            <div class="prose result-prose">
+              <p>You've done the smart thing. The next move is two-pronged: keep migrating your social following onto the list, and make sure you're actually monetizing the subscribers you already have.</p>
+              <p>Most creators with a list your size are under-monetizing it. The numbers below show what's possible at your current count — and where the ceiling is if you keep growing.</p>
+            </div>
+          </div>
+        `;
+      }
+
+      else if (d.hasSocial === 'no' && d.hasEmail === 'yes') {
+        headlineHTML = `
+          <div class="result-headline-block">
+            <p class="rh-label">Your ${fmtCount(d.emailCount)}-subscriber list in ${d.niche} is worth</p>
+            <p class="rh-number">${fmtMid(d.emailCount)}</p>
+            <p class="rh-range">Realistic range: ${fmtRange(d.emailCount)}</p>
+          </div>
+        `;
+        situationHTML = `
+          <div class="result-section">
+            <p class="result-section-label">Your starting point</p>
+            <div class="prose result-prose">
+              <p>You've got <strong>${fmtCount(d.emailCount)} email subscribers</strong> in ${d.niche} — and you built the right thing first. No algorithm between you and your audience. No platform that can pull the rug.</p>
+            </div>
+          </div>
+        `;
+        narrativeHTML = `
+          <div class="result-section">
+            <p class="result-section-label">What this means</p>
+            <div class="prose result-prose">
+              <p>You've already made the move most creators never make. The next unlock is adding a content-discovery layer — YouTube, social, SEO — that feeds more people into the list you already own.</p>
+            </div>
+          </div>
+        `;
+      }
+
+      else {
+        headlineHTML = `
+          <div class="result-headline-block zero">
+            <p class="rh-label">Starting from zero in ${d.niche}.</p>
+            <p class="rh-number">That's actually fine.</p>
+            <p class="rh-range">Here's what the numbers look like once you're moving.</p>
+          </div>
+        `;
+        situationHTML = `
+          <div class="result-section">
+            <p class="result-section-label">Your starting point</p>
+            <div class="prose result-prose">
+              <p>No social audience yet, no email list yet — just you and ${d.niche}. You don't have bad habits to undo, no sunk cost keeping you on the wrong platform, and no existing audience scattered across a dozen places.</p>
+              <p>Starting clean is an advantage most people don't recognize until they've already made the mistakes.</p>
+            </div>
+          </div>
+        `;
+        narrativeHTML = `
+          <div class="result-section">
+            <p class="result-section-label">What this means</p>
+            <div class="prose result-prose">
+              <p>The hardest part is sending the first email. After that, every subscriber makes the list more valuable — and unlike a social following, you own them. The milestone table below shows what you're working toward.</p>
+            </div>
+          </div>
+        `;
+      }
+
+      // Milestone table
+      const MILESTONE_NOTES: Record<number, string> = {
+        500:   'First offers, list getting established',
+        1000:  'Affiliate + service income starting to compound',
+        5000:  'Sponsorships, paid tiers, multiple streams possible',
+        10000: 'Full monetization mix, serious recurring potential',
+      };
+
+      const milestoneRows = MILESTONES.map((m) => `
+        <tr>
+          <td class="ms-count">${fmtCount(m)}</td>
+          <td class="ms-mid">${fmtMid(m)}</td>
+          <td class="ms-range">${fmtRange(m)}</td>
+          <td class="ms-note hide-mobile">${MILESTONE_NOTES[m]}</td>
+        </tr>
+      `).join('');
+
+      const milestoneHTML = `
+        <div class="result-section">
+          <p class="result-section-label">Subscriber milestones — what the numbers look like</p>
+          <table class="ms-table">
+            <thead>
+              <tr>
+                <th>Subscribers</th>
+                <th>Avg est.</th>
+                <th>Range</th>
+                <th class="hide-mobile">What drives it</th>
+              </tr>
+            </thead>
+            <tbody>${milestoneRows}</tbody>
+          </table>
+          <p class="ms-footnote">Based on a Neil Patel study of 2,501 marketers (avg: $582/month per 1,000 email subscribers). Range reflects early-stage vs. well-monetized lists. Your results depend on your offer, engagement, and niche.</p>
+        </div>
+      `;
+
+      // Monetization paths
+      let monoHTML = '';
+      if (d.monoPaths.length > 0) {
+        monoHTML = `
+          <div class="result-section result-section--alt">
+            <p class="result-section-label">Your selected monetization paths</p>
+            <div class="mono-list">
+              ${d.monoPaths.map((path) => `
+                <div class="mono-item">
+                  <p class="mono-label">${MONO_LABELS[path]}</p>
+                  <p>${MONO_COPY[path]}</p>
+                  <ul class="mono-sublist">
+                    ${MONO_ITEMS[path].map((item) => `
+                      <li><strong>${item.label}:</strong> ${item.desc}</li>
+                    `).join('')}
+                  </ul>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Closing
+      const closingHTML = `
+        <div class="result-section result-closing">
+          <div class="prose result-prose">
+            <p><em>I built my list before I needed it. I wish someone had shown me this number sooner.</em></p>
+            <p><em>Now you've got it. The rest is up to you.</em></p>
+            <p class="closing-sig">— Corey</p>
+          </div>
+        </div>
+      `;
+
+      resultsEl.innerHTML = `
+        <div class="results-card">
+          ${honestNote}
+          <div class="result-opener">${openerHTML}</div>
+          ${headlineHTML}
+          ${situationHTML}
+          ${narrativeHTML}
+          ${milestoneHTML}
+          ${monoHTML}
+          ${closingHTML}
+        </div>
+      `;
+
+      show(resultsEl);
+    }
+  </script>
+
+  <style is:global>
+    .narrow { max-width: 720px; }
+    .hidden { display: none !important; }
+
+    /* ── HERO ──────────────────────────────────────────────────────── */
+    .article-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .article-deck {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 640px;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Hero image */
+    .hero-img-wrap {
+      margin: 2rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* Intro prose */
+    .intro-prose {
+      margin-bottom: 2.5rem;
+    }
+
+    .jerry-line {
+      margin-top: 0.5rem;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── CALCULATOR ────────────────────────────────────────────────── */
+    .calc-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .field { margin-bottom: 1.75rem; }
+    .field:last-of-type { margin-bottom: 0; }
+
+    .field > label:first-child {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.65rem;
+      line-height: 1.4;
+    }
+
+    .field-note {
+      font-weight: 400;
+      color: var(--text-light);
+      font-size: 0.85rem;
+    }
+
+    .conditional {
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--border);
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color 0.15s;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(9, 161, 231, 0.12);
+    }
+
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      padding-right: 2.5rem;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .radio-opt {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: var(--text);
+      user-select: none;
+    }
+
+    .radio-opt input {
+      accent-color: var(--blue);
+      width: 17px;
+      height: 17px;
+      cursor: pointer;
+    }
+
+    .check-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .check-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .check-opt input {
+      accent-color: var(--blue);
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      margin-top: 0.12rem;
+      cursor: pointer;
+    }
+
+    .check-opt > span {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .check-desc {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-weight: 400;
+      margin-top: 0.1rem;
+    }
+
+    .form-error {
+      color: #dc2626;
+      font-size: 0.875rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .btn-calc {
+      font-size: 1.05rem;
+      height: 52px;
+      padding: 0 2rem;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 480px) {
+      .btn-calc { width: auto; }
+    }
+
+    /* ── RESULTS ───────────────────────────────────────────────────── */
+    .results { margin: 0 0 2.5rem; }
+
+    .results-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* Honest note */
+    .honest-note {
+      background: #fefce8;
+      border-bottom: 1px solid #fde68a;
+      padding: 1rem 2rem;
+      font-size: 0.875rem;
+      color: #78350f;
+      line-height: 1.7;
+    }
+
+    .honest-note strong {
+      font-weight: 700;
+      color: #92400e;
+    }
+
+    /* Opener */
+    .result-opener {
+      background: var(--blue);
+      padding: 1.5rem 2rem 0;
+    }
+
+    .result-opener-line {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.7);
+      margin: 0;
+    }
+
+    /* Headline number */
+    .result-headline-block {
+      background: var(--blue);
+      padding: 1rem 2rem 2rem;
+    }
+
+    .rh-label {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.4rem;
+      line-height: 1.5;
+    }
+
+    .rh-number {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 0.4rem;
+    }
+
+    .result-headline-block.zero .rh-number {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    }
+
+    .rh-range {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.68);
+      margin: 0;
+    }
+
+    /* Result sections */
+    .result-section {
+      padding: 2rem;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .result-section--alt { background: var(--bg-subtle); }
+    .result-closing { border-bottom: none; }
+
+    .result-section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    /* Result prose — uses .prose from global but scoped so margins don't double */
+    .result-prose { max-width: none; }
+    .result-prose p { margin-bottom: 1.1rem; }
+    .result-prose p:last-child { margin-bottom: 0; }
+
+    .closing-sig {
+      font-style: normal !important;
+      font-weight: 700;
+      color: var(--text) !important;
+    }
+
+    /* Milestone table */
+    .ms-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 0 0 1rem;
+    }
+
+    .ms-table th {
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-light);
+      padding: 0 0.75rem 0.75rem 0;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .ms-table td {
+      padding: 0.75rem 0.75rem 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+
+    .ms-table tbody tr:last-child td { border-bottom: none; }
+
+    .ms-count { font-weight: 700; color: var(--text); white-space: nowrap; }
+    .ms-mid   { color: var(--blue); font-weight: 800; white-space: nowrap; font-size: 1rem; }
+    .ms-range { color: var(--text-muted); }
+    .ms-note  { color: var(--text-light); font-size: 0.8rem; }
+
+    .ms-footnote {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Monetization paths */
+    .mono-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .mono-item {
+      border-left: 3px solid var(--blue);
+      padding-left: 1rem;
+    }
+
+    .mono-label {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .mono-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin: 0 0 0.85rem;
+    }
+
+    .mono-sublist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mono-sublist li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .mono-sublist strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* ── CTAs ──────────────────────────────────────────────────────── */
+    .cta-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.5rem 0 1.5rem;
+      color: var(--text-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .cta-divider::before,
+    .cta-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .ctas-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .cta-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      background: #fff;
+    }
+
+    .cta-beehiiv   { border-left: 4px solid var(--blue); }
+    .cta-quickstart { border-left: 4px solid #e5e7eb; }
+
+    .cta-card__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .cta-card p {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 0.85rem;
+    }
+
+    .cta-card p:last-of-type { margin-bottom: 1.25rem; }
+
+    .coupon {
+      background: rgba(9, 161, 231, 0.1);
+      color: var(--blue);
+      padding: 0.15em 0.45em;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95em;
+      letter-spacing: 0.05em;
+    }
+
+    .cta-note {
+      font-size: 0.76rem !important;
+      color: var(--text-light) !important;
+      margin-top: 0.75rem;
+      margin-bottom: 0 !important;
+    }
+
+    .cta-form {
+      margin-top: 1rem;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .calc-card,
+      .cta-card,
+      .result-section,
+      .honest-note,
+      .result-opener,
+      .result-headline-block { padding: 1.25rem; }
+
+      .hide-mobile { display: none; }
+      .hero-img { height: 220px; }
+
+      .ms-range { display: none; }
+    }
+  </style>
+</Layout>
