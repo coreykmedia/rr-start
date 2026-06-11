@@ -10,9 +10,8 @@ import Layout from '../../../../layouts/Layout.astro';
 >
   <section class="section">
     <div class="container ty-container">
-      <p class="ty-eyebrow">You're in</p>
-      <h1 class="ty-headline">Hell yeah! Your guide is on its way.</h1>
-      <p class="ty-subhead">Check your inbox in the next few minutes — that's where your First 50 Subscribers guide is headed.</p>
+      <h1 class="ty-headline"><strong>Hell Yeah! You are in and your guide is on its way.</strong></h1>
+      <p class="ty-subhead">Your <strong>First 50 Subscribers</strong> guide is on the way to your inbox. While you wait, watch this video for a short message from Corey...</p>
 
       <div class="video-embed">
         <iframe
@@ -25,7 +24,7 @@ import Layout from '../../../../layouts/Layout.astro';
       </div>
 
       <div class="prose">
-        <p>While you wait, here's a head start: the very first real step in the guide is picking your platform. I use Beehiiv, and it's what I'd pick again if I were starting today — solid analytics, a built-in referral system, and they don't take a cut of your paid subscriptions.</p>
+        <p>One of the first real steps in the guide is picking your platform.</p>
         <p>If you sign up now, you'll already be set up by the time your guide lands.</p>
       </div>
 
@@ -53,15 +52,6 @@ import Layout from '../../../../layouts/Layout.astro';
   .ty-container {
     max-width: 720px;
     text-align: center;
-  }
-
-  .ty-eyebrow {
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--blue);
-    margin-bottom: 0.75rem;
   }
 
   .ty-headline {
@@ -104,6 +94,12 @@ import Layout from '../../../../layouts/Layout.astro';
     max-width: 560px;
     margin: 1.5rem auto 2rem;
     text-align: left;
+  }
+
+  .ty-container .inline-cta .btn {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .cta-note {
