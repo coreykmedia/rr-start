@@ -149,8 +149,8 @@ import Layout from '../../../layouts/Layout.astro';
       <!-- ── RESULTS (injected by JS) ──────────────────────────────── -->
       <div id="results" class="results hidden" aria-live="polite"></div>
 
-      <!-- ── CTAS ──────────────────────────────────────────────────── -->
-      <div class="ctas-section">
+      <!-- ── CTAS (revealed after results) ──────────────────────────── -->
+      <div class="ctas-section hidden" id="ctas-section">
 
         <div class="cta-divider"><span>What now?</span></div>
 
@@ -324,6 +324,7 @@ import Layout from '../../../layouts/Layout.astro';
       const emailCount  = hasEmail  === 'yes' ? (MIDPOINTS[emailSize]  ?? 0) : 0;
 
       renderResults({ niche, hasSocial, hasEmail, socialCount, emailCount, monoPaths });
+      show(document.getElementById('ctas-section'));
 
       setTimeout(() => {
         document.getElementById('results')!.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -958,7 +959,10 @@ import Layout from '../../../layouts/Layout.astro';
     }
 
     .cta-beehiiv   { border-left: 4px solid var(--blue); }
-    .cta-quickstart { border-left: 4px solid #e5e7eb; }
+    .cta-quickstart {
+      border-left: 4px solid #e5e7eb;
+      background: #f7f0d5;
+    }
 
     .cta-card__label {
       font-size: 0.72rem;
