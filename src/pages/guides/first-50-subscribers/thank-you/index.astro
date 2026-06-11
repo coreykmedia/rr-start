@@ -1,0 +1,84 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="You're In | Redefining Retirement"
+  description="Your First 50 Subscribers guide is on its way."
+  type="website"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container ty-container">
+      <p class="ty-eyebrow">You're in</p>
+      <h1 class="ty-headline">Hell yeah! Your guide is on its way.</h1>
+      <p class="ty-subhead">Check your inbox in the next few minutes — that's where your First 50 Subscribers guide is headed.</p>
+
+      <div class="prose">
+        <p>While you wait, here's a head start: the very first real step in the guide is picking your platform. I use Beehiiv, and it's what I'd pick again if I were starting today — solid analytics, a built-in referral system, and they don't take a cut of your paid subscriptions.</p>
+        <p>If you sign up now, you'll already be set up by the time your guide lands.</p>
+      </div>
+
+      <div class="inline-cta">
+        <p>If you sign up through my link and use the code <strong class="coupon">MIGRATE</strong>, you get 20% off your first three months.</p>
+        <a
+          href="https://www.beehiiv.com?via=MIGRATE"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start on Beehiiv &rarr;
+        </a>
+        <p class="cta-note">Free plan available. Affiliate link — I earn a small commission at no cost to you.</p>
+      </div>
+
+      <div class="prose">
+        <p>Talk soon,<br />Corey</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .ty-container {
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .ty-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-headline {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-subhead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .ty-container .prose {
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+  }
+
+  .ty-container .inline-cta {
+    max-width: 560px;
+    margin: 1.5rem auto 2rem;
+    text-align: left;
+  }
+
+  .cta-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+</style>
