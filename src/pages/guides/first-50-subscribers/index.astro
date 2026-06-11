@@ -1,0 +1,470 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Your First 50 Subscribers in 7 Days | Redefining Retirement"
+  description="Three steps to get your first 50 newsletter subscribers in a week — the same playbook I used. Free guide, no fluff."
+  type="website"
+>
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section class="sq-section" id="top">
+    <div class="sq-container">
+
+      <!-- Left: Gen eXit Playbook-style cover -->
+      <div class="sq-mockup-wrap">
+        <div class="cover-card">
+          <div class="cover-bg"></div>
+          <img src="/rr-icon.png" alt="" class="cover-icon" />
+          <div class="cover-tape cover-tape--title">
+            <h2 class="cover-title">Your First <span class="cover-title-accent">50</span><br />Subscribers</h2>
+          </div>
+          <div class="cover-tape cover-tape--sub">
+            <p class="cover-subtitle">In 7 days. No following required.</p>
+          </div>
+          <div class="cover-tape cover-tape--footer">
+            <p class="cover-url">www.RedefiningRetirement.io</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: copy + form -->
+      <div class="sq-copy">
+        <p class="sq-eyebrow">Free Guide</p>
+        <h1 class="sq-headline">Your Audience Is Worth $582 a Month per 1,000 People. You're Making $79.</h1>
+        <p class="sq-subhead">For creators with any kind of following — here's why those numbers don't mean what you think, and the 3-step plan to close the gap in a week.</p>
+        <ul class="sq-bullets">
+          <li>Why your follower count and your income aren't the same thing — and the exact dollar gap between the two</li>
+          <li>The "gift" that gets a stranger to hand over their email — you've probably already made it without realizing</li>
+          <li>The exact 3-step plan I'd use to get my first 50 subscribers this week, starting from zero</li>
+        </ul>
+
+        <div class="sq-form">
+          <div data-beehiiv-form-id="c7512ec6-96c4-497a-851a-3d8b9f59c108"></div>
+          <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="c7512ec6-96c4-497a-851a-3d8b9f59c108"></script>
+          <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+        </div>
+
+        <p class="sq-trust">Free. Takes about a week. No fluff, no paywall.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── BIO + CASE STUDY ───────────────────────────────────────── -->
+  <section class="sq-below">
+    <div class="sq-below-container">
+      <div class="sq-bio">
+        <img
+          src="/images/corey-portrait.jpg"
+          alt="Corey Koehler"
+          class="sq-bio-photo"
+          onerror="this.style.display='none'"
+        />
+        <div class="sq-bio-text">
+          <p class="sq-bio-name">Corey Koehler</p>
+          <p>Foundry worker, then mechanical draftsman for 17 years, then... whatever this is now. I've built a few audiences and a few email lists along the way — enough to know what's worth a week of your time.</p>
+        </div>
+      </div>
+      <div class="sq-divider"></div>
+      <div class="sq-testimonial">
+        <blockquote class="sq-quote">"We didn't do anything fancy. We just installed the plumbing."</blockquote>
+        <p class="sq-attribution">— A two-person finance team, after moving 725 subscribers off LinkedIn onto their own list</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY THIS MATTERS ───────────────────────────────────────── -->
+  <section class="sq-why">
+    <div class="sq-why-container">
+      <h2 class="sq-why-heading">Why this matters if you've got any kind of following</h2>
+      <p>Most people with any kind of following are doing everything the platforms tell them to do. Posting consistently. Engaging in the comments. Riding the algorithm while it's being nice to them.</p>
+      <p>And they're one policy change away from losing all of it.</p>
+      <p><strong>Platforms change the rules, not you.</strong> You don't get a vote when a platform changes its algorithm, its monetization terms, or whether your account exists tomorrow. An email list is the one channel where the rules don't change without your say-so.</p>
+      <p><strong>You don't need scale, you need 50 real people.</strong> Most people never start because they're picturing the end state — thousands of subscribers, a "real" newsletter. You don't need that to start. You need 50 people who said yes once. That's a week, not a year.</p>
+      <p><strong>"Boring" doesn't disqualify you.</strong> If a regulated finance team can move 725 people off LinkedIn with nothing fancy, your niche isn't the problem. The plumbing is the same no matter what you talk about.</p>
+      <p>This guide lays out the exact 3 steps — pick a gift, set up your home base, go get your first 50. No pitch, no upsell. Just the plan.</p>
+      <div class="sq-why-cta">
+        <a href="#top" class="sq-why-btn">Get Access to the Guide &rarr;</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ── HERO SECTION ──────────────────────────────────────────────── */
+  .sq-section {
+    min-height: calc(100vh - 60px);
+    background: var(--bg-subtle);
+    display: flex;
+    align-items: center;
+    padding: 48px 24px;
+  }
+
+  .sq-container {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  /* ── GUIDE COVER MOCKUP ────────────────────────────────────────── */
+  .sq-mockup-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cover-card {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 0.72;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.16), 0 24px 48px rgba(0,0,0,0.10);
+    transform: rotate(-2.5deg);
+    transition: transform 0.3s ease;
+  }
+
+  .cover-card:hover {
+    transform: rotate(-1deg) scale(1.02);
+  }
+
+  /* Grayscale "cassette texture" backdrop */
+  .cover-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #8c8c8c;
+    background-image:
+      radial-gradient(circle at 18% 16%, rgba(255,255,255,0.18) 0 9%, transparent 10%),
+      radial-gradient(circle at 72% 12%, rgba(0,0,0,0.18) 0 11%, transparent 12%),
+      radial-gradient(circle at 38% 58%, rgba(255,255,255,0.14) 0 10%, transparent 11%),
+      radial-gradient(circle at 88% 66%, rgba(0,0,0,0.16) 0 12%, transparent 13%),
+      radial-gradient(circle at 12% 88%, rgba(255,255,255,0.12) 0 8%, transparent 9%),
+      radial-gradient(circle at 58% 92%, rgba(0,0,0,0.14) 0 10%, transparent 11%);
+    filter: grayscale(100%);
+  }
+
+  /* Rx icon mark */
+  .cover-icon {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 18%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: #fffce0;
+    border-radius: 4px;
+    padding: 6%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  /* Ripped-tape strips */
+  .cover-tape {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    background: #fffce0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    clip-path: polygon(
+      0% 6%, 4% 0%, 9% 5%, 15% 1%, 21% 6%, 27% 1%, 33% 5%, 39% 0%, 45% 6%, 51% 1%, 57% 5%, 63% 0%, 69% 6%, 75% 1%, 81% 5%, 87% 0%, 93% 6%, 100% 1%,
+      100% 94%, 96% 100%, 91% 95%, 85% 99%, 79% 94%, 73% 99%, 67% 95%, 61% 100%, 55% 94%, 49% 99%, 43% 95%, 37% 100%, 31% 94%, 25% 99%, 19% 95%, 13% 100%, 7% 94%, 0% 99%
+    );
+  }
+
+  .cover-tape--title {
+    top: 32%;
+    padding: 16px 18px 18px;
+    transform: rotate(-1.5deg);
+  }
+
+  .cover-title {
+    font-family: var(--font);
+    font-size: clamp(22px, 6.5vw, 28px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--blue);
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .cover-title-accent {
+    color: var(--text);
+  }
+
+  .cover-tape--sub {
+    top: 56%;
+    padding: 12px 18px;
+    transform: rotate(1deg);
+  }
+
+  .cover-subtitle {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .cover-tape--footer {
+    bottom: 6%;
+    padding: 8px 16px;
+    transform: rotate(-1deg);
+  }
+
+  .cover-url {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    text-align: center;
+    margin: 0;
+  }
+
+  /* ── COPY / FORM ───────────────────────────────────────────────── */
+  .sq-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 14px;
+  }
+
+  .sq-headline {
+    font-family: var(--font);
+    font-size: clamp(24px, 3.5vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .sq-subhead {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .sq-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sq-bullets li {
+    padding-left: 28px;
+    position: relative;
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .sq-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .sq-trust {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* ── BIO + TESTIMONIAL ─────────────────────────────────────────── */
+  .sq-below {
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 48px 24px;
+  }
+
+  .sq-below-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .sq-bio {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .sq-bio-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+  }
+
+  .sq-bio-name {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .sq-bio-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .sq-divider {
+    width: 1px;
+    height: 100px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .sq-testimonial {
+    padding-left: 8px;
+  }
+
+  .sq-quote {
+    font-size: 17px;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0 0 12px;
+    border: 0;
+    padding: 0;
+  }
+
+  .sq-quote::before {
+    content: '\201C';
+    font-size: 48px;
+    color: var(--blue);
+    line-height: 0;
+    vertical-align: -18px;
+    margin-right: 4px;
+  }
+
+  .sq-attribution {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 0;
+  }
+
+  /* ── WHY THIS MATTERS ──────────────────────────────────────────── */
+  .sq-why {
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+    padding: 64px 24px;
+  }
+
+  .sq-why-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .sq-why-heading {
+    font-family: var(--font);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 28px;
+    line-height: 1.25;
+  }
+
+  .sq-why-container p {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .sq-why-container p strong {
+    color: var(--text);
+  }
+
+  .sq-why-cta {
+    margin-top: 36px;
+    text-align: center;
+  }
+
+  .sq-why-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.15s;
+  }
+
+  .sq-why-btn:hover {
+    background: var(--blue-hover);
+    transform: translateY(-1px);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* ── RESPONSIVE ────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .sq-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .sq-mockup-wrap {
+      order: 2;
+    }
+
+    .sq-copy {
+      order: 1;
+    }
+
+    .tape-card {
+      max-width: 280px;
+      transform: rotate(-1.5deg);
+    }
+
+    .tape-card:hover {
+      transform: rotate(-0.5deg) scale(1.02);
+    }
+
+    .sq-section {
+      padding: 40px 20px;
+      min-height: 0;
+    }
+
+    .sq-below-container {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .sq-divider {
+      width: 100%;
+      height: 1px;
+    }
+  }
+</style>
