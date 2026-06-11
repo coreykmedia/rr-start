@@ -39,13 +39,6 @@ import Layout from '../../../../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- ── READER TESTIMONIAL ───────────────────────────────────── -->
-      <div class="reader-quote">
-        <p>"When I was just getting started with my email newsletter, I didn't have much experience or confidence. Corey walked me through the early steps, gave me clear advice, and helped me find my footing. He made the whole process feel simple and doable.</p>
-        <p>Thanks to his coaching, I now have a newsletter that basically runs on autopilot, and it's working great!"</p>
-        <p class="reader-quote-attr">— Dustin Hauer, founder of Social Media Bites</p>
-      </div>
-
       <!-- ── INTRO VIDEO WALKTHROUGH ──────────────────────────────── -->
       <div class="video-block">
         <h3 class="video-block-title">Video walkthrough</h3>
@@ -342,6 +335,16 @@ Give me 3 variations of my 2-line waitlist pitch in plain, conversational langua
         </div>
       </div>
 
+      <!-- ── READER TESTIMONIAL ───────────────────────────────────── -->
+      <div class="reader-quote">
+        <p>"When I was just getting started with my email newsletter, I didn't have much experience or confidence. Corey walked me through the early steps, gave me clear advice, and helped me find my footing. He made the whole process feel simple and doable.</p>
+        <p>Thanks to his coaching, I now have a newsletter that basically runs on autopilot, and it's working great!"</p>
+        <div class="reader-quote-attr">
+          <img src="/images/dustin-hauer.png" alt="Dustin Hauer" class="reader-quote-photo" />
+          <span>Dustin Hauer, founder of Social Media Bites</span>
+        </div>
+      </div>
+
       <!-- ── FINAL CTA: DONE-FOR-YOU NEWSLETTER SETUP ──────────────────── -->
       <div class="cta-block final-cta">
         <div class="cta-card__label">Ready to skip the trial-and-error?</div>
@@ -434,9 +437,21 @@ Give me 3 variations of my 2-line waitlist pitch in plain, conversational langua
     }
 
     .reader-quote-attr {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
       font-size: 0.9rem;
       color: var(--text-muted);
       font-style: normal !important;
+    }
+
+    .reader-quote-photo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
     }
 
     /* ── VIDEO BLOCK ───────────────────────────────────────────────── */

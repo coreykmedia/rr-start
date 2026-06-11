@@ -102,7 +102,10 @@ import Layout from '../../../layouts/Layout.astro';
       <div class="sq-why-quote">
         <p>"When I was just getting started with my email newsletter, I didn't have much experience or confidence. Corey walked me through the early steps, gave me clear advice, and helped me find my footing. He made the whole process feel simple and doable.</p>
         <p>Thanks to his coaching, I now have a newsletter that basically runs on autopilot, and it's working great!"</p>
-        <p class="sq-why-quote-attr">— Dustin Hauer, founder of Social Media Bites</p>
+        <div class="sq-why-quote-attr">
+          <img src="/images/dustin-hauer.png" alt="Dustin Hauer" class="sq-why-quote-photo" />
+          <span>Dustin Hauer, founder of Social Media Bites</span>
+        </div>
       </div>
       <div class="sq-why-cta">
         <a href="#top" class="sq-why-btn">Get Access to the Guide &rarr;</a>
@@ -470,9 +473,21 @@ import Layout from '../../../layouts/Layout.astro';
   }
 
   .sq-why-quote-attr {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
     font-size: 0.9rem;
     color: var(--text-muted);
     font-style: normal !important;
+  }
+
+  .sq-why-quote-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   .sq-why-cta {
