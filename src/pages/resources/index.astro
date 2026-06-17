@@ -19,24 +19,28 @@ const comparisons = [
     desc: 'The real differences in pricing, monetization, and who each platform is actually built for — without the affiliate spin.',
     href: 'https://redefiningretirement.io/p/beehiiv-vs-substack-newsletter-platform-comparison?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Comparison',
+    image: '/images/resources/beehiiv-vs-substack.jpg',
   },
   {
     title: 'LinkedIn Newsletter vs. Email Newsletter',
     desc: "You don't own your LinkedIn audience. Here's what that actually means — and what to do about it.",
     href: 'https://redefiningretirement.io/p/linkedin-newsletter-vs-email-newsletter?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Comparison',
+    image: '/images/resources/linkedin-vs-email-newsletter.png',
   },
   {
     title: 'Beehiiv Review 2025: Pricing and Promo Code',
     desc: 'A straight look at what Beehiiv costs, what you get, and whether it makes sense for where you are right now.',
     href: 'https://redefiningretirement.io/p/beehiiv-review-2025-pricing-and-promo?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Review',
+    image: '/images/resources/beehiiv-vs-substack.jpg',
   },
   {
     title: 'Riverside.fm Review',
     desc: 'Is Riverside worth it for solo podcasters and video creators? An honest look at what it does well and where it falls short.',
     href: 'https://redefiningretirement.io/p/riverside-fm-review?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Review',
+    image: '/images/resources/solopreneur-tools.jpg',
   },
 ];
 
@@ -46,24 +50,28 @@ const guides = [
     desc: 'Six income streams Gen X creators are using to turn an email list into real recurring revenue.',
     href: 'https://redefiningretirement.io/p/how-to-monetize-a-newsletter-2025-gen-x-creators-income-guide?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Guide',
+    image: '/images/resources/newsletter-monetization.jpg',
   },
   {
     title: 'AI Newsletter Fast Track',
     desc: 'A step-by-step guide to using AI to build and grow a newsletter faster than going it alone.',
     href: 'https://redefiningretirement.io/p/ai-newsletter-fast-track-step-by-step-guide?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Guide',
+    image: '/images/resources/ai-newsletter-fast-track.jpg',
   },
   {
     title: 'Affiliate Marketing for Gen X',
     desc: 'How to build an affiliate income stream that fits the way Gen X actually works — without the hustle-culture nonsense.',
     href: 'https://redefiningretirement.io/p/affiliate-marketing-for-gen-x?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Guide',
+    image: '/images/resources/newsletter-monetization.jpg',
   },
   {
     title: 'What Is a Blogletter? A Complete Guide',
     desc: 'The case for running a blog and a newsletter as one thing — and why it might be the smartest content model for solopreneurs.',
     href: 'https://redefiningretirement.io/p/what-is-a-blogletter-a-complete-guide-for-beginners?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     tag: 'Guide',
+    image: '/images/resources/blogletter-guide.jpg',
   },
 ];
 
@@ -72,16 +80,19 @@ const topics = [
     title: 'Solopreneur Tools',
     href: 'https://redefiningretirement.io/c/solopreneur-business-resources-tools-courses?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     desc: 'The software stack that actually matters — newsletter platforms, podcast gear, AI tools, and more.',
+    image: '/images/resources/solopreneur-tools.jpg',
   },
   {
     title: 'Gen Exit Playbook',
     href: 'https://redefiningretirement.io/c/gen-exit-playbook?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     desc: 'Free strategy guide for Gen X — how to build income and independence before you have to retire.',
+    image: '/images/resources/gen-exit-playbook-cover.jpg',
   },
   {
     title: 'Newsletter Resources',
     href: 'https://redefiningretirement.io/p/how-to-monetize-a-newsletter-2025-gen-x-creators-income-guide?utm_source=start-here&utm_medium=referral&utm_campaign=resources-page',
     desc: 'Platform comparisons, growth strategies, and monetization guides for building an email audience you own.',
+    image: '/images/resources/newsletter-monetization.jpg',
   },
 ];
 ---
@@ -107,45 +118,56 @@ const topics = [
 
       <h2 class="group-heading"><span class="blue-dot"></span>Comparisons</h2>
       <div class="card-grid">
-        {comparisons.map(({ title, desc, href, tag }) => (
+        {comparisons.map(({ title, desc, href, tag, image }) => (
           <a href={href} class="card card--link" target="_blank" rel="noopener noreferrer">
-            <span class="tag">{tag}</span>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <span class="card-link">Read &rarr;</span>
+            <img src={image} alt={title} class="card-img" />
+            <div class="card-body">
+              <span class="tag">{tag}</span>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+              <span class="card-link">Read &rarr;</span>
+            </div>
           </a>
         ))}
       </div>
 
       <h2 class="group-heading"><span class="blue-dot"></span>Guides</h2>
       <div class="card-grid">
-        {guides.map(({ title, desc, href, tag }) => (
+        {guides.map(({ title, desc, href, tag, image }) => (
           <a href={href} class="card card--link" target="_blank" rel="noopener noreferrer">
-            <span class="tag">{tag}</span>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <span class="card-link">Read &rarr;</span>
+            <img src={image} alt={title} class="card-img" />
+            <div class="card-body">
+              <span class="tag">{tag}</span>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+              <span class="card-link">Read &rarr;</span>
+            </div>
           </a>
         ))}
       </div>
 
       <h2 class="group-heading"><span class="blue-dot"></span>Browse by Topic</h2>
       <div class="card-grid">
-        {topics.map(({ title, href, desc }) => (
+        {topics.map(({ title, href, desc, image }) => (
           <a href={href} class="card card--link" target="_blank" rel="noopener noreferrer">
-            <span class="tag">Topic</span>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <span class="card-link">Explore &rarr;</span>
+            <img src={image} alt={title} class="card-img" />
+            <div class="card-body">
+              <span class="tag">Topic</span>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+              <span class="card-link">Explore &rarr;</span>
+            </div>
           </a>
         ))}
       </div>
 
       <div class="cta-block">
-        <h2>New resources every week in the newsletter</h2>
+        <h2>Build work you never want to retire from</h2>
         <p>
-          The Redefining Retirement newsletter goes deeper than the site.
-          Tactics, case studies, and honest takes on building creator income as a Gen X solopreneur.
+          The Redefining Retirement newsletter is for Gen X solopreneurs done building on platforms
+          they don't control. One idea a week — AI tools that actually make sense with your
+          experience, audience-owning tactics, and honest takes on building income that doesn't
+          depend on someone else's algorithm.
         </p>
         <a
           href="https://redefiningretirement.io/subscribe"
@@ -186,6 +208,19 @@ const topics = [
     display: block;
     text-decoration: none;
     color: inherit;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-body {
+    padding: 1.5rem;
   }
 
   .card-link {
