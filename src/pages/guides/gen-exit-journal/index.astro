@@ -82,6 +82,21 @@ import Layout from '../../../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ── READER NOTES ──────────────────────────────────────────── -->
+  <section class="sq-testimonials">
+    <div class="sq-testimonials-container">
+      <p class="sq-testimonials-label">Reader Notes</p>
+      <div class="sq-testimonial">
+        <p>"If you're the one writing this, it's damned good writing&hellip; very personal, (actually interesting) captivating, compelling, etc. Bravo!!"</p>
+        <span class="sq-testimonial-attr">— Scott Zosel, journalist turned senior marketing manager and musician</span>
+      </div>
+      <div class="sq-testimonial">
+        <p>"Your posts always spark ideas for me. So glad I met you on my business ownership journey."</p>
+        <span class="sq-testimonial-attr">— Clorissa Osborn, CMA, career ownership coach &amp; small business owner</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ── WHY THIS MATTERS ───────────────────────────────────────── -->
   <section class="sq-why">
     <div class="sq-why-container">
@@ -315,6 +330,53 @@ import Layout from '../../../layouts/Layout.astro';
     color: var(--text);
     line-height: 1.5;
     margin: 0;
+  }
+
+  .sq-testimonials {
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 56px 24px;
+  }
+
+  .sq-testimonials-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .sq-testimonials-label {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .sq-testimonial {
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--blue);
+    background: var(--bg-subtle);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 18px;
+  }
+
+  .sq-testimonial:last-child {
+    margin-bottom: 0;
+  }
+
+  .sq-testimonial p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text);
+    font-style: italic;
+    margin: 0 0 8px;
+  }
+
+  .sq-testimonial-attr {
+    font-size: 0.85rem;
+    color: var(--text-muted);
   }
 
   .sq-why {

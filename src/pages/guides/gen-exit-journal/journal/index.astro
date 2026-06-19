@@ -1,15 +1,34 @@
 ---
-import Layout from '../../../../layouts/Layout.astro';
+import SEO from '../../../../components/SEO.astro';
 ---
 
-<Layout
-  title="Gen eXit Journal — 20+ Ways I've Tried to Get Paid on My Own Terms | Redefining Retirement"
-  description="A subscriber-edition digital journal — every way Corey Koehler has tried to get paid outside a job since the late 2000s, the hits and the flops both."
-  type="article"
-  noindex={true}
->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/rr-icon.png" />
+    <SEO
+      title="Gen eXit Journal — 20+ Ways I've Tried to Get Paid on My Own Terms"
+      description="A subscriber-edition digital journal — every way Corey Koehler has tried to get paid outside a job since the late 2000s, the hits and the flops both."
+      type="article"
+      noindex={true}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KCV3GWZ');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCV3GWZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 <div class="gej-wrap">
 
@@ -284,9 +303,13 @@ import Layout from '../../../../layouts/Layout.astro';
   document.getElementById('delivered-date').textContent = "Delivered " + months[d.getMonth()] + " " + d.getFullYear();
 </script>
 
-</Layout>
+  </body>
+</html>
 
 <style>
+  html, body{ margin:0; padding:0; }
+  *{ box-sizing:border-box; }
+
   .gej-wrap{
     --paper:#f6f1e6;
     --paper-deep:#ece4d2;
