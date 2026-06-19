@@ -1,0 +1,117 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="You're In | Redefining Retirement"
+  description="Your Gen eXit Journal is on its way."
+  type="website"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container ty-container">
+      <h1 class="ty-headline"><strong>Hell Yeah! You are in and your journal is on its way.</strong></h1>
+      <p class="ty-subhead">Your <strong>Gen eXit Journal</strong> is on the way to your inbox. While you wait, watch this video for a short message from Corey...</p>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/BFklnvKXHg8"
+          title="Welcome to Redefining Retirement"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="prose">
+        <p>Don't want to wait for your inbox? You can read it right now:</p>
+      </div>
+
+      <div class="inline-cta">
+        <a
+          href="/guides/gen-exit-journal/guide/"
+          class="btn"
+        >
+          Read the Journal Now &rarr;
+        </a>
+      </div>
+
+      <div class="prose">
+        <p>One more thing — if you want a tool that handles the newsletter, the website, the ad revenue, and the affiliate income all in one place (it's literally what I use to run this), use code <strong class="coupon">MYSTORY</strong> for 20% off your first 3 months.</p>
+        <a
+          href="https://www.beehiiv.com?via=MYSTORY"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start on Beehiiv &rarr;
+        </a>
+        <p class="cta-note">Free plan available. Affiliate link — I earn a small commission at no cost to you.</p>
+      </div>
+
+      <div class="prose">
+        <p>Talk soon,<br />Corey</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .ty-container {
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .ty-headline {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-subhead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .ty-container .prose {
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+  }
+
+  .video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ty-container .inline-cta {
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+  }
+
+  .ty-container .inline-cta .btn {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .cta-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+</style>
