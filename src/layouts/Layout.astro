@@ -12,9 +12,10 @@ export interface Props {
   type?: 'website' | 'article';
   schema?: object;
   noindex?: boolean;
+  bare?: boolean;
 }
 
-const seoProps = Astro.props;
+const { bare, ...seoProps } = Astro.props;
 ---
 
 <!doctype html>
@@ -40,10 +41,36 @@ const seoProps = Astro.props;
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCV3GWZ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    {bare ? (
+      <main class="bare-main">
+        <div class="bare-brand">
+          <a href="https://redefiningretirement.io" aria-label="Redefining Retirement">
+            <img src="/rr-logo.jpg" alt="Redefining Retirement" />
+          </a>
+        </div>
+        <slot />
+      </main>
+    ) : (
+      <Fragment>
+        <Header />
+        <main>
+          <slot />
+        </main>
+        <Footer />
+      </Fragment>
+    )}
   </body>
 </html>
+
+<style>
+  .bare-brand {
+    display: flex;
+    justify-content: center;
+    padding: 1.75rem 1.5rem 0;
+  }
+  .bare-brand img {
+    height: 34px;
+    width: auto;
+    display: block;
+  }
+</style>

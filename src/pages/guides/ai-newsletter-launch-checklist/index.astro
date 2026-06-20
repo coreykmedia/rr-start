@@ -1,0 +1,886 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="The AI Newsletter Launch Checklist | Redefining Retirement"
+  description="The simple, step-by-step checklist to start and grow a newsletter you actually own — faster with AI. Tick the boxes, use the prompts, get it live."
+  type="article"
+  noindex={true}
+  bare={true}
+>
+  <article class="section">
+    <div class="container narrow">
+
+      <!-- ── HERO ─────────────────────────────────────────────────── -->
+      <header class="article-header">
+        <span class="tag">Free Checklist</span>
+        <h1 class="article-title">The AI Newsletter Launch Checklist</h1>
+        <p class="article-deck">
+          The simple, step-by-step way to start and grow a newsletter you actually own — faster with AI. Tick the boxes as you go; your progress saves automatically.
+        </p>
+      </header>
+
+      <!-- ── HELLO ────────────────────────────────────────────────── -->
+      <div class="hello-section">
+        <img
+          src="/images/corey-portrait.jpg"
+          alt="Corey Koehler"
+          class="hello-photo"
+          onerror="this.style.display='none'"
+        />
+        <div class="hello-text">
+          <h2>Hello</h2>
+          <p>Hey, I'm Corey Koehler (KOH-ler).</p>
+          <p>Foundry worker, then mechanical draftsman for 17 years, then… whatever this is now.</p>
+          <p>Years ago I had a blog pulling 10,000+ visitors a week from Google — and I never collected a single email. When the traffic dried up, I had nothing to show for it. The newsletter I built later, with the email list as the foundation from day one, is still paying me back today.</p>
+          <p>This checklist is the shortcut version of everything I wish I'd known then. Tick the boxes, lean on the AI prompts under each step, and you'll have a newsletter that's actually yours.</p>
+          <p>Quick heads-up before we start: if you don't have an email newsletter yet, you're leaving money and control on the table. Here's why.</p>
+        </div>
+      </div>
+
+      <!-- ── THE HOOK ─────────────────────────────────────────────── -->
+      <div class="hook-block">
+        <h2>Why newsletters crush YouTube &amp; social for long-term value</h2>
+        <div class="prose">
+          <p>Most creators think their subscriber count equals security. Reality check:</p>
+          <ul>
+            <li>👉 1,000 social media followers = about $79/month</li>
+            <li>👉 1,000 YouTube subs = about $79/month</li>
+            <li>👉 1,000 email subs = about $582/month</li>
+          </ul>
+          <p>That's not my opinion — it's from a Neil Patel study of 2,501 marketers, which found email subscribers generate 7.4x more revenue per month than YouTube subscribers.</p>
+          <p>And the kicker? Email subscribers don't vanish when the algorithm decides to ghost you.</p>
+          <p>Email subscribers = assets you own. Average lifetime value: $37.85 each (up to $100+ in high-value niches).</p>
+          <p>YouTube subs = rented attention. They only pay if they keep watching, and you're at the mercy of RPMs, ad buyers, and YouTube's mood swings.</p>
+          <p>A social media follower = even more rented attention — worth just pennies ($0.01–$0.10).</p>
+          <p>Translation: 10,000 social followers might bring in a couple grand if you're lucky. 10,000 email subs? That could mean a far more reliable five-figure monthly income.</p>
+          <p>That's the gap. It's why smart creators are finally saying:</p>
+          <p><em>"I'll use YouTube and social for discovery, but my email list is my long-term plan."</em></p>
+          <p>Ok — with that out of the way, let's get your newsletter going.</p>
+        </div>
+      </div>
+
+      <!-- ── PROMPT SETUP ─────────────────────────────────────────── -->
+      <div class="setup-block">
+        <p class="setup-title">⚡ Set up your prompts once</p>
+        <p class="setup-text">
+          Every step below comes with an AI prompt. Type your niche or topic here and it drops into all of them automatically. Then hit <strong>Copy</strong> and paste into ChatGPT, Claude, Gemini, or your favorite LLM.
+        </p>
+        <label class="setup-label" for="niche-input">Your niche or topic</label>
+        <input
+          id="niche-input"
+          class="setup-input"
+          type="text"
+          placeholder="e.g., personal finance, fitness for busy parents, productivity"
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- ── PROGRESS ─────────────────────────────────────────────── -->
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Your progress</span>
+          <span id="progress-count">0 / 0 done</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- ── STEPS ────────────────────────────────────────────────── -->
+      <div class="steps">
+
+        <!-- STEP 1 -->
+        <div class="step">
+          <div class="step-num">Step 1</div>
+          <div class="step-content">
+            <h2 class="step-title">Nail your why (before you burn out)</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s1-1"><span>Define what you actually want: predictable income, direct access to your fans, less hamster wheel.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s1-2"><span>Identify the pain you're solving — for your audience <em>and</em> for yourself.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s1-3"><span>Define how you solve it: strategies, templates, insights.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a newsletter strategist. My niche is <span class="ph" data-ph>[your niche]</span>. Review my channel, blog, or audience at [paste URL] and give me 5 specific ways a newsletter could solve my audience's biggest problem and reduce my dependence on social platforms. For each, name the angle and who it's for.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step">
+          <div class="step-num">Step 2</div>
+          <div class="step-content">
+            <h2 class="step-title">Choose your newsletter type</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s2-1"><span>Pick a format you can actually sustain. Common ones: a curated roundup (links + commentary), a single tip / how-to issue, a personal essay or story, a deep-dive on one topic, or a Q&amp;A / mailbag.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s2-2"><span>Choose the one that fits how you like to create — not the one that looks most impressive.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a newsletter coach. My niche is <span class="ph" data-ph>[your niche]</span> and I can realistically write about 1 hour a week. Recommend the single simplest format I can sustain weekly, explain why it fits, and give me a repeatable 4-part structure I can use for every issue.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+          <div class="step-num">Step 3</div>
+          <div class="step-content">
+            <h2 class="step-title">Brand it so people get it</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s3-1"><span>Choose a clear, action-oriented name — "10-Minute Marketing Fix" beats "Marketing Musings" every time.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s3-2"><span>Write a one-liner that says what readers get (e.g., "Every Saturday, 1 actionable tip to launch, grow, and monetize your newsletter.").</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a brand copywriter. Give me 10 clear, action-oriented newsletter names for a newsletter about <span class="ph" data-ph>[your niche]</span>. For each, add a one-line description of what readers get. Skip vague or clever names — favor ones that signal the outcome.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step">
+          <div class="step-num">Step 4</div>
+          <div class="step-content">
+            <h2 class="step-title">Pick your email platform</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s4-1"><span>Start free. Beehiiv's Launch plan is <strong>$0 up to 2,500 subscribers</strong> — unlimited sends, custom domain, a built-in referral program, and your issues double as SEO blog posts ("write once, publish twice").</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s4-2"><span>Want to compare first? Look at Substack, Kit, and Mailchimp — but for most creators starting today, Beehiiv's free tier plus its growth tools are hard to beat.</span></label></li>
+            </ul>
+
+            <div class="inline-cta">
+              <p>If you sign up through my link and use the code <strong class="coupon">GUIDE</strong>, you get 20% off your first three months.</p>
+              <a
+                href="https://www.beehiiv.com?via=GUIDE"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start free on Beehiiv &rarr;
+              </a>
+              <p class="cta-note">Free plan available. Affiliate link — I earn a small commission at no cost to you.</p>
+            </div>
+
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a newsletter consultant. Compare Beehiiv, Substack, Kit, and Mailchimp for a beginner-to-intermediate creator in the <span class="ph" data-ph>[your niche]</span> space. Put it in a table (free tier, ease of use, growth tools, monetization, fees), then recommend one with your reasoning.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="step">
+          <div class="step-num">Step 5</div>
+          <div class="step-content">
+            <h2 class="step-title">Create a lead magnet</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s5-1"><span>Pick something worth trading an email for. Fast options: a checklist, a cheat sheet, a short guide, a template, a tool/resource list, a mini case study, or an exclusive video.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s5-2"><span>Don't build from scratch if you don't have to — repackage something that already performed well.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s5-3"><span>Create a simple landing page offering the freebie (Beehiiv has a built-in page builder).</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a lead-generation strategist. Suggest 5 lead magnet ideas for a newsletter about <span class="ph" data-ph>[your niche]</span> that I could create in a single afternoon. For each: the format, the promise or headline, and why my audience would trade their email for it.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="step">
+          <div class="step-num">Step 6</div>
+          <div class="step-content">
+            <h2 class="step-title">Build your signup page</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s6-1"><span>Write a compelling headline and subheadline.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s6-2"><span>Include one clear call to action (e.g., "Get 1 actionable tip every Saturday — join free.").</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a direct-response copywriter. Write a high-converting signup page for my <span class="ph" data-ph>[your niche]</span> newsletter: a headline, a subheadline, 3 benefit bullets, and one clear call to action. Keep it plain-spoken, no hype.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 7 -->
+        <div class="step">
+          <div class="step-num">Step 7</div>
+          <div class="step-content">
+            <h2 class="step-title">Write your welcome email</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s7-1"><span>Cover three things: who you are, what they'll get, and instant delivery of the lead magnet.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s7-2"><span>Ask new subscribers to reply — it trains inboxes to treat you as a real contact and boosts deliverability.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as an email copywriter. Write a warm welcome email for my <span class="ph" data-ph>[your niche]</span> newsletter that (1) says who I am, (2) sets expectations for what they'll get and how often, (3) delivers the lead magnet, and (4) asks them to reply with one question. Keep it under 200 words.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 8 -->
+        <div class="step">
+          <div class="step-num">Step 8</div>
+          <div class="step-content">
+            <h2 class="step-title">Repurpose instead of reinventing</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s8-1"><span>Take your best-performing videos, posts, or social content.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s8-2"><span>Use AI to spin them into email issues.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s8-3"><span>Bonus: on Beehiiv, each issue can also publish as a blog post — more search traffic, no extra work.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a content repurposer. Here's one of my best-performing pieces: [paste transcript or post]. Turn it into a 300-word newsletter issue for my <span class="ph" data-ph>[your niche]</span> audience, in a conversational voice, with a subject line and a one-line P.S. call to action.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 9 -->
+        <div class="step">
+          <div class="step-num">Step 9</div>
+          <div class="step-content">
+            <h2 class="step-title">Grow your list (without ads)</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s9-1"><span>Mention your newsletter in every video, post, or episode.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s9-2"><span>Put the signup link in every description and bio.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s9-3"><span>Add a pinned comment or post linking to subscribe.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s9-4"><span>Turn on Beehiiv's built-in referral program — reward subscribers for bringing friends.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s9-5"><span>Use Beehiiv Boosts to cross-promote with other newsletters — and get paid per subscriber.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s9-6"><span>Add a signup link to your email signature.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a newsletter growth expert. My niche is <span class="ph" data-ph>[your niche]</span> and I'm starting near zero. Give me 5 organic strategies to reach my first 1,000 subscribers without paid ads, ordered by what to do first, with one concrete weekly action for each.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 10 -->
+        <div class="step">
+          <div class="step-num">Step 10</div>
+          <div class="step-content">
+            <h2 class="step-title">Monetize your newsletter</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s10-1"><span>Pick your first revenue stream. Easiest starting points: Beehiiv's built-in ad network (kicks in around 1,000 subs), affiliate recommendations for tools you actually use, or a simple paid offer or service.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s10-2"><span>Plan what comes later: paid subscriptions, sponsorships, digital products, or courses.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a newsletter monetization advisor. My niche is <span class="ph" data-ph>[your niche]</span>. Suggest 5 ways to monetize, ranked by how soon I can realistically start each one. For each: what it is, roughly how many subscribers I need, and the first step to set it up.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 11 -->
+        <div class="step">
+          <div class="step-num">Step 11</div>
+          <div class="step-content">
+            <h2 class="step-title">Build a system that compounds</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s11-1"><span>Commit to publishing 1x per week.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s11-2"><span>Engage readers with questions and clear calls to action.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s11-3"><span>Review your analytics and improve.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s11-4"><span>Focus on assets that last: evergreen guides and an automated welcome series.</span></label></li>
+            </ul>
+            <div class="ai-prompt">
+              <div class="ap-head">
+                <span class="ap-label">AI prompt</span>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <p class="ap-text">Act as a content strategist. Outline a 12-week content calendar for my <span class="ph" data-ph>[your niche]</span> newsletter that compounds over time (evergreen, repurposable assets) instead of one-off posts. Give me a theme per week and one issue idea for each.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── BONUS: FIRST POST TEMPLATE ───────────────────────────── -->
+      <div class="bonus-block">
+        <p class="result-section-label">Bonus</p>
+        <h2>🎁 The "first post" fill-in-the-blanks template</h2>
+        <div class="prose">
+          <p>Staring at a blank screen? Copy this structure for your very first issue and fill in the blanks.</p>
+        </div>
+        <div class="prompt-block">
+          <pre>Subject line: Why I'm starting [NEWSLETTER NAME]
+
+I used to think [OLD BELIEF / MYTH IN YOUR INDUSTRY].
+
+But after [NUMBER] years as a [YOUR JOB TITLE], I realized the truth is actually [NEW INSIGHT].
+
+That's why I'm launching [NEWSLETTER NAME].
+
+The internet is full of noise about [TOPIC]. My goal is to be the signal.
+
+Here's what you can expect. Every [DAY OF WEEK], I'll send you:
+ - One tip about [TOPIC A]
+ - One story about [TOPIC B]
+
+That's it. No fluff. Hit reply and tell me what you're working on — I read every response.</pre>
+        </div>
+      </div>
+
+      <!-- ── CROSS-LINK: FAST-TRACK GUIDE ─────────────────────────── -->
+      <div class="xlink-block">
+        <p>Want the full walkthrough behind each step — the "why," the examples, and the deeper monetization playbook?</p>
+        <a href="https://redefiningretirement.io/p/ai-newsletter-fast-track-step-by-step-guide" class="xlink" target="_blank" rel="noopener noreferrer">
+          Read the AI Newsletter Fast-Track Guide &rarr;
+        </a>
+      </div>
+
+      <!-- ── FINAL CTA: DONE-FOR-YOU MVP ──────────────────────────── -->
+      <div class="cta-block final-cta">
+        <div class="cta-card__label">Already have an audience? Skip the setup.</div>
+        <h2>I'll build your newsletter for you.</h2>
+        <p>You can do every step on this list yourself — that's exactly what it's for. But if you already have an audience somewhere and you'd rather not spend a weekend wiring it all up, I'll do the setup for you.</p>
+        <p>The Done-For-You MVP Newsletter Setup gets your minimum viable newsletter live in 72 hours — landing page, welcome emails, audience survey, and content sync, all built and ready. It's $497.</p>
+        <a href="https://redefiningretirement.io/products/done-for-you-mvp-newsletter-set-up" class="btn">
+          Get My Newsletter Set Up &rarr;
+        </a>
+        <p class="cta-note">Best if you've already got an audience to move. Money-back guarantee.</p>
+      </div>
+
+    </div>
+  </article>
+
+  <style>
+    .narrow { max-width: 720px; }
+
+    .article-header { margin-bottom: 2.5rem; }
+
+    .article-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .article-deck {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 640px;
+      line-height: 1.65;
+    }
+
+    /* ── HELLO ─────────────────────────────────────────────────────── */
+    .hello-section {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hello-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      filter: grayscale(100%);
+    }
+
+    .hello-text h2 {
+      font-size: 1.3rem;
+      margin: 0 0 0.75rem;
+      color: var(--text);
+    }
+
+    .hello-text p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.85rem;
+    }
+
+    .hello-text p:last-child { margin-bottom: 0; }
+
+    /* ── HOOK ──────────────────────────────────────────────────────── */
+    .hook-block {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hook-block h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .hook-block .prose p,
+    .hook-block .prose ul { margin-bottom: 0.9rem; }
+    .hook-block .prose p:last-child { margin-bottom: 0; }
+
+    /* ── PROMPT SETUP ──────────────────────────────────────────────── */
+    .setup-block {
+      background: var(--text);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .setup-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.5rem;
+    }
+
+    .setup-text {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin: 0 0 1.1rem;
+    }
+
+    .setup-text strong { color: #fff; }
+
+    .setup-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.45rem;
+    }
+
+    .setup-input {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: var(--font);
+      font-size: 1rem;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      outline: none;
+    }
+
+    .setup-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(9, 161, 231, 0.15); }
+
+    /* ── PROGRESS ──────────────────────────────────────────────────── */
+    .progress-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: #fff;
+      padding: 0.85rem 0;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: var(--bg-subtle);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      background: var(--blue);
+      transition: width 0.25s ease;
+    }
+
+    /* ── STEPS ─────────────────────────────────────────────────────── */
+    .steps { margin: 1.5rem 0 2.5rem; }
+
+    .step {
+      display: flex;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:first-child { padding-top: 0.5rem; }
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      font-family: var(--font);
+      font-weight: 900;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      opacity: 0.5;
+      flex-shrink: 0;
+      width: 5rem;
+      line-height: 1.3;
+      padding-top: 0.3rem;
+    }
+
+    .step-content { flex: 1; min-width: 0; }
+
+    .step-title {
+      font-size: 1.3rem;
+      margin: 0 0 1rem;
+      color: var(--text);
+    }
+
+    /* ── CHECKLIST ─────────────────────────────────────────────────── */
+    .checklist {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      cursor: pointer;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .check-item input {
+      margin: 0.2rem 0 0;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--blue);
+      cursor: pointer;
+    }
+
+    .check-item span { transition: color 0.15s ease; }
+
+    .check-item input:checked + span {
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+
+    .check-item strong { color: var(--text); font-weight: 700; }
+
+    /* ── AI PROMPT ─────────────────────────────────────────────────── */
+    .ai-prompt {
+      margin: 1.1rem 0 0;
+      padding: 0.85rem 1rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: var(--radius);
+    }
+
+    .ap-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .ap-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+    }
+
+    .copy-btn {
+      font-family: var(--font);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      background: #fff;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .copy-btn:hover { background: var(--blue); color: #fff; }
+    .copy-btn.copied { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+    .ap-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .ph {
+      color: var(--blue);
+      font-weight: 600;
+      background: rgba(9, 161, 231, 0.1);
+      padding: 0.05em 0.3em;
+      border-radius: 4px;
+    }
+
+    /* ── INLINE CTA (Beehiiv affiliate) ────────────────────────────── */
+    .inline-cta {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 1.5rem 0 0;
+    }
+
+    .inline-cta p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .inline-cta p:last-child { margin-bottom: 0; margin-top: 0.85rem; }
+
+    .inline-cta .btn { display: flex; margin: 0 auto; width: fit-content; }
+
+    .coupon {
+      background: rgba(9, 161, 231, 0.1);
+      color: var(--blue);
+      padding: 0.15em 0.45em;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95em;
+      letter-spacing: 0.05em;
+    }
+
+    .cta-note {
+      font-size: 0.76rem !important;
+      color: var(--text-light) !important;
+    }
+
+    /* ── BONUS / TEMPLATE ──────────────────────────────────────────── */
+    .bonus-block { margin: 3rem 0; }
+
+    .bonus-block h2 {
+      font-size: 1.4rem;
+      margin: 0.25rem 0 1rem;
+      color: var(--text);
+    }
+
+    .result-section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .prompt-block {
+      margin: 1.25rem 0 0;
+      padding: 1.5rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .prompt-block pre {
+      white-space: pre-wrap;
+      font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    /* ── CROSS-LINK ────────────────────────────────────────────────── */
+    .xlink-block {
+      margin: 2.5rem 0;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .xlink-block p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 0.85rem;
+    }
+
+    .xlink {
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .xlink:hover { text-decoration: underline; }
+
+    /* ── FINAL CTA ─────────────────────────────────────────────────── */
+    .final-cta { text-align: left; }
+
+    .final-cta .cta-card__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .final-cta h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+      text-align: left;
+    }
+
+    .final-cta p {
+      text-align: left;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hook-block,
+      .inline-cta,
+      .prompt-block,
+      .final-cta,
+      .xlink-block { padding: 1.25rem; }
+
+      .step { flex-direction: column; gap: 0.75rem; }
+      .step-num { font-size: 0.95rem; width: auto; }
+
+      .hello-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var KEY = 'ai-newsletter-checklist-v1';
+      var boxes = Array.prototype.slice.call(
+        document.querySelectorAll('.check-item input[type=checkbox]')
+      );
+      var saved = {};
+      try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+
+      var fill = document.getElementById('progress-fill');
+      var count = document.getElementById('progress-count');
+
+      function update() {
+        var done = 0;
+        boxes.forEach(function (b) { if (b.checked) done++; });
+        var pct = boxes.length ? Math.round((done / boxes.length) * 100) : 0;
+        if (fill) fill.style.width = pct + '%';
+        if (count) count.textContent = done + ' / ' + boxes.length + ' done';
+      }
+
+      boxes.forEach(function (b) {
+        var id = b.getAttribute('data-id');
+        if (saved[id]) b.checked = true;
+        b.addEventListener('change', function () {
+          saved[id] = b.checked;
+          try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+          update();
+        });
+      });
+
+      update();
+
+      /* ── Niche autofill ──────────────────────────────────────────── */
+      var NICHE_KEY = 'ai-newsletter-niche-v1';
+      var DEFAULT = '[your niche]';
+      var input = document.getElementById('niche-input');
+      var phs = Array.prototype.slice.call(document.querySelectorAll('.ph[data-ph]'));
+
+      function applyNiche(val) {
+        var text = val && val.trim() ? val.trim() : DEFAULT;
+        phs.forEach(function (el) { el.textContent = text; });
+      }
+
+      if (input) {
+        var savedNiche = '';
+        try { savedNiche = localStorage.getItem(NICHE_KEY) || ''; } catch (e) {}
+        if (savedNiche) { input.value = savedNiche; applyNiche(savedNiche); }
+        input.addEventListener('input', function () {
+          applyNiche(input.value);
+          try { localStorage.setItem(NICHE_KEY, input.value); } catch (e) {}
+        });
+      }
+
+      /* ── Copy buttons ────────────────────────────────────────────── */
+      var copyBtns = Array.prototype.slice.call(document.querySelectorAll('[data-copy]'));
+      copyBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var wrap = btn.closest('.ai-prompt');
+          var textEl = wrap ? wrap.querySelector('.ap-text') : null;
+          if (!textEl) return;
+          var text = textEl.textContent.trim();
+          var done = function () {
+            var orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function () { btn.textContent = orig; btn.classList.remove('copied'); }, 1600);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, done);
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta); done();
+          }
+        });
+      });
+    })();
+  </script>
+</Layout>
