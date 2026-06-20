@@ -166,7 +166,10 @@ import Layout from '../../../../layouts/Layout.astro';
             </div>
 
             <div class="prompt-block">
-              <p class="prompt-label">If you want help writing yours, copy this into ChatGPT, Claude, Gemini, or your favorite LLM:</p>
+              <div class="ap-head">
+                <p class="prompt-label">If you want help writing yours, paste this into ChatGPT, Claude, Gemini, or your favorite LLM:</p>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
               <pre>You are a newsletter growth expert. I want you to help me create a 2-line waitlist pitch for my newsletter.
 
 Walk me through it step by step.
@@ -208,39 +211,72 @@ Give me 3 variations of my 2-line waitlist pitch in plain, conversational langua
               ></iframe>
             </div>
 
+            <div class="script-setup">
+              <p class="setup-title">⚡ Fill in the blanks once</p>
+              <p class="setup-text">Drop in your topic and signup link — they'll fill into every script below. Hit <strong>Copy</strong>, then just personalize the [First Name] bits as you send.</p>
+              <div class="setup-fields">
+                <div class="setup-field">
+                  <label class="setup-label" for="topic-input">Your newsletter topic</label>
+                  <input id="topic-input" class="setup-input" type="text" placeholder="e.g., personal finance for creators" autocomplete="off" />
+                </div>
+                <div class="setup-field">
+                  <label class="setup-label" for="link-input">Your signup link</label>
+                  <input id="link-input" class="setup-input" type="text" placeholder="e.g., yourname.beehiiv.com" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+
             <div class="prose">
               <h3>1. Reach out directly</h3>
               <p>Message people you actually know. Not a mass blast — a real message, one at a time.</p>
-              <blockquote>
-                <p><strong>Subject:</strong> Quick question, [First Name]</p>
-                <p>Hey [First Name],</p>
-                <p>I'm starting a newsletter about [TOPIC], and I'd love to include you.</p>
-                <p>Want in? Just reply and let me know.</p>
-              </blockquote>
+              <div class="script">
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p><strong>Subject:</strong> Quick question, [First Name]</p>
+                  <p>Hey [First Name],</p>
+                  <p>I'm starting a newsletter about <span class="ph" data-ph="topic">[TOPIC]</span>, and I'd love to include you.</p>
+                  <p>Want in? Just reply and let me know.</p>
+                </blockquote>
+              </div>
               <p>When they say yes:</p>
-              <blockquote>
-                <p>Awesome! Just click this link to sign up: [link]</p>
-                <p>Or drop me your best email, and I'll add you myself.</p>
-              </blockquote>
+              <div class="script">
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p>Awesome! Just click this link to sign up: <span class="ph" data-ph="link">[link]</span></p>
+                  <p>Or drop me your best email, and I'll add you myself.</p>
+                </blockquote>
+              </div>
               <p>After they sign up:</p>
-              <blockquote>
-                <p>Thank you! By the way, do you know one other person who'd be interested too?</p>
-              </blockquote>
+              <div class="script">
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p>Thank you! By the way, do you know one other person who'd be interested too?</p>
+                </blockquote>
+              </div>
 
               <h3>DM your social connections (one by one)</h3>
               <p>Go through your friends, followers, and connections on LinkedIn, Facebook, Instagram, TikTok — wherever you're already active.</p>
               <p><strong>Message 1:</strong></p>
-              <blockquote>
-                <p>Hey [First Name]!</p>
-              </blockquote>
+              <div class="script">
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p>Hey [First Name]!</p>
+                </blockquote>
+              </div>
               <p><strong>Message 2</strong> (when they respond):</p>
-              <blockquote>
-                <p>I'm working on a new project — mind if I get your take on something?</p>
-              </blockquote>
+              <div class="script">
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p>I'm working on a new project — mind if I get your take on something?</p>
+                </blockquote>
+              </div>
               <p><strong>Message 3</strong> (when they say sure):</p>
-              <blockquote>
-                <p>Cool, thanks! I'm starting a newsletter about [TOPIC] and thought of you because [personalized reason]. Mind if I add you to the list? Would love your thoughts.</p>
-              </blockquote>
+              <div class="script">
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p>Cool, thanks! I'm starting a newsletter about <span class="ph" data-ph="topic">[TOPIC]</span> and thought of you because [personalized reason]. Mind if I add you to the list? Would love your thoughts.</p>
+                </blockquote>
+              </div>
 
               <h3>2. Add sign-up links everywhere</h3>
               <ul>
@@ -256,7 +292,7 @@ Give me 3 variations of my 2-line waitlist pitch in plain, conversational langua
               <p>Tell people what you're doing, why, and how to join. One post. Doesn't need to be clever — just clear.</p>
 
               <h3>4. Mention it in your content</h3>
-              <p>Bottom of every post: "Want more? Join my newsletter here 👉 [link]"</p>
+              <p>Bottom of every post: "Want more? Join my newsletter here 👉 <span class="ph" data-ph="link">[link]</span>"</p>
               <p>End of every video or podcast: "I share more on this in my newsletter — link's in the description."</p>
             </div>
           </div>
@@ -778,8 +814,115 @@ Give me 3 variations of my 2-line waitlist pitch in plain, conversational langua
       margin-right: 0;
     }
 
+    /* ── PROMPT SETUP / AUTOFILL ───────────────────────────────────── */
+    .script-setup {
+      background: var(--text);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .setup-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.5rem;
+    }
+
+    .setup-text {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin: 0 0 1.1rem;
+    }
+
+    .setup-text strong { color: #fff; }
+
+    .setup-fields {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .setup-field { flex: 1; min-width: 0; }
+
+    .setup-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.45rem;
+    }
+
+    .setup-input {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: var(--font);
+      font-size: 1rem;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.7rem 0.9rem;
+      outline: none;
+    }
+
+    .setup-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(9, 161, 231, 0.15); }
+
+    .ph {
+      color: var(--blue);
+      font-weight: 600;
+      background: rgba(9, 161, 231, 0.1);
+      padding: 0.05em 0.3em;
+      border-radius: 4px;
+    }
+
+    /* ── SCRIPT BLOCKS + COPY ──────────────────────────────────────── */
+    .script { position: relative; margin: 0 0 1.1rem; }
+
+    .script blockquote { margin-bottom: 0; padding-right: 4.75rem; }
+
+    .ap-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ap-head .prompt-label { margin-bottom: 0; }
+
+    .copy-btn {
+      font-family: var(--font);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      background: #fff;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      flex-shrink: 0;
+    }
+
+    .copy-btn:hover { background: var(--blue); color: #fff; }
+    .copy-btn.copied { background: var(--blue); color: #fff; }
+
+    .script .copy-btn {
+      position: absolute;
+      top: 0.35rem;
+      right: 0.4rem;
+      z-index: 1;
+    }
+
     /* ── RESPONSIVE ────────────────────────────────────────────────── */
     @media (max-width: 600px) {
+      .setup-fields { flex-direction: column; gap: 0.85rem; }
+
       .hook-block,
       .case-study,
       .inline-cta,
@@ -806,4 +949,53 @@ Give me 3 variations of my 2-line waitlist pitch in plain, conversational langua
       }
     }
   </style>
+
+  <script is:inline>
+    (function () {
+      function bind(inputId, phName, key, def) {
+        var input = document.getElementById(inputId);
+        if (!input) return;
+        var phs = Array.prototype.slice.call(
+          document.querySelectorAll('.ph[data-ph="' + phName + '"]')
+        );
+        function apply(val) {
+          var t = val && val.trim() ? val.trim() : def;
+          phs.forEach(function (el) { el.textContent = t; });
+        }
+        var saved = '';
+        try { saved = localStorage.getItem(key) || ''; } catch (e) {}
+        if (saved) { input.value = saved; apply(saved); }
+        input.addEventListener('input', function () {
+          apply(input.value);
+          try { localStorage.setItem(key, input.value); } catch (e) {}
+        });
+      }
+      bind('topic-input', 'topic', 'first50-topic-v1', '[TOPIC]');
+      bind('link-input', 'link', 'first50-link-v1', '[link]');
+
+      var copyBtns = Array.prototype.slice.call(document.querySelectorAll('[data-copy]'));
+      copyBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var container = btn.closest('.script, .prompt-block, .ai-prompt') || btn.parentElement;
+          var src = container ? container.querySelector('blockquote, pre, .ap-text') : null;
+          if (!src) return;
+          var text = src.textContent.trim();
+          var done = function () {
+            var orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function () { btn.textContent = orig; btn.classList.remove('copied'); }, 1600);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, done);
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta); done();
+          }
+        });
+      });
+    })();
+  </script>
 </Layout>
