@@ -1,0 +1,80 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="You're In | Redefining Retirement"
+  description="Your Gen eXit Playbook is on its way."
+  type="website"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container ty-container">
+      <h1 class="ty-headline"><strong>Hell Yeah! You're in, and your playbook is on its way.</strong></h1>
+      <p class="ty-subhead">Your <strong>Gen eXit Playbook</strong> is headed to your inbox. While you wait, watch this for a quick message from Corey...</p>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/BFklnvKXHg8"
+          title="Welcome to Redefining Retirement"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="prose">
+        <p>A huge thanks for joining us! Pop over to your email &ndash; I've sent you a quick note with your playbook inside.</p>
+        <p>One thing: you'll need to confirm you actually want these emails. You'll get instructions in that first email &ndash; email providers need the thumbs up before they'll let everything through.</p>
+      </div>
+
+      <div class="prose">
+        <p>Talk soon,<br />Corey</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .ty-container {
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .ty-headline {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-subhead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .ty-container .prose {
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+  }
+
+  .video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+</style>
