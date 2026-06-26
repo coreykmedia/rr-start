@@ -21,7 +21,8 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
 
   <section class="section oto-section">
     <div class="container prose oto-prose">
-      <h2 class="oto-headline">One-Time Offer: Want My Gen eXit Compass For Only $27 (60% Off)?</h2>
+      <span class="oto-badge">One-Time Offer:</span>
+      <h2 class="oto-headline">Want My Gen eXit Compass For Only $27 (60% Off)?</h2>
 
       <div class="quiz-block">
         <p><strong>Pop quiz:</strong> What's the #1 most important thing for planning your next chapter in 2026?</p>
@@ -34,11 +35,11 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
         <p class="quiz-answer"><strong>Answer:</strong> None of the above.</p>
       </div>
 
-      <p>Instead, the #1 most important thing is finding a direction that AI can't replace — and that you'd actually be glad to do for the rest of your working life — before you build anything.</p>
+      <p>Instead, <span class="highlight">the #1 most important thing is finding a direction that AI can't replace — and that you'd actually be glad to do for the rest of your working life</span> — before you build anything.</p>
 
       <p>This is the whole ballgame. Because if you're going to put in the time to play offense, the worst thing you can do is pour a year into the wrong thing and quit at month four.</p>
 
-      <p>And it dictates the answers to ALL the other questions… like what to build, which skills to lean on, what to learn, and where the money actually is — and so much more.</p>
+      <p><strong>And it dictates the answers to ALL the other questions…</strong> like what to build, which skills to lean on, what to learn, and where the money actually is — and so much more.</p>
 
       <p>Now, The Gen Exit Playbook on its way to your inbox covers the basics — the offense-vs-defense shift and the 5 plays for building income beside your job…</p>
 
@@ -50,7 +51,8 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
 
       <p>Then I've got great news for you.</p>
 
-      <h3 class="intro-headline">Introducing… The Gen eXit Compass</h3>
+      <p class="intro-label">Introducing</p>
+      <h3 class="intro-headline"><span class="product-badge">The Gen eXit Compass</span></h3>
 
       <img
         class="compass-cover"
@@ -62,9 +64,9 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
       <p>Inside, you'll discover:</p>
 
       <ul class="check-list">
-        <li>How to run your 25 years of experience through 7 plug-in AI prompts to surface a direction that's yours — no blank page, no guessing</li>
+        <li><strong>How to run your 25 years of experience through 7 plug-in AI prompts</strong> to surface a direction that's yours — no blank page, no guessing</li>
         <li>The AI Rory Test — how to aim at the kind of work AI can't touch (so you're not building on ground that's about to disappear)</li>
-        <li>The Ikigai Intersection — pinpoint the overlap where what you're good at, what you love, what's needed, and what pays all meet</li>
+        <li><strong>The Ikigai Intersection</strong> — pinpoint the overlap where what you're good at, what you love, what's needed, and what pays all meet</li>
         <li>How to turn that direction into 3 real, demand-validated opportunities — ranked by which one you could test the fastest</li>
         <li>BONUS: Your fill-in "My North Star" page — so you walk away holding an actual document, not a vague feeling</li>
       </ul>
@@ -125,16 +127,22 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
 
       <p>Plus, if for some reason you're not satisfied, just email me at <a href="mailto:coreysretirement@fastmail.com">coreysretirement@fastmail.com</a> and I'll refund your purchase with no hassles, headaches, or questions asked.</p>
 
-      <p>But just a heads up… This is a one-time-only offer for new subscribers. It's only available right here on this page. You won't find it anywhere else on the internet.</p>
+      <p>But just a heads up… <strong>This is a one-time-only offer for new subscribers.</strong> It's only available right here on this page. You won't find it anywhere else on the internet.</p>
 
-      <p>So if you've read this far, it's clear you understand how crucial it is to find a direction that's AI-proof — and worth doing — in 2026… Not to mention why you'd want to follow a proven process… Instead of trying to reinvent the wheel (or worse, doing nothing and gutting it out till 67).</p>
+      <p><strong>So if you've read this far, it's clear you understand how crucial it is to find a direction that's AI-proof — and worth doing — in 2026.</strong> Not to mention why you'd want to follow a proven process… Instead of trying to reinvent the wheel (or worse, doing nothing and gutting it out till 67).</p>
+
+      <div class="testimonial-block">
+        <p>"Corey, this column may have saved my career. The AI Rory prompt helped put something in perspective for me about my new job and guided how I'm going to approach it going forward. I can't explain it without giving you a ton of detail, but I just wanted to say thank you!"</p>
+        <span class="testimonial-attr">— Andy Klungland</span>
+      </div>
     </div>
 
     <div class="container">
       <div class="cta-block oto-cta">
         <h2>Complete Your Order Now to Get Your Discounted Copy Before This Offer Disappears</h2>
         <p class="price-line"><span class="price-was">$67</span> <span class="price-now">$27</span></p>
-        <a class="btn" href={COMPASS_URL}>Yes — Give Me The Gen eXit Compass For $27 →</a>
+        <a class="btn btn-cta" href={COMPASS_URL}>⚡ Get The Gen eXit Compass For $27 →</a>
+        <p class="cta-trust">** 30-Day Money-Back Guarantee ** &nbsp; ** 100% Safe and Secure Checkout **</p>
       </div>
     </div>
   </section>
@@ -173,9 +181,28 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
     max-width: 640px;
   }
 
+  .oto-badge {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 0.75rem;
+    background: var(--blue);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-pill);
+  }
+
   .oto-headline {
     text-align: center;
     margin-top: 0 !important;
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+  }
+
+  .highlight {
+    color: var(--blue);
+    font-weight: 700;
   }
 
   .quiz-block {
@@ -194,8 +221,24 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
     margin-bottom: 0 !important;
   }
 
+  .intro-label {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem !important;
+  }
+
   .intro-headline {
     text-align: center;
+  }
+
+  .product-badge {
+    display: inline-block;
+    background: var(--bg-subtle);
+    border: 1px solid var(--blue);
+    color: var(--text);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius);
   }
 
   .compass-cover {
@@ -249,5 +292,39 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
 
   .price-now {
     color: var(--blue);
+  }
+
+  .btn-cta {
+    height: 56px;
+    padding: 0 2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .cta-trust {
+    margin-top: 0.85rem !important;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-light);
+  }
+
+  .testimonial-block {
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--blue);
+    background: var(--bg-subtle);
+    border-radius: var(--radius);
+    margin: 2rem 0;
+  }
+
+  .testimonial-block p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonial-attr {
+    font-size: 0.85rem;
+    color: var(--text-muted);
   }
 </style>
