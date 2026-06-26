@@ -6,6 +6,7 @@ import Layout from '../../../layouts/Layout.astro';
   title="Gen eXit Playbook: A Different Way to an Earlier 9–5 Exit | Redefining Retirement"
   description="A short, honest playbook — five things that worked for me to start earning on my own terms, and the one little asset underneath all of them. Free."
   type="website"
+  bare={true}
 >
   <!-- ── HERO ───────────────────────────────────────────────────── -->
   <section class="sq-section" id="top">
@@ -20,13 +21,13 @@ import Layout from '../../../layouts/Layout.astro';
 
       <!-- Right: copy + form -->
       <div class="sq-copy">
-        <p class="sq-eyebrow">The Gen eXit Playbook — Free</p>
-        <h1 class="sq-headline">A Different Way to an Earlier 9–5 Exit</h1>
-        <p class="sq-subhead">For those of us who did the math on "just save more" and came up short. Five things that worked for me to start earning on my own terms — and the one little asset underneath all of them.</p>
+        <p class="sq-eyebrow">The Gen eXit Playbook — Free for Gen Xers Stuck Between the 9-5 and Retirement</p>
+        <h1 class="sq-headline">Too Young to Retire, Too Old to Keep Grinding?</h1>
+        <p class="sq-subhead">I found the sweet spot between the 9–5 and retirement — without quitting tomorrow or waiting till 65. Here's exactly how.</p>
         <ul class="sq-bullets">
-          <li>The five plays I'd run if I were starting over — no system, just what actually worked</li>
-          <li>How a $40K draftsman backed into a one-person business, one little list at a time</li>
-          <li>The single move I'd tell anyone to make first, no matter what they're building</li>
+          <li><strong>Ditched the Daily Grind:</strong> How I started moving from a 9-to-5 toward work-on-my-terms, using the five plays in this playbook, without blowing anything up overnight</li>
+          <li><strong>Stayed Relevant Instead of Replaced:</strong> How a $40K draftsman used what he already knew (plus a few AI tools that actually stuck) to stay sharp instead of getting left behind</li>
+          <li><strong>Started Loving Work Again:</strong> The one move underneath all five plays that turned "counting down to the weekend" into work that doesn't feel like a chore</li>
         </ul>
 
         <div class="sq-form">
@@ -35,7 +36,7 @@ import Layout from '../../../layouts/Layout.astro';
           <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
         </div>
 
-        <p class="sq-trust">Free. About a 7-minute read. No paywall.</p>
+        <p class="sq-trust">Free. About a 7-minute read. No hustle-bro energy or smoke up your ass. Unsubscribe whenever — no hard feelings.</p>
       </div>
 
     </div>
@@ -53,7 +54,7 @@ import Layout from '../../../layouts/Layout.astro';
         />
         <div class="sq-bio-text">
           <p class="sq-bio-name">Corey Koehler</p>
-          <p>Foundry worker, then 17 years behind a CAD station as a mechanical draftsman, singer-songwriter on the weekends, 80s latchkey kid — Class of '90. Nothing on that list says "runs his own thing." I sure didn't think so. But I stumbled into a handful of ways to make money on my own terms, and this is the stuff I wish someone had handed me 20 years ago.</p>
+          <p>Foundry worker, then 17 years behind a CAD station as a mechanical draftsman, singer-songwriter on the weekends, 80s latchkey kid — Class of '90. Nothing on that list says "runs his own thing." I sure didn't think so. But I stumbled into a handful of ways to make money on my own terms, and this is the stuff I wish someone had handed me 20 years ago. Oh, and if you ever catch me sounding like a guru, do me a favor and tell me to knock it off.</p>
         </div>
       </div>
       <div class="sq-divider"></div>
@@ -82,14 +83,24 @@ import Layout from '../../../layouts/Layout.astro';
   <!-- ── READER NOTES ──────────────────────────────────────────── -->
   <section class="sq-testimonials">
     <div class="sq-testimonials-container">
-      <p class="sq-testimonials-label">Reader Notes</p>
-      <div class="sq-testimonial">
-        <p>"If you're the one writing this, it's damned good writing&hellip; very personal, (actually interesting) captivating, compelling, etc. Bravo!!"</p>
-        <span class="sq-testimonial-attr">— Scott Zosel, journalist turned senior marketing manager and musician</span>
-      </div>
-      <div class="sq-testimonial">
-        <p>"Your posts always spark ideas for me. So glad I met you on my business ownership journey."</p>
-        <span class="sq-testimonial-attr">— Clorissa Osborn, CMA, career ownership coach &amp; small business owner</span>
+      <p class="sq-testimonials-label">What Readers Have to Say</p>
+      <div class="sq-testimonial-grid">
+        <div class="sq-testimonial">
+          <p>"If you're the one writing this, it's damned good writing&hellip; very personal, (actually interesting) captivating, compelling, etc. Bravo!!"</p>
+          <span class="sq-testimonial-attr">— Scott Zosel, journalist turned senior marketing manager and musician</span>
+        </div>
+        <div class="sq-testimonial">
+          <p>"Corey has provided a lot of inspiration and encouragement for making the final step from full time employment to full time self deployment. Better than that are the exercises he's suggested that really help clarify what it is I want to accomplish in life."</p>
+          <span class="sq-testimonial-attr">— Cory Tomesh, employee turned business owner, Sprint Graphics</span>
+        </div>
+        <div class="sq-testimonial">
+          <p>"Your posts always spark ideas for me. So glad I met you on my business ownership journey. And I like your newsletter, the voice and tone is fun and easy to read and helpful."</p>
+          <span class="sq-testimonial-attr">— Clorissa Osborn, CMA, career ownership coach &amp; small business owner</span>
+        </div>
+        <div class="sq-testimonial">
+          <p>"This column may have saved my career. The AI Rory prompt helped put something in perspective for me about my new job and guided how I'm going to approach it going forward. I just wanted to say thank you!"</p>
+          <span class="sq-testimonial-attr">— Andy, Redefining Retirement reader</span>
+        </div>
       </div>
     </div>
   </section>
@@ -112,7 +123,7 @@ import Layout from '../../../layouts/Layout.astro';
 <style>
   /* ── HERO SECTION ──────────────────────────────────────────────── */
   .sq-section {
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 90px);
     background: #EAE6E5;
     display: flex;
     align-items: center;
@@ -244,7 +255,6 @@ import Layout from '../../../layouts/Layout.astro';
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    filter: grayscale(100%);
   }
 
   .sq-bio-name {
@@ -335,7 +345,7 @@ import Layout from '../../../layouts/Layout.astro';
   }
 
   .sq-testimonials-container {
-    max-width: 720px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
@@ -350,16 +360,17 @@ import Layout from '../../../layouts/Layout.astro';
     margin-bottom: 24px;
   }
 
+  .sq-testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
   .sq-testimonial {
     padding: 1.25rem 1.5rem;
     border-left: 4px solid var(--blue);
     background: var(--bg-subtle);
     border-radius: 0 var(--radius) var(--radius) 0;
-    margin-bottom: 18px;
-  }
-
-  .sq-testimonial:last-child {
-    margin-bottom: 0;
   }
 
   .sq-testimonial p {
@@ -459,6 +470,10 @@ import Layout from '../../../layouts/Layout.astro';
     .sq-below-container {
       grid-template-columns: 1fr;
       gap: 32px;
+    }
+
+    .sq-testimonial-grid {
+      grid-template-columns: 1fr;
     }
 
     .sq-divider {

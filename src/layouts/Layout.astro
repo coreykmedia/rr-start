@@ -50,6 +50,7 @@ const { bare, ...seoProps } = Astro.props;
         </div>
         <slot />
       </main>
+      <Footer hideSocials={true} />
     ) : (
       <Fragment>
         <Header />
@@ -66,7 +67,7 @@ const { bare, ...seoProps } = Astro.props;
   .bare-brand {
     display: flex;
     justify-content: center;
-    padding: 1.75rem 1.5rem 0;
+    padding: 1.75rem 1.5rem;
   }
   .bare-brand img {
     height: 34px;
