@@ -228,6 +228,18 @@ import Layout from '../../../layouts/Layout.astro';
     text-align: center;
   }
 
+  .sq-copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sq-eyebrow { order: 1; }
+  .sq-headline { order: 2; }
+  .sq-subhead { order: 3; }
+  .sq-bullets { order: 4; }
+  .sq-form { order: 5; }
+  .sq-trust { order: 6; }
+
   .sq-below {
     background: #fff;
     border-top: 1px solid var(--border);
@@ -479,6 +491,18 @@ import Layout from '../../../layouts/Layout.astro';
     .sq-divider {
       width: 100%;
       height: 1px;
+    }
+
+    .sq-bullets {
+      order: 6;
+    }
+
+    .sq-form {
+      order: 4;
+    }
+
+    .sq-trust {
+      order: 5;
     }
   }
 </style>
