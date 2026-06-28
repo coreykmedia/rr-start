@@ -3,8 +3,8 @@ import Layout from '../../../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="The AI Newsletter Fast-Track Checklist | Redefining Retirement"
-  description="The simple, step-by-step checklist to start and grow a newsletter you actually own — faster with AI. Tick the boxes, use the prompts, get it live."
+  title="The Newsletter Fast-Track Checklist | Redefining Retirement"
+  description="Get your newsletter home base live in a few hours — the step-by-step checklist with Beehiiv-specific AI prompts, screenshots, and copy-paste scripts."
   type="article"
   noindex={true}
   bare={true}
@@ -15,9 +15,9 @@ import Layout from '../../../../layouts/Layout.astro';
       <!-- ── HERO ─────────────────────────────────────────────────── -->
       <header class="article-header">
         <span class="tag">Free Checklist</span>
-        <h1 class="article-title">The AI Newsletter Fast-Track Checklist</h1>
+        <h1 class="article-title">The Newsletter Fast-Track Checklist</h1>
         <p class="article-deck">
-          The simple, step-by-step way to start and grow a newsletter you actually own — faster with AI. Tick the boxes as you go; your progress saves automatically.
+          Launch your newsletter faster with AI — and skip the tech overwhelm, overthinking, and hours of research.
         </p>
       </header>
 
@@ -32,10 +32,9 @@ import Layout from '../../../../layouts/Layout.astro';
         <div class="hello-text">
           <h2>Hello</h2>
           <p>Hey, I'm Corey Koehler (KOH-ler).</p>
-          <p>Foundry worker, then mechanical draftsman for 17 years, then… whatever this is now.</p>
+          <p>Foundry worker, then mechanical draftsman for 17 years, then... whatever this is now.</p>
           <p>Years ago I had a blog pulling 10,000+ visitors a week from Google — and I never collected a single email. When the traffic dried up, I had nothing to show for it. The newsletter I built later, with the email list as the foundation from day one, is still paying me back today.</p>
-          <p>This checklist is the shortcut version of everything I wish I'd known then. Tick the boxes, lean on the AI prompts under each step, and you'll have a newsletter that's actually yours.</p>
-          <p>Quick heads-up before we start: if you don't have an email newsletter yet, you're leaving money and control on the table. Here's why.</p>
+          <p>This checklist is the shortcut version. Tick the boxes, lean on the AI prompts under each step, and you'll have your home base live in a few hours — not weeks.</p>
         </div>
       </div>
 
@@ -61,11 +60,27 @@ import Layout from '../../../../layouts/Layout.astro';
         </div>
       </div>
 
+      <!-- ── INTRO VIDEO WALKTHROUGH ──────────────────────────────── -->
+      <div class="video-block">
+        <h3 class="video-block-title">Video walkthrough</h3>
+        <p class="video-block-deck">Before you start the steps below, watch this quick walkthrough of getting your home base set up.</p>
+        <p class="video-block-note">Heads up: Beehiiv has updated its dashboard since I recorded this, so a few screens may look slightly different. The steps and principles are still exactly the same — just follow along for the "why," and use the written steps below for the current click-by-click.</p>
+        <div class="video-embed">
+          <iframe
+            src="https://www.loom.com/embed/c763792cb89348d58cafbd5a9d119249"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
       <!-- ── PROMPT SETUP ─────────────────────────────────────────── -->
       <div class="setup-block">
         <p class="setup-title">⚡ Set up your prompts once</p>
         <p class="setup-text">
-          Every step below comes with an AI prompt. Type your niche or topic here and it drops into all of them automatically. Then hit <strong>Copy</strong> and paste into ChatGPT, Claude, Gemini, or your favorite LLM.
+          Every step below comes with an AI prompt. Type your niche here and it drops into all of them automatically. Paste each prompt into the <strong>same chat</strong> as you go — every step builds on the one before it, so the AI keeps your context (your niche, your gift, your name) the whole way through.
         </p>
         <label class="setup-label" for="niche-input">Your niche or topic</label>
         <input
@@ -95,18 +110,51 @@ import Layout from '../../../../layouts/Layout.astro';
         <div class="step">
           <div class="step-num">Step 1</div>
           <div class="step-content">
-            <h2 class="step-title">Nail your why (before you burn out)</h2>
+            <h2 class="step-title">Pick something worth trading an email for</h2>
+            <div class="prose">
+              <p>A "gift" is just something useful enough that a stranger hands over their email address for it. It doesn't need to be complicated, and it definitely doesn't need to take you a week to make.</p>
+              <p>When I did this, I started with stuff I'd already made — a post that did well, an answer to the question people kept asking me. The work was already done. I just packaged it up.</p>
+              <p>Don't overthink it. Pick from:</p>
+              <ul>
+                <li>A "how-to" post or video that already performed well</li>
+                <li>An answer to the question you get asked all the time</li>
+                <li>Or just open a waitlist and figure out the gift later — that's allowed</li>
+              </ul>
+              <p>If you're starting from nothing, here's a shortlist of fast ideas:</p>
+              <ul>
+                <li>Checklist</li>
+                <li>Quick guide or cheat sheet</li>
+                <li>A list of tools, sites, or books you actually use</li>
+                <li>A short case study or mini workbook</li>
+                <li>Something exclusive — a video, article, or podcast episode</li>
+                <li>A mini course or quiz</li>
+                <li>A template</li>
+              </ul>
+              <p>You don't need to build the gift today. Just decide what it is — you'll need it for Step 2.</p>
+            </div>
             <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s1-1"><span>Define what you actually want: predictable income, direct access to your fans, less hamster wheel.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s1-2"><span>Identify the pain you're solving — for your audience <em>and</em> for yourself.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s1-3"><span>Define how you solve it: strategies, templates, insights.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s1-1"><span>Pick something worth trading an email for — a checklist, short guide, template, tool list, or mini case study.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s1-2"><span>Don't build from scratch if you don't have to — repackage something that already worked (a post, a video, an answer you give people all the time).</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s1-3"><span>Decide what it is now. You'll attach it in Step 4.</span></label></li>
             </ul>
-            <div class="ai-prompt">
+            <div class="prompt-block">
               <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
+                <p class="prompt-label">If you want help picking yours, paste this into ChatGPT, Claude, Gemini, or your favorite LLM — and keep using this same chat for every prompt on this page:</p>
                 <button type="button" class="copy-btn" data-copy>Copy</button>
               </div>
-              <p class="ap-text">Act as a newsletter strategist. My niche is <span class="ph" data-ph>[your niche]</span>. Review my channel, blog, or audience at [paste URL] and give me 5 specific ways a newsletter could solve my audience's biggest problem and reduce my dependence on social platforms. For each, name the angle and who it's for.</p>
+              <pre>You are a lead-generation strategist helping me pick a lead magnet for a brand-new newsletter about <span class="ph" data-ph="niche">[your niche]</span>.
+
+Walk me through it step by step:
+
+Step 1: Ask me who my ideal subscriber is, specifically — not "everyone interested in <span class="ph" data-ph="niche">[your niche]</span>," but one real type of person and the one problem they're stuck on.
+
+Step 2: Ask me what I've already created that did well — a post, video, or answer I give people all the time. Find out if I'd rather repackage something that exists or build something new.
+
+Step 3: Based on my answers, give me 5 lead magnet ideas I could realistically finish in one afternoon. For each: the format, the promise or headline, and why my audience would trade their email for it.
+
+Step 4: Ask me which one I'm picking, then write a single clear sentence describing it — I'll reuse that sentence when I name my newsletter and write my welcome email later.
+
+Keep it plain-spoken. No hype, no buzzwords.</pre>
             </div>
           </div>
         </div>
@@ -115,48 +163,14 @@ import Layout from '../../../../layouts/Layout.astro';
         <div class="step">
           <div class="step-num">Step 2</div>
           <div class="step-content">
-            <h2 class="step-title">Choose your newsletter type</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s2-1"><span>Pick a format you can actually sustain. Common ones: a curated roundup (links + commentary), a single tip / how-to issue, a personal essay or story, a deep-dive on one topic, or a Q&amp;A / mailbag.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s2-2"><span>Choose the one that fits how you like to create — not the one that looks most impressive.</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as a newsletter coach. My niche is <span class="ph" data-ph>[your niche]</span> and I can realistically write about 1 hour a week. Recommend the single simplest format I can sustain weekly, explain why it fits, and give me a repeatable 4-part structure I can use for every issue.</p>
+            <h2 class="step-title">Set up your home base on Beehiiv</h2>
+            <div class="prose">
+              <p>I use Beehiiv, and it's what I'd pick again starting today — solid analytics, a built-in referral system, and a free plan up to 2,500 subscribers.</p>
             </div>
-          </div>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="step">
-          <div class="step-num">Step 3</div>
-          <div class="step-content">
-            <h2 class="step-title">Brand it so people get it</h2>
             <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s3-1"><span>Choose a clear, action-oriented name — "10-Minute Marketing Fix" beats "Marketing Musings" every time.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s3-2"><span>Write a one-liner that says what readers get (e.g., "Every Saturday, 1 actionable tip to launch, grow, and monetize your newsletter.").</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as a brand copywriter. Give me 10 clear, action-oriented newsletter names for a newsletter about <span class="ph" data-ph>[your niche]</span>. For each, add a one-line description of what readers get. Skip vague or clever names — favor ones that signal the outcome.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="step">
-          <div class="step-num">Step 4</div>
-          <div class="step-content">
-            <h2 class="step-title">Pick your email platform</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s4-1"><span>Start free. Beehiiv's Launch plan is <strong>$0 up to 2,500 subscribers</strong> — unlimited sends, custom domain, a built-in referral program, and your issues double as SEO blog posts ("write once, publish twice").</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s4-2"><span>Want to compare first? Look at Substack, Kit, and Mailchimp — but for most creators starting today, Beehiiv's free tier plus its growth tools are hard to beat.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s2-1"><span>Sign up for Beehiiv (the free plan is plenty to start).</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s2-2"><span>Fill in Settings &rarr; General Info — basics only, don't overthink it.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s2-3"><span>Skip the advanced settings for now. You can come back to those later.</span></label></li>
             </ul>
 
             <div class="inline-cta">
@@ -172,12 +186,144 @@ import Layout from '../../../../layouts/Layout.astro';
               <p class="cta-note">Free plan available. Affiliate link — I earn a small commission at no cost to you.</p>
             </div>
 
-            <div class="ai-prompt">
+            <div class="prose">
+              <p>Once you're signed up, go to Settings &rarr; General Info and fill in your details. This part's just data entry.</p>
+            </div>
+
+            <figure class="screenshot-slot">
+              <img
+                src="/images/beehiiv-create.png"
+                alt="Beehiiv's create a new publication screen"
+                loading="lazy"
+                onerror="this.closest('figure').style.display='none'"
+              />
+              <figcaption>Beehiiv's "create a new publication" screen.</figcaption>
+            </figure>
+
+            <div class="prose">
+              <p>A few other basics while you're in there:</p>
+              <ul>
+                <li>Add a logo and thumbnail. Canva works fine if you don't have one — or take the size Beehiiv asks for on that screen and ask Gemini, ChatGPT, or any AI image tool to generate one for you.</li>
+                <li>Pick 3 publication tags.</li>
+                <li>Set your language and time zone.</li>
+              </ul>
+              <p>Leave everything else for later — we're keeping this simple.</p>
+            </div>
+
+            <div class="prompt-block">
               <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
+                <p class="prompt-label">If you want a second opinion on your settings, paste this into ChatGPT, Claude, Gemini, or your favorite LLM. One tip: for a how-to question like this, Perplexity tends to do well — it's current and pulls in tutorials and video walkthroughs, not just text.</p>
                 <button type="button" class="copy-btn" data-copy>Copy</button>
               </div>
-              <p class="ap-text">Act as a newsletter consultant. Compare Beehiiv, Substack, Kit, and Mailchimp for a beginner-to-intermediate creator in the <span class="ph" data-ph>[your niche]</span> space. Put it in a table (free tier, ease of use, growth tools, monetization, fees), then recommend one with your reasoning.</p>
+              <pre>You are a Beehiiv setup consultant. I'm creating a new publication for a newsletter about <span class="ph" data-ph="niche">[your niche]</span>.
+
+Walk me through it step by step:
+
+Step 1: Tell me exactly which settings under Settings &rarr; General Info actually matter when I'm just starting — sender name, reply-to address, time zone, publication tags — and why each one matters for deliverability or growth.
+
+Step 2: Tell me which advanced settings (custom domains, integrations, advanced automations) I can safely ignore until I have subscribers, so I don't waste time on them now.
+
+Step 3: I already picked a lead magnet in Step 1 of this checklist — based on that, suggest 3 publication tags that fit my niche and audience.
+
+Give me a short checklist I can run through in under 10 minutes.</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+          <div class="step-num">Step 3</div>
+          <div class="step-content">
+            <h2 class="step-title">Name it + write your two-line pitch</h2>
+            <div class="prose">
+              <p>The rule: clear beats clever, every time.</p>
+              <p><strong>Avoid:</strong> something vague like "Marketing Musings."</p>
+              <p><strong>Try:</strong> something that tells people exactly what's inside — "[Outcome] for [Audience]."</p>
+              <p>Then write your two-line pitch. This is the bit people skip, and shouldn't:</p>
+              <ul>
+                <li><strong>Line 1 (the hook):</strong> Who it's for + the problem + the outcome</li>
+                <li><strong>Line 2 (the lever):</strong> A call to action + the benefit</li>
+              </ul>
+              <p><em>Example: "Helping parents exhausted by screen-time battles set boundaries that actually stick. Enter your email and join the waitlist to get 5 quick scripts that make unplugging easier."</em></p>
+            </div>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s3-1"><span>Pick a name where clear beats clever — "Outcome for Audience" beats "Marketing Musings" every time.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s3-2"><span>Write your two-line pitch — Line 1 is the hook (who it's for + problem + outcome), Line 2 is the lever (a call to action + benefit).</span></label></li>
+            </ul>
+
+            <figure class="screenshot-slot">
+              <img
+                src="/images/beehiiv-details.png"
+                alt="Beehiiv publication details settings"
+                loading="lazy"
+                onerror="this.closest('figure').style.display='none'"
+              />
+              <figcaption>Settings &rarr; Publication Details.</figcaption>
+            </figure>
+
+            <div class="prompt-block">
+              <div class="ap-head">
+                <p class="prompt-label">If you want help writing yours, paste this into ChatGPT, Claude, Gemini, or your favorite LLM:</p>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <pre>You are a newsletter growth expert. I want you to help me create a 2-line waitlist pitch for my newsletter.
+
+Walk me through it step by step.
+
+Step 1: Ask me what I want my readers to do (not "learn") and help me phrase it in action terms.
+
+Step 2: Ask me to niche it down. Help me pick a slice of my audience.
+
+Step 3: Ask me to pick 1 problem my audience has and 1 outcome they want. Combine into a single clear sentence.
+
+Step 4: Help me add a call-to-action line that starts with "Enter your email and join the waitlist to get…" and ends with a concrete benefit.
+
+Give me 3 variations of my 2-line waitlist pitch in plain, conversational language.</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step">
+          <div class="step-num">Step 4</div>
+          <div class="step-content">
+            <h2 class="step-title">Build your signup page &amp; attach the gift</h2>
+            <ul class="checklist">
+              <li><label class="check-item"><input type="checkbox" data-id="s4-1"><span>Use Beehiiv's built-in page builder — you don't need a separate website.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s4-2"><span>Write one headline, one subheadline, one call to action.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s4-3"><span>Attach the gift from Step 1 so it delivers automatically.</span></label></li>
+            </ul>
+
+            <figure class="screenshot-slot">
+              <img
+                src="/images/beehiiv-landing.png"
+                alt="Beehiiv landing page and subscribe form builder"
+                loading="lazy"
+                onerror="this.closest('figure').style.display='none'"
+              />
+              <figcaption>Website &rarr; landing page / subscribe form builder.</figcaption>
+            </figure>
+
+            <div class="prompt-block">
+              <div class="ap-head">
+                <p class="prompt-label">If you want a first draft, paste this into ChatGPT, Claude, Gemini, or your favorite LLM:</p>
+                <button type="button" class="copy-btn" data-copy>Copy</button>
+              </div>
+              <pre>You are a direct-response copywriter. I'm building the signup page for my newsletter about <span class="ph" data-ph="niche">[your niche]</span>.
+
+I've already got a free gift, a newsletter name, and a two-line pitch from the steps above.
+
+Walk me through it step by step:
+
+Step 1: Ask me to paste my newsletter name and two-line pitch from Step 3.
+
+Step 2: Ask me what the free gift is and what format it's in (checklist, guide, template, etc.) from Step 1.
+
+Step 3: Using my answers, write a headline, a subheadline, 3 benefit bullets, and one clear call to action that mentions the gift by name.
+
+Step 4: Give me 2 alternate headlines in case the first one doesn't land.
+
+Keep it plain-spoken — no hype, no hard sell.</pre>
             </div>
           </div>
         </div>
@@ -186,189 +332,201 @@ import Layout from '../../../../layouts/Layout.astro';
         <div class="step">
           <div class="step-num">Step 5</div>
           <div class="step-content">
-            <h2 class="step-title">Create a lead magnet</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s5-1"><span>Pick something worth trading an email for. Fast options: a checklist, a cheat sheet, a short guide, a template, a tool/resource list, a mini case study, or an exclusive video.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s5-2"><span>Don't build from scratch if you don't have to — repackage something that already performed well.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s5-3"><span>Create a simple landing page offering the freebie (Beehiiv has a built-in page builder).</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as a lead-generation strategist. Suggest 5 lead magnet ideas for a newsletter about <span class="ph" data-ph>[your niche]</span> that I could create in a single afternoon. For each: the format, the promise or headline, and why my audience would trade their email for it.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- STEP 6 -->
-        <div class="step">
-          <div class="step-num">Step 6</div>
-          <div class="step-content">
-            <h2 class="step-title">Build your signup page</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s6-1"><span>Write a compelling headline and subheadline.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s6-2"><span>Include one clear call to action (e.g., "Get 1 actionable tip every Saturday — join free.").</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as a direct-response copywriter. Write a high-converting signup page for my <span class="ph" data-ph>[your niche]</span> newsletter: a headline, a subheadline, 3 benefit bullets, and one clear call to action. Keep it plain-spoken, no hype.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- STEP 7 -->
-        <div class="step">
-          <div class="step-num">Step 7</div>
-          <div class="step-content">
             <h2 class="step-title">Write your welcome email</h2>
             <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s7-1"><span>Cover three things: who you are, what they'll get, and instant delivery of the lead magnet.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s7-2"><span>Ask new subscribers to reply — it trains inboxes to treat you as a real contact and boosts deliverability.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s5-1"><span>Say who you are, what they'll get, and how often.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s5-2"><span>Deliver the gift right away — no waiting.</span></label></li>
+              <li><label class="check-item"><input type="checkbox" data-id="s5-3"><span>Ask them to reply with one question. It boosts deliverability and starts a real conversation.</span></label></li>
             </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as an email copywriter. Write a warm welcome email for my <span class="ph" data-ph>[your niche]</span> newsletter that (1) says who I am, (2) sets expectations for what they'll get and how often, (3) delivers the lead magnet, and (4) asks them to reply with one question. Keep it under 200 words.</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- STEP 8 -->
-        <div class="step">
-          <div class="step-num">Step 8</div>
-          <div class="step-content">
-            <h2 class="step-title">Repurpose instead of reinventing</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s8-1"><span>Take your best-performing videos, posts, or social content.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s8-2"><span>Use AI to spin them into email issues.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s8-3"><span>Bonus: on Beehiiv, each issue can also publish as a blog post — more search traffic, no extra work.</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as a content repurposer. Here's one of my best-performing pieces: [paste transcript or post]. Turn it into a 300-word newsletter issue for my <span class="ph" data-ph>[your niche]</span> audience, in a conversational voice, with a subject line and a one-line P.S. call to action.</p>
-            </div>
-          </div>
-        </div>
+            <figure class="screenshot-slot">
+              <img
+                src="/images/beehiiv-welcome.png"
+                alt="Beehiiv automations welcome email editor"
+                loading="lazy"
+                onerror="this.closest('figure').style.display='none'"
+              />
+              <figcaption>Automations &rarr; welcome email editor.</figcaption>
+            </figure>
 
-        <!-- STEP 9 -->
-        <div class="step">
-          <div class="step-num">Step 9</div>
-          <div class="step-content">
-            <h2 class="step-title">Grow your list (without ads)</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s9-1"><span>Mention your newsletter in every video, post, or episode.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s9-2"><span>Put the signup link in every description and bio.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s9-3"><span>Add a pinned comment or post linking to subscribe.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s9-4"><span>Turn on Beehiiv's built-in referral program — reward subscribers for bringing friends.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s9-5"><span>Use Beehiiv Boosts to cross-promote with other newsletters — and get paid per subscriber.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s9-6"><span>Add a signup link to your email signature.</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
+            <div class="prose">
+              <p><strong>Example:</strong></p>
+              <div class="script">
                 <button type="button" class="copy-btn" data-copy>Copy</button>
+                <blockquote>
+                  <p><strong>Subject:</strong> Here's your [gift name] (+ a quick favor)</p>
+                  <p>Hey [First Name],</p>
+                  <p>Thanks for signing up. Here's your [gift name] &rarr; [link]</p>
+                  <p>I'm Corey — I send <span class="ph" data-ph="niche">[your niche]</span> tips like this every [day of week]. No fluff, just what's worked for me.</p>
+                  <p>Quick favor: hit reply and tell me the one thing you're stuck on right now. I read every reply, and it helps me write issues that actually help.</p>
+                  <p>Talk soon,<br>Corey</p>
+                </blockquote>
               </div>
-              <p class="ap-text">Act as a newsletter growth expert. My niche is <span class="ph" data-ph>[your niche]</span> and I'm starting near zero. Give me 5 organic strategies to reach my first 1,000 subscribers without paid ads, ordered by what to do first, with one concrete weekly action for each.</p>
             </div>
-          </div>
-        </div>
 
-        <!-- STEP 10 -->
-        <div class="step">
-          <div class="step-num">Step 10</div>
-          <div class="step-content">
-            <h2 class="step-title">Monetize your newsletter</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s10-1"><span>Pick your first revenue stream. Easiest starting points: Beehiiv's built-in ad network (kicks in around 1,000 subs), affiliate recommendations for tools you actually use, or a simple paid offer or service.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s10-2"><span>Plan what comes later: paid subscriptions, sponsorships, digital products, or courses.</span></label></li>
-            </ul>
-            <div class="ai-prompt">
+            <div class="prompt-block">
               <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
+                <p class="prompt-label">If you want a first draft, paste this into ChatGPT, Claude, Gemini, or your favorite LLM:</p>
                 <button type="button" class="copy-btn" data-copy>Copy</button>
               </div>
-              <p class="ap-text">Act as a newsletter monetization advisor. My niche is <span class="ph" data-ph>[your niche]</span>. Suggest 5 ways to monetize, ranked by how soon I can realistically start each one. For each: what it is, roughly how many subscribers I need, and the first step to set it up.</p>
-            </div>
-          </div>
-        </div>
+              <pre>You are an email copywriter. I'm writing the welcome email for my newsletter about <span class="ph" data-ph="niche">[your niche]</span>.
 
-        <!-- STEP 11 -->
-        <div class="step">
-          <div class="step-num">Step 11</div>
-          <div class="step-content">
-            <h2 class="step-title">Build a system that compounds</h2>
-            <ul class="checklist">
-              <li><label class="check-item"><input type="checkbox" data-id="s11-1"><span>Commit to publishing 1x per week.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s11-2"><span>Engage readers with questions and clear calls to action.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s11-3"><span>Review your analytics and improve.</span></label></li>
-              <li><label class="check-item"><input type="checkbox" data-id="s11-4"><span>Focus on assets that last: evergreen guides and an automated welcome series.</span></label></li>
-            </ul>
-            <div class="ai-prompt">
-              <div class="ap-head">
-                <span class="ap-label">AI prompt</span>
-                <button type="button" class="copy-btn" data-copy>Copy</button>
-              </div>
-              <p class="ap-text">Act as a content strategist. Outline a 12-week content calendar for my <span class="ph" data-ph>[your niche]</span> newsletter that compounds over time (evergreen, repurposable assets) instead of one-off posts. Give me a theme per week and one issue idea for each.</p>
+I've already got a free gift, a newsletter name, and a two-line pitch from the steps above.
+
+Walk me through it step by step:
+
+Step 1: Ask me to paste the gift, the name, and the pitch from the earlier steps.
+
+Step 2: Ask me how often I plan to send (weekly, biweekly) and what day.
+
+Step 3: Using my answers, write a warm welcome email under 200 words that says who I am, sets expectations for what they'll get and how often, delivers the gift right away, and asks them to reply with one specific question.
+
+Step 4: Give me one alternate subject line option.
+
+Keep it conversational — like a real person, not a marketing team.</pre>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- ── BONUS: FIRST POST TEMPLATE ───────────────────────────── -->
+      <!-- ── MILESTONE: HOME BASE DONE ─────────────────────────────── -->
+      <div class="milestone-block">
+        <p>🎉 <strong>Your home base is live.</strong> That's the deliverable — a newsletter you actually own. Everything from here is about getting a few people onto it.</p>
+      </div>
+
+      <!-- ── BONUS: FIRST SUBSCRIBERS (QUICK WIN) ─────────────────── -->
       <div class="bonus-block">
         <p class="result-section-label">Bonus</p>
-        <h2>🎁 The "first post" fill-in-the-blanks template</h2>
+        <h2>Get your first subscribers (the quick win)</h2>
         <div class="prose">
-          <p>Staring at a blank screen? Copy this structure for your very first issue and fill in the blanks.</p>
+          <p>Your list is live. Here's how to get a few people on it this week — no audience required.</p>
         </div>
-        <div class="prompt-block">
-          <pre>Subject line: Why I'm starting [NEWSLETTER NAME]
 
-I used to think [OLD BELIEF / MYTH IN YOUR INDUSTRY].
+        <div class="video-embed">
+          <iframe
+            src="https://www.loom.com/embed/7c909354370d435b91b0019f7cf815fe"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          ></iframe>
+        </div>
 
-But after [NUMBER] years as a [YOUR JOB TITLE], I realized the truth is actually [NEW INSIGHT].
+        <div class="script-setup">
+          <p class="setup-title">⚡ Fill in the blanks once</p>
+          <p class="setup-text">Drop in your topic and signup link — they'll fill into every script below. Hit <strong>Copy</strong>, then personalize the [First Name] bits as you send.</p>
+          <div class="setup-fields">
+            <div class="setup-field">
+              <label class="setup-label" for="topic-input">Your newsletter topic</label>
+              <input id="topic-input" class="setup-input" type="text" placeholder="e.g., personal finance for creators" autocomplete="off" />
+            </div>
+            <div class="setup-field">
+              <label class="setup-label" for="link-input">Your signup link</label>
+              <input id="link-input" class="setup-input" type="text" placeholder="e.g., yourname.beehiiv.com" autocomplete="off" />
+            </div>
+          </div>
+        </div>
 
-That's why I'm launching [NEWSLETTER NAME].
+        <div class="prose">
+          <h3>Reach out directly</h3>
+          <p>Message people you actually know. Not a mass blast — a real message, one at a time.</p>
+          <div class="script">
+            <button type="button" class="copy-btn" data-copy>Copy</button>
+            <blockquote>
+              <p><strong>Subject:</strong> Quick question, [First Name]</p>
+              <p>Hey [First Name],</p>
+              <p>I'm starting a newsletter about <span class="ph" data-ph="topic">[TOPIC]</span>, and I'd love to include you.</p>
+              <p>Want in? Just reply and let me know.</p>
+            </blockquote>
+          </div>
+          <p>When they say yes:</p>
+          <div class="script">
+            <button type="button" class="copy-btn" data-copy>Copy</button>
+            <blockquote>
+              <p>Awesome! Just click this link to sign up: <span class="ph" data-ph="link">[link]</span></p>
+              <p>Or drop me your best email, and I'll add you myself.</p>
+            </blockquote>
+          </div>
+          <p>After they sign up:</p>
+          <div class="script">
+            <button type="button" class="copy-btn" data-copy>Copy</button>
+            <blockquote>
+              <p>Thank you! By the way, do you know one other person who'd be interested too?</p>
+            </blockquote>
+          </div>
 
-The internet is full of noise about [TOPIC]. My goal is to be the signal.
+          <h3>DM your social connections (one by one)</h3>
+          <p>Go through your friends, followers, and connections on LinkedIn, Facebook, Instagram, TikTok — wherever you're already active.</p>
+          <p><strong>Message 1:</strong></p>
+          <div class="script">
+            <button type="button" class="copy-btn" data-copy>Copy</button>
+            <blockquote><p>Hey [First Name]!</p></blockquote>
+          </div>
+          <p><strong>Message 2</strong> (when they respond):</p>
+          <div class="script">
+            <button type="button" class="copy-btn" data-copy>Copy</button>
+            <blockquote><p>I'm working on a new project — mind if I get your take on something?</p></blockquote>
+          </div>
+          <p><strong>Message 3</strong> (when they say sure):</p>
+          <div class="script">
+            <button type="button" class="copy-btn" data-copy>Copy</button>
+            <blockquote><p>Cool, thanks! I'm starting a newsletter about <span class="ph" data-ph="topic">[TOPIC]</span> and thought of you because [personalized reason]. Mind if I add you to the list? Would love your thoughts.</p></blockquote>
+          </div>
 
-Here's what you can expect. Every [DAY OF WEEK], I'll send you:
- - One tip about [TOPIC A]
- - One story about [TOPIC B]
+          <h3>Add signup links everywhere</h3>
+          <ul>
+            <li>YouTube video descriptions and pinned comments</li>
+            <li>Social media bios (LinkedIn, Instagram, X, YouTube)</li>
+            <li>Email signature</li>
+            <li>Pinned posts</li>
+          </ul>
 
-That's it. No fluff. Hit reply and tell me what you're working on — I read every response.</pre>
+          <h3>Announce it publicly</h3>
+          <p>Tell people what you're doing, why, and how to join. One post. Doesn't need to be clever — just clear.</p>
+
+          <h3>Mention it in your content</h3>
+          <p>Bottom of every video or post: "Want more? Join my newsletter here 👉 <span class="ph" data-ph="link">[link]</span>"</p>
         </div>
       </div>
 
-      <!-- ── CROSS-LINK: FAST-TRACK GUIDE ─────────────────────────── -->
-      <div class="xlink-block">
-        <p>Want the full walkthrough behind each step — the "why," the examples, and the deeper monetization playbook?</p>
-        <a href="https://redefiningretirement.io/p/ai-newsletter-fast-track-step-by-step-guide" class="xlink" target="_blank" rel="noopener noreferrer">
-          Read the AI Newsletter Fast-Track Guide &rarr;
-        </a>
+      <!-- ── MONETIZATION TEASER ───────────────────────────────────── -->
+      <div class="bonus-block">
+        <p class="result-section-label">Looking ahead</p>
+        <h2>What's possible once you have a list</h2>
+        <div class="prose">
+          <p>You don't need this yet. But it helps to know what's coming once people start subscribing.</p>
+        </div>
+
+        <div class="mono-list">
+          <div class="mono-item">
+            <p class="mono-label">Services</p>
+            <ul>
+              <li>Coaching, consulting, or small digital services — sold directly to people who already trust you.</li>
+            </ul>
+          </div>
+          <div class="mono-item">
+            <p class="mono-label">Recurring revenue</p>
+            <ul>
+              <li>Sponsorships, affiliate recommendations, or a paid subscription tier.</li>
+            </ul>
+          </div>
+          <div class="mono-item">
+            <p class="mono-label">Products</p>
+            <ul>
+              <li>Templates, guides, or courses you build once and sell over and over.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <!-- ── FINAL CTA: DONE-FOR-YOU MVP ──────────────────────────── -->
+      <!-- ── FINAL CTA: WHAT'S NEXT ────────────────────────────────── -->
+      <!-- TODO(Corey): no $27 product yet — once it's live, swap this block for a real CTA + link/button -->
       <div class="cta-block final-cta">
-        <div class="cta-card__label">Already have an audience? Skip the setup.</div>
-        <h2>I'll build your newsletter for you.</h2>
-        <p>You can do every step on this list yourself — that's exactly what it's for. But if you already have an audience somewhere and you'd rather not spend a weekend wiring it all up, I'll do the setup for you.</p>
-        <p>The Done-For-You MVP Newsletter Setup gets your minimum viable newsletter live in 72 hours — landing page, welcome emails, audience survey, and content sync, all built and ready. It's $497.</p>
-        <a href="https://redefiningretirement.io/products/done-for-you-mvp-newsletter-set-up" class="btn">
-          Get My Newsletter Set Up &rarr;
-        </a>
-        <p class="cta-note">Best if you've already got an audience to move. Money-back guarantee.</p>
+        <div class="cta-card__label">What's next</div>
+        <h2>Turning your list into income</h2>
+        <p>Once you've got a few subscribers, the next move is turning that list into income — without needing thousands of people on it first.</p>
+        <p>I'm putting together a simple, low-cost resource for exactly that next step. It's not live yet — but you're already on the list, so I'll send it straight to your inbox the moment it is.</p>
       </div>
 
     </div>
@@ -446,6 +604,52 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
     .hook-block .prose ul { margin-bottom: 0.9rem; }
     .hook-block .prose p:last-child { margin-bottom: 0; }
 
+    /* ── VIDEO BLOCK ───────────────────────────────────────────────── */
+    .video-block { margin-bottom: 2.5rem; }
+
+    .video-block-title {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+      color: var(--text);
+    }
+
+    .video-block-deck {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .video-block-note {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .video-embed {
+      position: relative;
+      padding-bottom: 62.5%;
+      height: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     /* ── PROMPT SETUP ──────────────────────────────────────────────── */
     .setup-block {
       background: var(--text);
@@ -494,6 +698,17 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
     }
 
     .setup-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(9, 161, 231, 0.15); }
+
+    /* ── BONUS AUTOFILL (2-field dark box) ───────────────────────────── */
+    .script-setup {
+      background: var(--text);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .setup-fields { display: flex; gap: 1rem; }
+    .setup-field { flex: 1; min-width: 0; }
 
     /* ── PROGRESS ──────────────────────────────────────────────────── */
     .progress-wrap {
@@ -563,6 +778,12 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
       color: var(--text);
     }
 
+    .step-content .prose p { margin-bottom: 0.9rem; }
+    .step-content .prose p:last-child { margin-bottom: 0; }
+    .step-content .prose ul { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
+    .step-content .prose li { margin-bottom: 0.4rem; color: var(--text-muted); line-height: 1.6; }
+    .step-content .prose li strong { color: var(--text); font-weight: 700; }
+
     /* ── CHECKLIST ─────────────────────────────────────────────────── */
     .checklist {
       list-style: none;
@@ -599,32 +820,45 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
       text-decoration: line-through;
     }
 
-    .check-item strong { color: var(--text); font-weight: 700; }
-
-    /* ── AI PROMPT ─────────────────────────────────────────────────── */
-    .ai-prompt {
+    /* ── PROMPT BLOCK (AI prompts) ───────────────────────────────────── */
+    .prompt-block {
       margin: 1.1rem 0 0;
-      padding: 0.85rem 1rem;
+      padding: 1.5rem;
       background: var(--bg-subtle);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--blue);
       border-radius: var(--radius);
+    }
+
+    .prompt-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .prompt-block pre {
+      white-space: pre-wrap;
+      font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 0;
     }
 
     .ap-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
       margin-bottom: 0.5rem;
     }
 
-    .ap-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--blue);
-    }
+    .ap-head .prompt-label { margin-bottom: 0; }
 
     .copy-btn {
       font-family: var(--font);
@@ -639,17 +873,11 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
       padding: 0.25rem 0.75rem;
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
+      flex-shrink: 0;
     }
 
     .copy-btn:hover { background: var(--blue); color: #fff; }
     .copy-btn.copied { background: var(--blue); color: #fff; border-color: var(--blue); }
-
-    .ap-text {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      margin: 0;
-    }
 
     .ph {
       color: var(--blue);
@@ -658,6 +886,25 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
       padding: 0.05em 0.3em;
       border-radius: 4px;
     }
+
+    /* ── SCRIPT BLOCKS (bonus DM scripts) ────────────────────────────── */
+    .script { position: relative; margin: 0 0 1.1rem; }
+    .script blockquote { margin-bottom: 0; padding-right: 4.75rem; }
+    .script .copy-btn { position: absolute; top: 0.35rem; right: 0.4rem; z-index: 1; }
+
+    .prose blockquote {
+      border-left: 3px solid var(--border);
+      padding-left: 1.25rem;
+      margin: 0 0 1.1rem;
+    }
+
+    .prose blockquote p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .prose blockquote p:last-child { margin-bottom: 0; }
 
     /* ── INLINE CTA (Beehiiv affiliate) ────────────────────────────── */
     .inline-cta {
@@ -695,13 +942,65 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
       color: var(--text-light) !important;
     }
 
-    /* ── BONUS / TEMPLATE ──────────────────────────────────────────── */
+    /* ── SCREENSHOT SLOT ──────────────────────────────────────────────── */
+    .screenshot-slot {
+      margin: 1.25rem 0 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-subtle);
+    }
+
+    .screenshot-slot img { display: block; width: 100%; height: auto; }
+
+    .screenshot-slot figcaption {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      padding: 0.6rem 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── MILESTONE ─────────────────────────────────────────────────── */
+    .milestone-block {
+      margin: 1.5rem 0 3rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .milestone-block p {
+      font-size: 1rem;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── BONUS / MONETIZATION ──────────────────────────────────────── */
     .bonus-block { margin: 3rem 0; }
 
     .bonus-block h2 {
       font-size: 1.4rem;
       margin: 0.25rem 0 1rem;
       color: var(--text);
+    }
+
+    .bonus-block h3 {
+      font-size: 1.05rem;
+      margin: 1.5rem 0 0.75rem;
+      color: var(--text);
+    }
+
+    .bonus-block ul:not(.checklist) {
+      margin: 0.5rem 0 1rem;
+      padding-left: 1.25rem;
+    }
+
+    .bonus-block > .prose > ul:not(.checklist) li {
+      margin-bottom: 0.4rem;
+      color: var(--text-muted);
     }
 
     .result-section-label {
@@ -713,51 +1012,39 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
       margin-bottom: 0.5rem;
     }
 
-    .prompt-block {
-      margin: 1.25rem 0 0;
-      padding: 1.5rem;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+    .mono-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
 
-    .prompt-block pre {
-      white-space: pre-wrap;
-      font-family: ui-monospace, 'SF Mono', Consolas, monospace;
-      font-size: 0.82rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      overflow-x: auto;
-      margin: 0;
+    .mono-item {
+      border-left: 3px solid var(--blue);
+      padding-left: 1rem;
     }
 
-    /* ── CROSS-LINK ────────────────────────────────────────────────── */
-    .xlink-block {
-      margin: 2.5rem 0;
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      text-align: center;
-    }
-
-    .xlink-block p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin: 0 0 0.85rem;
-    }
-
-    .xlink {
+    .mono-label {
       font-weight: 700;
-      color: var(--blue);
-      text-decoration: none;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
     }
 
-    .xlink:hover { text-decoration: underline; }
+    .mono-item ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mono-item li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
 
     /* ── FINAL CTA ─────────────────────────────────────────────────── */
     .final-cta { text-align: left; }
@@ -789,9 +1076,9 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
     @media (max-width: 600px) {
       .hook-block,
       .inline-cta,
-      .prompt-block,
-      .final-cta,
-      .xlink-block { padding: 1.25rem; }
+      .final-cta { padding: 1.25rem; }
+
+      .setup-fields { flex-direction: column; gap: 0.85rem; }
 
       .step { flex-direction: column; gap: 0.75rem; }
       .step-num { font-size: 0.95rem; width: auto; }
@@ -806,7 +1093,7 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
 
   <script is:inline>
     (function () {
-      var KEY = 'ai-newsletter-checklist-v1';
+      var KEY = 'newsletter-fast-track-checklist-v1';
       var boxes = Array.prototype.slice.call(
         document.querySelectorAll('.check-item input[type=checkbox]')
       );
@@ -836,35 +1123,37 @@ That's it. No fluff. Hit reply and tell me what you're working on — I read eve
 
       update();
 
-      /* ── Niche autofill ──────────────────────────────────────────── */
-      var NICHE_KEY = 'ai-newsletter-niche-v1';
-      var DEFAULT = '[your niche]';
-      var input = document.getElementById('niche-input');
-      var phs = Array.prototype.slice.call(document.querySelectorAll('.ph[data-ph]'));
-
-      function applyNiche(val) {
-        var text = val && val.trim() ? val.trim() : DEFAULT;
-        phs.forEach(function (el) { el.textContent = text; });
-      }
-
-      if (input) {
-        var savedNiche = '';
-        try { savedNiche = localStorage.getItem(NICHE_KEY) || ''; } catch (e) {}
-        if (savedNiche) { input.value = savedNiche; applyNiche(savedNiche); }
+      /* ── Placeholder autofill (niche / topic / link) ─────────────── */
+      function bindPlaceholder(inputId, phName, storageKey, defaultText) {
+        var input = document.getElementById(inputId);
+        if (!input) return;
+        var phs = Array.prototype.slice.call(
+          document.querySelectorAll('.ph[data-ph="' + phName + '"]')
+        );
+        function apply(val) {
+          var t = val && val.trim() ? val.trim() : defaultText;
+          phs.forEach(function (el) { el.textContent = t; });
+        }
+        var savedVal = '';
+        try { savedVal = localStorage.getItem(storageKey) || ''; } catch (e) {}
+        if (savedVal) { input.value = savedVal; apply(savedVal); }
         input.addEventListener('input', function () {
-          applyNiche(input.value);
-          try { localStorage.setItem(NICHE_KEY, input.value); } catch (e) {}
+          apply(input.value);
+          try { localStorage.setItem(storageKey, input.value); } catch (e) {}
         });
       }
+      bindPlaceholder('niche-input', 'niche', 'newsletter-fast-track-niche-v1', '[your niche]');
+      bindPlaceholder('topic-input', 'topic', 'newsletter-fast-track-topic-v1', '[TOPIC]');
+      bindPlaceholder('link-input', 'link', 'newsletter-fast-track-link-v1', '[link]');
 
-      /* ── Copy buttons ────────────────────────────────────────────── */
+      /* ── Copy buttons ─────────────────────────────────────────────── */
       var copyBtns = Array.prototype.slice.call(document.querySelectorAll('[data-copy]'));
       copyBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          var wrap = btn.closest('.ai-prompt');
-          var textEl = wrap ? wrap.querySelector('.ap-text') : null;
-          if (!textEl) return;
-          var text = textEl.textContent.trim();
+          var container = btn.closest('.script, .prompt-block') || btn.parentElement;
+          var src = container ? container.querySelector('blockquote, pre') : null;
+          if (!src) return;
+          var text = src.textContent.trim();
           var done = function () {
             var orig = btn.textContent;
             btn.textContent = 'Copied!';
