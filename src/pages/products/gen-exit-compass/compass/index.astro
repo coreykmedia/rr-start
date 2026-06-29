@@ -719,28 +719,6 @@ Using this information, please:
 </div>
 
 <script is:inline>
-  /* ── purchase event: fires on an intentional click, not just a page load. Deduped per-device via localStorage, since Beehiiv gives every buyer the same static link (no per-order token to verify against). ── */
-  (function () {
-    window.dataLayer = window.dataLayer || [];
-    var startBtn = document.getElementById('compass-start-btn');
-    if (!startBtn) return;
-    startBtn.addEventListener('click', function () {
-      try {
-        if (localStorage.getItem('rrCompassPurchaseFired')) return;
-        localStorage.setItem('rrCompassPurchaseFired', '1');
-      } catch (e) {}
-      window.dataLayer.push({
-        event: 'purchase',
-        ecommerce: {
-          transaction_id: 'gec-' + Date.now(),
-          currency: 'USD',
-          value: 27,
-          items: [{ item_id: 'gen-exit-compass', item_name: 'The Gen eXit Compass', price: 27, quantity: 1 }],
-        },
-      });
-    });
-  })();
-
   /* ── progress bar ── */
   var bar = document.getElementById('progress');
   window.addEventListener('scroll', function () {

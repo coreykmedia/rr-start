@@ -1,0 +1,64 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const WORKBOOK_URL = 'https://start.redefiningretirement.io/products/gen-exit-compass/compass';
+---
+
+<Layout
+  title="Thank You | Redefining Retirement"
+  description="Your Gen eXit Compass purchase is confirmed."
+  type="website"
+  noindex={true}
+  bare={true}
+>
+  <section class="section">
+    <div class="container ty-container">
+      <p class="ty-eyebrow">Purchase Confirmed</p>
+      <h1 class="ty-headline">You're in — <strong>The Gen eXit Compass</strong> is ready for you.</h1>
+      <p class="ty-subhead">Click below to start your workbook.</p>
+      <a class="btn btn-cta" href={WORKBOOK_URL}>Continue to Your Workbook &rarr;</a>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'purchase',
+      ecommerce: {
+        transaction_id: 'gec-' + Date.now(),
+        currency: 'USD',
+        value: 27,
+        items: [{ item_id: 'gen-exit-compass', item_name: 'The Gen eXit Compass', price: 27, quantity: 1 }],
+      },
+    });
+  })();
+</script>
+
+<style>
+  .ty-container {
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .ty-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .ty-headline {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-subhead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+</style>
