@@ -141,12 +141,46 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
       <div class="cta-block oto-cta">
         <h2>Complete Your Order Now to Get Your Discounted Copy Before This Offer Disappears</h2>
         <p class="price-line"><span class="price-was">$67</span> <span class="price-now">$27</span></p>
-        <a class="btn btn-cta" href={COMPASS_URL}>⚡ Get The Gen eXit Compass For $27 →</a>
+        <a class="btn btn-cta" href={COMPASS_URL} id="compass-cta-btn">⚡ Get The Gen eXit Compass For $27 →</a>
         <p class="cta-trust">** 30-Day Money-Back Guarantee ** &nbsp; ** 100% Safe and Secure Checkout **</p>
       </div>
     </div>
   </section>
 </Layout>
+
+<script is:inline>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+
+    // Carry UTM + fbclid params through to the Beehiiv checkout link.
+    var btn = document.getElementById('compass-cta-btn');
+    if (btn) {
+      var params = new URLSearchParams(window.location.search);
+      var passthrough = new URLSearchParams();
+      params.forEach(function (value, key) {
+        if (key.indexOf('utm_') === 0 || key === 'fbclid' || key === 'gclid') {
+          passthrough.append(key, value);
+        }
+      });
+      if ([...passthrough].length) {
+        var url = new URL(btn.href);
+        passthrough.forEach(function (value, key) { url.searchParams.set(key, value); });
+        btn.href = url.toString();
+      }
+
+      btn.addEventListener('click', function () {
+        window.dataLayer.push({
+          event: 'begin_checkout',
+          ecommerce: {
+            currency: 'USD',
+            value: 27,
+            items: [{ item_id: 'gen-exit-compass', item_name: 'The Gen eXit Compass', price: 27, quantity: 1 }],
+          },
+        });
+      });
+    }
+  })();
+</script>
 
 <style>
   .ty-container {
