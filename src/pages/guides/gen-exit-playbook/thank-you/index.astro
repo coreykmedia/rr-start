@@ -152,6 +152,10 @@ const COMPASS_URL = 'https://redefiningretirement.io/products/the-gen-exit-compa
   (function () {
     window.dataLayer = window.dataLayer || [];
 
+    // Fire on page load — this page is only reachable via Beehiiv signup redirect.
+    // Used by Meta Pixel - Lead in GTM (avoids race condition with signedUp + redirect).
+    window.dataLayer.push({ event: 'subscriber_signup_confirmed' });
+
     // Carry UTM + fbclid params through to the Beehiiv checkout link.
     var btn = document.getElementById('compass-cta-btn');
     if (btn) {
