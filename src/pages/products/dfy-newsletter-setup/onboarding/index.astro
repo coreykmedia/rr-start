@@ -1,0 +1,168 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const BEEHIIV_PARTNER_URL = 'https://www.beehiiv.com/?via=corey'; // TODO: confirm affiliate link
+const INTAKE_FORM_URL = 'https://airtable.com/appIZWByRN8VbJ0u0/pagf3NCtNNVSyENgE/form';
+const COREY_EMAIL = 'ckmedia@fastmail.com';
+---
+
+<Layout
+  title="Your Next Steps | Redefining Retirement"
+  description="Complete these three steps to get your Done-For-You MVP Newsletter Setup started."
+  type="website"
+  noindex={true}
+  bare={true}
+>
+  <section class="section">
+    <div class="container ob-container">
+
+      <p class="ob-eyebrow">Purchase Confirmed</p>
+      <h1 class="ob-headline">Congratulations — Your Newsletter Setup Has Started.</h1>
+      <p class="ob-intro">You're one step closer to owning your audience. But first, I need the keys to the engine.</p>
+
+      <div class="urgency-box">
+        <strong>IMPORTANT: Your 72-Hour Guarantee Clock Starts NOW.</strong><br />
+        I cannot begin work until I have access to your account and your brand assets. Complete all three steps below to get started.
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <h2 class="step-title">Create Your Beehiiv Account <span class="required">(Required)</span></h2>
+        </div>
+        <p>You must sign up for the <strong>Scale Plan</strong>. This is non-negotiable — it's the only plan that lets me join your account as a team member without sharing your password.</p>
+        <a href={BEEHIIV_PARTNER_URL} target="_blank" rel="noopener" class="step-link">Sign up for Beehiiv Scale &rarr;</a>
+        <p class="note">Use code <strong>MIGRATE</strong> at checkout for 20% off your first 3 months. (This is my partner link.)</p>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <h2 class="step-title">Grant Me "Draftsman" Access</h2>
+        </div>
+        <p>Once you're logged into Beehiiv:</p>
+        <ol class="step-list">
+          <li>Go to <strong>Settings &rarr; Team</strong></li>
+          <li>Click <strong>"Invite Team Member"</strong></li>
+          <li>Invite me at: <strong>{COREY_EMAIL}</strong></li>
+          <li>Set my role to <strong>"Admin"</strong> or <strong>"Manager"</strong> so I have the permissions to build everything</li>
+        </ol>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <span class="step-number">3</span>
+          <h2 class="step-title">Fill Out the "Blueprint" Intake Form</h2>
+        </div>
+        <p>This is where you give me your logo, links, and branding so I can customize your setup. It takes about 5 minutes.</p>
+        <a href={INTAKE_FORM_URL} target="_blank" rel="noopener" class="btn btn-cta">Access Your Newsletter Setup Intake Form &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .ob-container {
+    max-width: 720px;
+  }
+
+  .ob-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .ob-headline {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .ob-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .urgency-box {
+    background: #fff8e1;
+    border: 2px solid #f59e0b;
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .step {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .required {
+    font-size: 0.85rem;
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .step-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .step-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .step-link {
+    display: inline-block;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .btn-cta {
+    margin-top: 0.75rem;
+    height: 56px;
+    padding: 0 2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+</style>
