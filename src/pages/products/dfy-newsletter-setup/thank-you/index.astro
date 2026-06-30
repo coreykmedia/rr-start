@@ -1,0 +1,72 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const INSTRUCTIONS_URL = 'https://redefiningretirement.io/c/thank-you-purchase-migration-kit';
+const PRODUCT_PRICE = 497;
+---
+
+<Layout
+  title="Thank You | Redefining Retirement"
+  description="Your Done-For-You MVP Newsletter Setup purchase is confirmed."
+  type="website"
+  noindex={true}
+  bare={true}
+>
+  <section class="section">
+    <div class="container ty-container">
+      <p class="ty-eyebrow">Purchase Confirmed</p>
+      <h1 class="ty-headline">You're in — your <strong>Done-For-You MVP Newsletter Setup</strong> is confirmed.</h1>
+      <p class="ty-subhead">Click below to see your next steps and get started.</p>
+      <a class="btn btn-cta" href={INSTRUCTIONS_URL}>See Your Next Steps &rarr;</a>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline define:vars={{ PRODUCT_PRICE }}>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'purchase',
+      ecommerce: {
+        transaction_id: 'dfy-' + Date.now(),
+        currency: 'USD',
+        value: PRODUCT_PRICE,
+        items: [{ item_id: 'dfy-newsletter-setup', item_name: 'Done-For-You MVP Newsletter Setup', price: PRODUCT_PRICE, quantity: 1 }],
+      },
+    });
+  })();
+</script>
+
+<style>
+  .ty-container {
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .ty-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .ty-headline {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-subhead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .btn-cta {
+    height: 56px;
+    padding: 0 2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+</style>
