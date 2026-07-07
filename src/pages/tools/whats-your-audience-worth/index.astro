@@ -171,15 +171,22 @@ import Layout from '../../../layouts/Layout.astro';
           <p class="cta-note">Free plan available. Affiliate link — I earn a small commission at no cost to you.</p>
         </div>
 
-        <!-- CTA 2: First 50 Subscribers quick-start (free) -->
-        <div class="cta-card cta-quickstart">
-          <div class="cta-card__label">Free guide</div>
-          <h2>Here's how to close that gap — on me.</h2>
-          <p>Views, followers, subscribers — that's not an audience. The exact 3-step plan to set up your system and start moving people onto your list this week, starting from zero. Same steps I'd use myself. No paywall, no upsell.</p>
-          <div class="cta-form">
-            <div data-beehiiv-form-id="c7512ec6-96c4-497a-851a-3d8b9f59c108"></div>
-            <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="c7512ec6-96c4-497a-851a-3d8b9f59c108"></script>
-            <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+        <!-- CTA 2: Newsletter Fast-Track Checklist (free) -->
+        <div class="cta-card cta-quickstart cta-with-cover">
+          <img
+            src="/images/resources/newsletter-fast-track-cover.jpg"
+            alt="Newsletter Fast-Track Checklist cover"
+            class="cta-cover-img"
+          />
+          <div class="cta-cover-content">
+            <div class="cta-card__label">Free guide</div>
+            <h2>Here's how to close that gap — on me.</h2>
+            <p>Views, followers, subscribers — that's not an audience. Grab the <strong>Newsletter Fast-Track Checklist</strong> — the 7-step plan to get your email list live and collecting, starting from zero. Prompts included — no blank screens. Same steps I use for myself and my clients. No paywall, no upsell.</p>
+            <div class="cta-form">
+              <div data-beehiiv-form-id="16b3b3bd-0b54-4ec7-8d11-75e33922d658"></div>
+              <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="16b3b3bd-0b54-4ec7-8d11-75e33922d658"></script>
+              <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+            </div>
           </div>
         </div>
 
@@ -962,6 +969,36 @@ import Layout from '../../../layouts/Layout.astro';
     .cta-quickstart {
       border-left: 4px solid #e5e7eb;
       background: #f7f0d5;
+    }
+
+    .cta-with-cover {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .cta-cover-img {
+      width: 100px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .cta-cover-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    @media (max-width: 600px) {
+      .cta-with-cover {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .cta-cover-img {
+        width: 120px;
+      }
     }
 
     .cta-card__label {
