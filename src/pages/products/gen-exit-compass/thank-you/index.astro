@@ -24,6 +24,11 @@ const WORKBOOK_URL = 'https://start.redefiningretirement.io/products/gen-exit-co
 <script is:inline>
   (function () {
     window.dataLayer = window.dataLayer || [];
+    var KEY = 'rr_purchase_fired_gen_exit_compass';
+    try {
+      if (sessionStorage.getItem(KEY)) return; // already counted this session — don't inflate on refresh/revisit
+      sessionStorage.setItem(KEY, '1');
+    } catch (e) { /* sessionStorage unavailable — fall through and fire once on this load */ }
     window.dataLayer.push({
       event: 'purchase',
       ecommerce: {
