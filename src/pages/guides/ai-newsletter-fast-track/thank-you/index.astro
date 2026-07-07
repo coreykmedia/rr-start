@@ -93,12 +93,16 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
 
         <p>And once the plumbing was in, more subscribers started arriving on their own — from Google, Instagram, Bing, even X.</p>
 
-        <!-- TODO: cropped Beehiiv dashboard screenshot goes here once client sign-off is confirmed -->
-
-        <div class="testimonial-block">
-          <p>"We didn't do anything fancy. We just installed the plumbing."</p>
-          <span class="testimonial-attr">— from a two-person finance-team newsletter I helped launch</span>
-        </div>
+        <figure class="shot-fig">
+          <img
+            src="/images/beehiiv-linkedin-case-study.jpg"
+            alt="Beehiiv dashboard showing subscriber acquisition sources — 37% from LinkedIn, plus Google, Instagram, Bing and X"
+            width="444"
+            height="640"
+            loading="lazy"
+          />
+          <figcaption>Their real Beehiiv dashboard: 0 → 725 owned subscribers, nearly 300 straight from LinkedIn — plus organic sign-ups from Google, Instagram, Bing &amp; X.</figcaption>
+        </figure>
 
         <p>And here's a creator who used these same steps to get started:</p>
 
@@ -479,5 +483,33 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
     font-size: 0.92rem;
     color: var(--text-muted);
     margin: 0.35rem 0 0;
+  }
+
+  /* Buttons inside the prose block inherit the prose link color (blue),
+     which makes their white label invisible on the blue button. Force white. */
+  .oto-prose a.btn {
+    color: #ffffff;
+  }
+
+  .shot-fig {
+    margin: 1.5rem auto;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .shot-fig img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  }
+
+  .shot-fig figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--text-muted);
   }
 </style>
