@@ -41,9 +41,11 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
 
       <p><strong>And it dictates the answers to ALL the other questions…</strong> like what to write about, which platform to use, how often you need to send, and where the real money actually is — and so much more.</p>
 
-      <p>Now, the Newsletter Fast-Track Checklist on its way to your inbox covers the basics — the 7 steps to get your list live and collecting, plus starter prompts for each one…</p>
+      <p>Now — the Newsletter Fast-Track Checklist on its way to your inbox lays out the whole plan: every step, in order, with a starter prompt for each. That's genuinely everything you need to <em>know</em> to get your list live.</p>
 
-      <p>But if you're serious about actually finishing this instead of starting it (again) and letting it stall out…</p>
+      <p>But a few of those steps — the signup page, the welcome email, the outreach messages — are where most people stall out, staring at a blank screen trying to find the words. <strong>The checklist tells you to do them. The Kit writes them for you.</strong></p>
+
+      <p>So if you're serious about actually finishing this instead of starting it (again) and letting it stall out…</p>
 
       <p>And want the exact fill-in-the-blank prompts and scripts that get it done today…</p>
 
@@ -57,11 +59,11 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
       <p>Inside, you'll discover:</p>
 
       <ul class="check-list">
-        <li><strong>Pro fill-in-the-blank prompts for all 7 steps</strong> — fill in your niche once, the AI writes the rest</li>
+        <li><strong>Pro fill-in-the-blank prompts for every step</strong> — fill in your niche once, the AI writes the rest</li>
         <li>My exact welcome-email script — the one I actually use, not a generic template</li>
         <li>The cold-outreach DM sequence + referral ask that seeds your first subscribers one real relationship at a time</li>
         <li>A signup-page prompt + template built to convert the followers you already have</li>
-        <li>BONUS: short video walkthroughs so you know exactly what to click, every step</li>
+        <li>BONUS: short video walkthroughs of the trickiest parts, plus a full start-to-finish overview</li>
       </ul>
 
       <p>I've built newsletters from scratch more than once — including the slow, painful way, before I figured out what actually moves the needle…</p>
@@ -81,7 +83,17 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
       <div class="proof-block">
         <p class="proof-question">Does this actually work?</p>
 
-        <p>Yep. I helped a two-person finance team — about as <em>"boring"</em> and regulated a niche as it gets — move their LinkedIn audience to an owned email list using this exact process. <strong>725 subscribers. Zero algorithm reliance.</strong></p>
+        <p>Yep. I recently helped a two-person finance team — about as <em>"boring"</em> and regulated a niche as it gets — build an owned email list from scratch using this exact process.</p>
+
+        <div class="stats">
+          <div class="stat"><div class="n">0 → 725</div><div class="l">owned subscribers in a few weeks</div></div>
+          <div class="stat"><div class="n">~300</div><div class="l">straight from their LinkedIn following</div></div>
+          <div class="stat"><div class="n">0</div><div class="l">reliance on the algorithm now</div></div>
+        </div>
+
+        <p>And once the plumbing was in, more subscribers started arriving on their own — from Google, Instagram, Bing, even X.</p>
+
+        <!-- TODO: cropped Beehiiv dashboard screenshot goes here once client sign-off is confirmed -->
 
         <div class="testimonial-block">
           <p>"We didn't do anything fancy. We just installed the plumbing."</p>
@@ -126,8 +138,6 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
 
       <p>You'll be far more likely to want my help with the next step: having the whole thing built for you.</p>
 
-      <p>So, drum roll please…</p>
-
       <p class="price-reveal">Your investment today is just… <strong>$27.</strong></p>
 
       <p>That's it.</p>
@@ -138,7 +148,14 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
 
       <p>So there's no reason to wait.</p>
 
-      <p>Plus, if for some reason you're not satisfied, just email me at <a href="mailto:coreysretirement@fastmail.com">coreysretirement@fastmail.com</a> and I'll refund your purchase with no hassles, headaches, or questions asked.</p>
+      <div class="oto-cta" style="margin: 1.5rem 0 2rem;">
+        <a class="btn btn-cta kit-cta-link" href={KIT_URL}>⚡ Get The Kit Now — Just $27 →</a>
+      </div>
+
+      <div class="guarantee-box">
+        <span class="g-title">🛡️ 30-Day Money-Back Guarantee</span>
+        <p>If for some reason you're not satisfied, just email me at <a href="mailto:coreysretirement@fastmail.com">coreysretirement@fastmail.com</a> and I'll refund your purchase — no hassles, headaches, or questions asked.</p>
+      </div>
 
       <p>But just a heads up… <strong>this is a one-time-only offer for new subscribers.</strong> It's only available right here on this page. You won't find it anywhere else on the internet.</p>
 
@@ -149,8 +166,9 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
       <div class="cta-block oto-cta">
         <h2>Complete Your Order Now to Get Your Discounted Copy Before This Offer Disappears</h2>
         <p class="price-line"><span class="price-was">$67</span> <span class="price-now">$27</span></p>
-        <a class="btn btn-cta" href={KIT_URL} id="kit-cta-btn">⚡ Get The Newsletter AI Fast-Track Kit For $27 →</a>
+        <a class="btn btn-cta kit-cta-link" href={KIT_URL} id="kit-cta-btn">⚡ Get The Newsletter AI Fast-Track Kit For $27 →</a>
         <p class="cta-trust">** 30-Day Money-Back Guarantee ** &nbsp; ** 100% Safe and Secure Checkout **</p>
+        <a class="decline-link" href="https://start.redefiningretirement.io/guides/ai-newsletter-fast-track/checklist">No thanks — I'm all set with my free checklist.</a>
       </div>
     </div>
   </section>
@@ -164,16 +182,17 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
     // Used by Meta Pixel - Lead in GTM (avoids race condition with signedUp + redirect).
     window.dataLayer.push({ event: 'subscriber_signup_confirmed' });
 
-    // Carry UTM + fbclid params through to the Beehiiv checkout link.
-    var btn = document.getElementById('kit-cta-btn');
-    if (btn) {
-      var params = new URLSearchParams(window.location.search);
-      var passthrough = new URLSearchParams();
-      params.forEach(function (value, key) {
-        if (key.indexOf('utm_') === 0 || key === 'fbclid' || key === 'gclid') {
-          passthrough.append(key, value);
-        }
-      });
+    // Carry UTM + fbclid params through to the Beehiiv checkout link(s).
+    var btns = document.querySelectorAll('.kit-cta-link');
+    var params = new URLSearchParams(window.location.search);
+    var passthrough = new URLSearchParams();
+    params.forEach(function (value, key) {
+      if (key.indexOf('utm_') === 0 || key === 'fbclid' || key === 'gclid') {
+        passthrough.append(key, value);
+      }
+    });
+
+    btns.forEach(function (btn) {
       if ([...passthrough].length) {
         var url = new URL(btn.href, window.location.origin);
         passthrough.forEach(function (value, key) { url.searchParams.set(key, value); });
@@ -190,7 +209,7 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
           },
         });
       });
-    }
+    });
   })();
 </script>
 
@@ -307,20 +326,56 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
 
   .proof-block {
     margin: 2rem 0;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
   }
 
   .proof-question {
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     color: var(--text);
+    margin-top: 0 !important;
     margin-bottom: 0.75rem !important;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+  }
+
+  .stat {
+    flex: 1 1 140px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+
+  .stat .n {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1;
+  }
+
+  .stat .l {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+    line-height: 1.35;
   }
 
   .testimonial-block {
     position: relative;
     padding: 1.5rem 1.5rem 1.25rem 2.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border);
     border-left: 4px solid var(--blue);
-    background: var(--bg-subtle);
     border-radius: var(--radius);
     margin: 1.25rem 0;
   }
@@ -401,5 +456,28 @@ const KIT_URL = 'https://redefiningretirement.io/products/newsletter-ai-fast-tra
     font-size: 0.85rem;
     color: var(--text-light);
     text-decoration: underline;
+  }
+
+  .guarantee-box {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0;
+    text-align: center;
+  }
+
+  .guarantee-box .g-title {
+    display: block;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .guarantee-box p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin: 0.35rem 0 0;
   }
 </style>
