@@ -10,37 +10,56 @@ import Layout from '../../../layouts/Layout.astro';
   <article class="section">
     <div class="container narrow">
 
-      <!-- ── HERO ─────────────────────────────────────────────────── -->
-      <header class="article-header">
-        <span class="tag">Free Calculator</span>
-        <h1 class="article-title">What's Your Audience Worth?</h1>
-        <p class="article-deck">
-          Curious what your following could actually be worth as an email list? So was I, so I built this.
-        </p>
-      </header>
+      <div class="hero-grid">
+        <div class="hero-left">
 
-      <!-- Hero image — src swapped in once image is approved -->
-      <div class="hero-img-wrap">
-        <img
-          src="/tools/audience-worth-hero.jpg"
-          alt=""
-          class="hero-img"
-          aria-hidden="true"
-          onerror="this.parentElement.style.display='none'"
-        />
-      </div>
+          <!-- ── HERO ─────────────────────────────────────────────── -->
+          <header class="article-header">
+            <span class="tag">Free Calculator</span>
+            <h1 class="article-title">What's Your Audience Worth?</h1>
+            <p class="article-deck">
+              Whether you've got 50K followers or you're just getting rolling — every person who finds you and leaves without landing on your list is probably gone for good. I learned that one the hard way. This free calculator shows what your audience could be worth as a list you own.
+            </p>
+            <p class="deck-friction">Takes about 60 seconds. No email required.</p>
+          </header>
 
-      <!-- ── INTRO COPY ─────────────────────────────────────────── -->
-      <div class="prose intro-prose">
-        <p>I've built a few email lists over the years, so I know roughly what they're worth. But what kept catching my eye was all these creators out there — big YouTube followings, solid TikTok numbers — with zero email list. None.</p>
-        <p>And I started thinking: do they even know what they're sitting on? Or more to the point — what they're <em>risking</em> by not having it?</p>
-        <p>So I built this. Answer a few quick questions about your audience, and I'll show you roughly what it could be worth as an email list — the kind of number that's hard to un-see once you've seen it.</p>
-        <p class="jerry-line"><em>You know the line from Jerry Maguire. Stop wondering. Let's see your number.</em></p>
-      </div>
+          <!-- ── BENCHMARK COMPARISON ────────────────────────────────── -->
+          <div class="benchmark-viz">
+            <div class="benchmark-row">
+              <span class="benchmark-label">1,000 social followers</span>
+              <div class="benchmark-bar-line">
+                <div class="benchmark-bar-track">
+                  <div class="benchmark-bar bar-social" style="width: 13.6%"></div>
+                </div>
+                <span class="benchmark-value">$79/mo</span>
+              </div>
+            </div>
+            <div class="benchmark-row">
+              <span class="benchmark-label">1,000 email subscribers</span>
+              <div class="benchmark-bar-line">
+                <div class="benchmark-bar-track">
+                  <div class="benchmark-bar bar-email" style="width: 100%"></div>
+                </div>
+                <span class="benchmark-value benchmark-value--email">$582/mo</span>
+              </div>
+            </div>
+            <p class="benchmark-source">Benchmarks from a study of 2,501 marketers.</p>
+          </div>
 
-      <!-- ── CALCULATOR ────────────────────────────────────────────── -->
-      <div class="calc-card">
-        <form id="calc-form" novalidate>
+          <!-- ── INTRO COPY ─────────────────────────────────────────── -->
+          <div class="prose intro-prose">
+            <p>Your followers are rented. Your email list is owned. That's the whole game.</p>
+            <p class="jerry-line"><em>You know the line from Jerry Maguire. Stop wondering. Let's see your number.</em></p>
+          </div>
+
+        </div>
+
+        <div class="hero-right">
+
+          <!-- ── CALCULATOR ──────────────────────────────────────────── -->
+          <div class="calc-card">
+            <span class="tag calc-tag">Free Calculator</span>
+            <form id="calc-form" novalidate>
 
           <div class="field">
             <label for="niche">What's your topic, niche, or profession?</label>
@@ -48,7 +67,7 @@ import Layout from '../../../layouts/Layout.astro';
               type="text"
               id="niche"
               name="niche"
-              placeholder="e.g. Fitness Coach, Personal Finance, Productivity Coach, Parenting Blogger"
+              placeholder="e.g. Woodworking YouTuber, Fitness Coach, Personal Finance Creator, Parenting Blogger"
               autocomplete="off"
             />
           </div>
@@ -143,7 +162,16 @@ import Layout from '../../../layouts/Layout.astro';
           <div class="form-error hidden" id="form-error" role="alert"></div>
 
           <button type="submit" class="btn btn-calc">Show Me The Money →</button>
-        </form>
+          <p class="calc-credibility">Benchmarks based on a study of 2,501 marketers.</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── BUILDER'S NOTE ─────────────────────────────────────────── -->
+      <div class="prose builder-note">
+        <p>I've been burned by this before. Years ago I had a blog pulling 10,000+ visitors a week from Google — real traffic, real reach — and I never collected a single email. When the traffic dried up, I had nothing to show for it. No list, no way to reach a single one of those people again.</p>
       </div>
 
       <!-- ── RESULTS (injected by JS) ──────────────────────────────── -->
@@ -180,8 +208,8 @@ import Layout from '../../../layouts/Layout.astro';
           />
           <div class="cta-cover-content">
             <div class="cta-card__label">Free guide</div>
-            <h2>Here's how to close that gap — on me.</h2>
-            <p>Views, followers, subscribers — that's not an audience. Grab the <strong>Newsletter Fast-Track Checklist</strong> — the 7-step plan to get your email list live and collecting, starting from zero. Prompts included — no blank screens. Same steps I use for myself and my clients. No paywall, no upsell.</p>
+            <h2>Own the Audience You Already Earned</h2>
+            <p>Views, followers, subscribers — that's not an audience. Grab the <strong>Newsletter Fast-Track Checklist</strong> — the exact path already mapped out to get your email list live and collecting, starting from zero. Prompts included — no blank screens. Same approach I use for myself and my clients. No paywall.</p>
             <div class="cta-form">
               <div data-beehiiv-form-id="16b3b3bd-0b54-4ec7-8d11-75e33922d658"></div>
               <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="16b3b3bd-0b54-4ec7-8d11-75e33922d658"></script>
@@ -579,24 +607,16 @@ import Layout from '../../../layouts/Layout.astro';
       margin-bottom: 0;
     }
 
-    /* Hero image */
-    .hero-img-wrap {
-      margin: 2rem 0;
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
+    .deck-friction {
+      color: var(--text-light);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0;
     }
 
     /* Intro prose */
     .intro-prose {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .jerry-line {
@@ -604,13 +624,139 @@ import Layout from '../../../layouts/Layout.astro';
       margin-bottom: 0 !important;
     }
 
+    /* Builder's note */
+    .builder-note {
+      background: var(--bg-subtle);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .builder-note p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-style: italic;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .calc-credibility {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      text-align: center;
+      margin: 0.75rem 0 0;
+    }
+
+    /* ── HERO / CALC GRID ──────────────────────────────────────────── */
+    .hero-grid {
+      display: block;
+    }
+
+    .hero-right {
+      margin-top: 0;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 2.5rem;
+        align-items: start;
+        width: 100vw;
+        max-width: 1080px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .hero-right {
+        position: sticky;
+        top: 1.5rem;
+      }
+    }
+
+    /* ── BENCHMARK COMPARISON ─────────────────────────────────────── */
+    .benchmark-viz {
+      margin: 1.25rem 0 1.75rem;
+      max-width: 420px;
+    }
+
+    .benchmark-row {
+      margin-bottom: 0.65rem;
+    }
+
+    .benchmark-row:last-of-type {
+      margin-bottom: 0.5rem;
+    }
+
+    .benchmark-label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .benchmark-bar-line {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .benchmark-bar-track {
+      flex: 1;
+      height: 10px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+    }
+
+    .benchmark-bar {
+      height: 100%;
+      border-radius: var(--radius-pill);
+    }
+
+    .bar-social {
+      background: #cbd5e1;
+    }
+
+    .bar-email {
+      background: var(--blue);
+    }
+
+    .benchmark-value {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text);
+      white-space: nowrap;
+      min-width: 56px;
+      text-align: right;
+    }
+
+    .benchmark-value--email {
+      color: var(--blue);
+    }
+
+    .benchmark-source {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      margin-top: 0.5rem;
+    }
+
     /* ── CALCULATOR ────────────────────────────────────────────────── */
     .calc-card {
       background: var(--bg-subtle);
       border: 1px solid var(--border);
+      border-top: 4px solid var(--blue);
       border-radius: var(--radius);
-      padding: 2rem;
+      padding: 2.25rem 2rem;
       margin-bottom: 2.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.07);
+    }
+
+    .calc-tag {
+      background: rgba(9, 161, 231, 0.1);
+      font-weight: 600;
     }
 
     .field { margin-bottom: 1.75rem; }
@@ -733,11 +879,14 @@ import Layout from '../../../layouts/Layout.astro';
     }
 
     .btn-calc {
-      font-size: 1.05rem;
-      height: 52px;
+      display: flex;
+      font-size: 1.15rem;
+      font-weight: 700;
+      height: 60px;
       padding: 0 2rem;
       width: 100%;
-      margin-top: 0.5rem;
+      margin: 0.5rem auto 0;
+      box-shadow: 0 4px 14px rgba(9, 161, 231, 0.32);
     }
 
     @media (min-width: 480px) {
@@ -1056,7 +1205,6 @@ import Layout from '../../../layouts/Layout.astro';
       .result-headline-block { padding: 1.25rem; }
 
       .hide-mobile { display: none; }
-      .hero-img { height: 220px; }
 
       .ms-range { display: none; }
     }
