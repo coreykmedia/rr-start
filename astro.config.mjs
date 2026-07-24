@@ -7,5 +7,6 @@ export default defineConfig({
     '/guides/ai-newsletter-launch-checklist': '/guides/ai-newsletter-fast-track/checklist',
     '/gen-exit': '/guides/gen-exit-playbook',
     '/audience-worth': '/tools/whats-your-audience-worth',
+    '/first-50': '/guides/ai-newsletter-fast-track',
   },
 });
