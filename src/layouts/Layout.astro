@@ -2,6 +2,7 @@
 import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AffiliateTracking from '../components/AffiliateTracking.astro';
 import '../styles/global.css';
 
 export interface Props {
@@ -60,6 +61,8 @@ const { bare, ...seoProps } = Astro.props;
         <Footer />
       </Fragment>
     )}
+
+    <AffiliateTracking />
   </body>
 </html>
 

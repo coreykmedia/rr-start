@@ -1,5 +1,6 @@
 ---
 import SEO from '../../../../components/SEO.astro';
+import AffiliateTracking from '../../../../components/AffiliateTracking.astro';
 ---
 
 <!doctype html>
@@ -303,6 +304,7 @@ import SEO from '../../../../components/SEO.astro';
   document.getElementById('delivered-date').textContent = "Delivered " + months[d.getMonth()] + " " + d.getFullYear();
 </script>
 
+    <AffiliateTracking />
   </body>
 </html>
 

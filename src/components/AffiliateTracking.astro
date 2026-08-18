@@ -1,0 +1,59 @@
+---
+// Pushes an `affiliate_click` event into the dataLayer for GTM-KCV3GWZ.
+// Event name and parameters match the CKM site so one GA4 config covers both.
+// Include this on any page that is NOT wrapped in Layout.astro.
+---
+
+<script is:inline>
+  (function () {
+    if (window.__rrAffiliateTrackingBound) return;
+    window.__rrAffiliateTrackingBound = true;
+
+    var AFFILIATE_PATTERNS = [
+      { pattern: /riverside\.partnerlinks\.io\//, name: 'riverside' },
+      { pattern: /partners\.convertkit\.com\//, name: 'convertkit' },
+      { pattern: /go\.granola\.ai\//, name: 'granola' },
+      { pattern: /beehiiv\.com.*[?&]via=/, name: 'beehiiv' },
+    ];
+
+    function getAffiliateName(href) {
+      if (!href) return null;
+      for (var i = 0; i < AFFILIATE_PATTERNS.length; i++) {
+        if (AFFILIATE_PATTERNS[i].pattern.test(href)) {
+          return AFFILIATE_PATTERNS[i].name;
+        }
+      }
+      return null;
+    }
+
+    function trackAffiliate(name, href, linkText, type) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'affiliate_click',
+        affiliate_name: name,
+        affiliate_link_url: href,
+        affiliate_link_text: (linkText || '').trim().substring(0, 100),
+        affiliate_link_type: type || 'unknown',
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href') || '';
+      var linkText = link.textContent || link.getAttribute('aria-label') || '';
+
+      var explicitName = link.getAttribute('data-affiliate');
+      if (explicitName) {
+        trackAffiliate(explicitName, href, linkText, 'explicit');
+        return;
+      }
+
+      var name = getAffiliateName(href);
+      if (name) {
+        trackAffiliate(name, href, linkText, 'external');
+      }
+    });
+  })();
+</script>
