@@ -17,7 +17,7 @@ const tools = [
   {
     category: 'Newsletter Platforms',
     items: [
-      { name: 'Beehiiv', desc: 'Built for growth. Strong monetization features, referral program, and analytics.', type: 'Affiliate link' },
+      { name: 'Beehiiv', url: 'https://www.beehiiv.com?via=QUICKSTART', desc: 'Built for growth. Strong monetization features, referral program, and analytics.', type: 'Affiliate link' },
       { name: 'Kit (formerly ConvertKit)', desc: 'Creator-first email platform. Powerful automations, great for selling digital products.', type: 'Affiliate link' },
       { name: 'Substack', desc: 'Free to start, takes a cut of paid subscriptions. Best for writers who want simplicity.', type: 'No affiliate' },
     ]
@@ -27,7 +27,7 @@ const tools = [
     items: [
       { name: 'Transistor.fm', desc: 'Podcast hosting with clean analytics and private podcast support.', type: 'Affiliate link' },
       { name: 'Descript', desc: 'Edit video and audio like a document. Removes filler words automatically.', type: 'No affiliate' },
-      { name: 'Riverside.fm', desc: 'High-quality remote recordings for podcasts and video interviews.', type: 'No affiliate' },
+      { name: 'Riverside.fm', url: 'https://riverside.partnerlinks.io/rr', desc: 'High-quality remote recordings for podcasts and video interviews. Fast enough to edit and publish the same day.', type: 'Affiliate link' },
     ]
   },
   {
@@ -68,10 +68,16 @@ const tools = [
         <div class="tool-group">
           <h2 class="group-heading"><span class="blue-dot"></span>{category}</h2>
           <div class="tool-list">
-            {items.map(({ name, desc, type }) => (
+            {items.map(({ name, url, desc, type }) => (
               <div class="tool-card">
                 <div class="tool-info">
-                  <h3>{name}</h3>
+                  <h3>
+                    {url ? (
+                      <a href={url} target="_blank" rel="noopener sponsored">{name}</a>
+                    ) : (
+                      name
+                    )}
+                  </h3>
                   <p>{desc}</p>
                 </div>
                 <span class={`tool-badge ${type === 'Affiliate link' ? 'tool-badge--affiliate' : ''}`}>
@@ -168,6 +174,15 @@ const tools = [
     font-size: 1rem;
     color: var(--text);
     margin-bottom: 0.3rem;
+  }
+
+  .tool-info h3 a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .tool-info h3 a:hover {
+    text-decoration: underline;
   }
 
   .tool-info p {
