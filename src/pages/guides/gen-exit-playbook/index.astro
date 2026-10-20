@@ -33,6 +33,7 @@ import Layout from '../../../layouts/Layout.astro';
           <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="a1338b7d-fb27-45f3-8db3-24f2a738c0be"></script>
           <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
         </div>
+        <a href="https://redefiningretirement.io/c/gen-exit-playbook" class="sq-why-btn sq-form-fallback" hidden>Get the Free Playbook &rarr;</a>
 
         <p class="sq-trust">Free. About a 15-minute read. No hustle-bro energy or smoke up your ass. Unsubscribe whenever, no hard feelings.</p>
       </div>
@@ -148,6 +149,15 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
     </div>
   </section>
+  <!-- If the beehiiv form fails to load (rate limit, blocker, outage), show a button to the beehiiv-hosted signup page -->
+  <script is:inline>
+    setTimeout(function () {
+      if (!document.querySelector('.sq-form iframe')) {
+        document.querySelector('.sq-form').style.display = 'none';
+        document.querySelector('.sq-form-fallback').hidden = false;
+      }
+    }, 6000);
+  </script>
 </Layout>
 
 <style>
@@ -325,6 +335,7 @@ import Layout from '../../../layouts/Layout.astro';
   .sq-headline { order: 2; }
   .sq-subhead { order: 3; }
   .sq-form { order: 4; }
+  .sq-form-fallback { order: 4; text-align: center; }
   .sq-trust { order: 5; }
 
   .sq-below {
