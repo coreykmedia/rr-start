@@ -90,7 +90,7 @@ const PLAYBOOK_URL = 'https://start.redefiningretirement.io/guides/gen-exit-play
             <li>Use the export window to post to Instagram and TikTok, schedule it, and send it to YouTube.</li>
           </ol>
           <p class="tip"><strong>Tip: set up a Magic Episodes template once.</strong> Pick your captions template and turn on pause and filler word removal, smooth cuts, fluff finder, and Magic Audio. After that, every new recording gets cleaned up before you even start editing.</p>
-          <a href={RIVERSIDE_URL} class="btn" target="_blank" rel="noopener noreferrer sponsored">Try Riverside &rarr;</a>
+          <a href={RIVERSIDE_URL} class="btn" target="_blank" rel="noopener noreferrer sponsored">Try Riverside free</a>
         </div>
 
         <div class="tool-card">
@@ -192,6 +192,13 @@ const PLAYBOOK_URL = 'https://start.redefiningretirement.io/guides/gen-exit-play
   .tool-card h3 { margin-top: 0; }
   .tool-card ol { margin: 0 0 1.25rem 1.25rem; color: var(--text-muted); line-height: 1.7; }
   .tool-card .btn { display: inline-flex; align-items: center; }
+  /* .prose a (global) outranks .btn; force white text on pink CTA buttons (#DB2777 ≈4.9:1, hover #BE185D ≈6.4:1) */
+  .tool-card a.btn,
+  .tool-card a.btn:link,
+  .tool-card a.btn:visited,
+  .tool-card a.btn:hover,
+  .tool-card a.btn:focus,
+  .tool-card a.btn:active { color: #fff; text-decoration: none; }
   .prompt {
     white-space: pre-wrap; font-family: ui-monospace, Menlo, monospace; font-size: 0.92rem;
     line-height: 1.6; background: var(--bg-subtle); border: 1px solid var(--border);
