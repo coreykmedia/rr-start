@@ -23,7 +23,6 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
           <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form={BEEHIIV_FORM_ID}></script>
           <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
         </div>
-        <p class="sq-proof">I've found freelance clients on Upwork for years. When I tested this process again for one month last year, I sent 12 proposals, got 8 replies, booked 4 calls, and did $1,602.60 in work.</p>
         <figure class="sq-brad">
           <blockquote>
             <p>"He gave me some specific advice about how he got started on Upwork... and within a few days I had my best client yet."</p>
@@ -99,6 +98,12 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
       </figure>
       <div class="sq-why-cta">
         <a href="#signup" class="sq-why-btn">Send me the kit</a>
+        <figure class="sq-signoff">
+          <blockquote>
+            <p>"I've found freelance clients on Upwork for years. When I tested this process again for one month last year, I sent 12 proposals, got 8 replies, booked 4 calls, and did $1,602.60 in work."</p>
+          </blockquote>
+          <figcaption>Corey Koehler</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -206,14 +211,6 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     min-height: 90px;
     max-width: 38rem;
     scroll-margin-top: 20px;
-  }
-
-  .sq-proof {
-    margin: 12px 0 0;
-    max-width: 38rem;
-    font-size: 0.92rem;
-    line-height: 1.45;
-    color: var(--text);
   }
 
   .sq-brad {
@@ -411,13 +408,16 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
   }
 
   .sq-why-cta {
-    margin-top: 28px;
+    width: 100%;
+    max-width: 38rem;
+    margin: 28px auto 0;
   }
 
   .sq-why-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     min-height: 52px;
     padding: 0 2rem;
     background: var(--cta);
@@ -433,6 +433,30 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     background: var(--cta-hover);
     text-decoration: none;
     color: #fff;
+  }
+
+  .sq-signoff {
+    margin: 14px 0 0;
+  }
+
+  .sq-signoff blockquote {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sq-signoff blockquote p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .sq-signoff figcaption {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
   }
 
   .sq-why-btn:focus-visible,
@@ -472,8 +496,9 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
       height: 1px;
     }
 
-    .sq-why-cta {
-      text-align: left;
+    .sq-why {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 
