@@ -7,12 +7,24 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
 
 <Layout
   title="Get the free Upwork Proposal Kit | Redefining Retirement"
-  description="A simple, low-risk way to dip your toe into freelancing and consulting after 50. You get my 2026 cover letter template, plus the AI prompt I'd use to draft a proposal and then edit it."
+  description="An easy way to dip a toe into freelancing and consulting after 50. You get my 2026 cover letter template, and the prompt I'd use to draft a proposal and then edit it."
   type="website"
   bare={true}
 >
-  <section class="sq-section" id="top">
+  <section class="sq-section">
     <div class="sq-container">
+      <div class="sq-copy">
+        <p class="sq-eyebrow">Free Guide</p>
+        <h1 class="sq-headline">Get the free Upwork Proposal Kit.</h1>
+        <p class="sq-subhead">An easy way to dip a toe into freelancing and consulting after 50. You get my 2026 cover letter template, and the prompt I'd use to draft a proposal and then edit it.</p>
+        <p class="sq-trust">It's free when you join the newsletter. You'll also get the Gen eXit Playbook.</p>
+        <div class="sq-form" id="signup">
+          <div data-beehiiv-form-id={BEEHIIV_FORM_ID}></div>
+          <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form={BEEHIIV_FORM_ID}></script>
+          <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+        </div>
+      </div>
+
       <div class="sq-mockup-wrap">
         <div class="cover-card">
           <!-- OWNER TODO: replace with the ripped-tape cover, public/images/resources/upwork-proposal-kit-cover.jpg -->
@@ -20,36 +32,11 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
             src="/images/resources/upwork-proposal-kit-cover.svg"
             alt="Upwork Proposal Kit cover"
             class="cover-photo"
+            width="720"
+            height="1000"
             onerror="this.parentElement.style.display='none'"
           />
         </div>
-      </div>
-
-      <div class="sq-copy">
-        <p class="sq-eyebrow">Free Guide</p>
-        <h1 class="sq-headline">Get the free Upwork Proposal Kit.</h1>
-        <p class="sq-subhead">A simple, low-risk way to dip your toe into freelancing and consulting after 50. You get my 2026 cover letter template, plus the AI prompt I'd use to draft a proposal and then edit it.</p>
-        <p class="sq-lead-in">Inside, you'll get</p>
-        <ul class="sq-bullets">
-          <li>My 2026 cover letter template</li>
-          <li>The AI prompt I'd use to draft a proposal and then edit it</li>
-          <li>The messages I send once a client replies</li>
-          <li>A way to look for adjacent work</li>
-          <li>One of my limited Grok Bot invites, a free 2-week Premium trial (I only have 10 to give away; a credit card is required to start the trial)</li>
-        </ul>
-
-        <aside class="sq-invite">
-          <p class="sq-invite-label">Inside the kit</p>
-          <p>You get one of my limited Grok Bot invites, a free 2-week Premium trial (I only have 10 to give away; a credit card is required to start the trial). The invite link is in the kit after you sign up.</p>
-        </aside>
-
-        <div class="sq-form">
-          <div data-beehiiv-form-id={BEEHIIV_FORM_ID}></div>
-          <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form={BEEHIIV_FORM_ID}></script>
-          <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
-        </div>
-
-        <p class="sq-trust">It's free when you join the newsletter. You'll also get the Gen eXit Playbook.</p>
       </div>
     </div>
   </section>
@@ -61,6 +48,8 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
           src="/images/corey-portrait.jpg"
           alt="Corey Koehler"
           class="sq-bio-photo"
+          width="80"
+          height="80"
           onerror="this.style.display='none'"
         />
         <div class="sq-bio-text">
@@ -68,16 +57,16 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
           <p>Foundry worker, then 17 years behind a CAD station as a mechanical draftsman, then midlife solopreneur. I have been writing Upwork proposals, off and on, since the site was still called Elance.</p>
         </div>
       </div>
-      <div class="sq-divider"></div>
+      <div class="sq-divider" aria-hidden="true"></div>
       <div class="sq-case-study">
-        <p class="sq-case-label">In the kit</p>
+        <h2 class="sq-case-label">Inside the kit</h2>
         <ul class="sq-inside">
-          <li>A cover letter you can actually use</li>
+          <li>My 2026 cover letter template</li>
           <li>The messages I send once a client replies</li>
           <li>A way to look for adjacent work</li>
-          <li>The prompt I'd paste into an agent today</li>
-          <li>One of my limited Grok Bot invites, a free 2-week Premium trial (I only have 10 to give away)</li>
+          <li>The AI prompt I'd use to draft a proposal, then edit it</li>
         </ul>
+        <p class="sq-bonus">Also inside: one of my limited Grok Bot invites, a free 2-week Premium trial. I only have 10 to give away, and a credit card is required to start the trial. The link is in the kit after you sign up.</p>
       </div>
     </div>
   </section>
@@ -89,19 +78,23 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
       <p>That is the whole point of dipping a toe in. You are not launching a store. You are not hiring a staff. You are testing a way to get paid for what you know how to do.</p>
       <p>Upwork is a simple place to run that test. The jobs are already posted. The payments stay on the platform. You can send a short proposal, have a conversation, and see if there is a fit. You do not need a new website, a logo, or a six-month plan to try it.</p>
       <div class="sq-why-cta">
-        <a href="#top" class="sq-why-btn">Send me the kit</a>
+        <a href="#signup" class="sq-why-btn">Send me the kit</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  .sq-section ::selection,
+  .sq-below ::selection,
+  .sq-why ::selection {
+    background: #c5e8f8;
+    color: var(--text);
+  }
+
   .sq-section {
-    min-height: calc(100vh - 90px);
     background: #EAE6E5;
-    display: flex;
-    align-items: center;
-    padding: 48px 24px;
+    padding: 28px 24px 40px;
   }
 
   .sq-container {
@@ -109,26 +102,35 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     margin: 0 auto;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
   }
 
   .sq-mockup-wrap {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+
+  .sq-copy {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
 
   .cover-card {
     width: 100%;
-    max-width: 320px;
+    max-width: 260px;
     aspect-ratio: 0.72;
     border-radius: var(--radius);
     overflow: hidden;
     position: relative;
     background: #EAE6E5;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.16), 0 24px 48px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 12px 28px rgba(0, 0, 0, 0.14);
     transform: rotate(-2.5deg);
     transition: transform 0.3s ease;
   }
@@ -150,104 +152,40 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--blue);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .sq-headline {
     font-family: var(--font);
-    font-size: clamp(24px, 3.5vw, 34px);
+    font-size: clamp(1.7rem, 3vw, 2.15rem);
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
     color: var(--text);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    text-wrap: balance;
   }
 
   .sq-subhead {
-    font-size: 17px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 24px;
-  }
-
-  .sq-lead-in {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 12px;
-  }
-
-  .sq-bullets,
-  .sq-inside {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .sq-bullets li,
-  .sq-inside li {
-    padding-left: 28px;
-    position: relative;
-    font-size: 16px;
+    font-size: 1.05rem;
     color: var(--text);
     line-height: 1.5;
+    margin-bottom: 12px;
+    max-width: 38rem;
   }
-
-  .sq-bullets li::before,
-  .sq-inside li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: 1px;
-    color: var(--blue);
-    font-weight: 700;
-    font-size: 15px;
-  }
-
-  .sq-inside { margin: 0; }
 
   .sq-trust {
-    font-size: 13px;
-    color: var(--text-light);
-    margin-top: 12px;
-    text-align: center;
-  }
-
-  .sq-copy { display: flex; flex-direction: column; }
-  .sq-eyebrow { order: 1; }
-  .sq-headline { order: 2; }
-  .sq-subhead { order: 3; }
-  .sq-lead-in { order: 4; }
-  .sq-bullets { order: 5; }
-  .sq-invite { order: 6; }
-  .sq-form { order: 7; }
-  .sq-trust { order: 8; }
-
-  .sq-invite {
-    margin: 0 0 1.25rem;
-    padding: 1rem 1.1rem;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--blue);
-    border-radius: var(--radius);
-  }
-
-  .sq-invite-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text);
-    margin-bottom: 0.35rem;
-  }
-
-  .sq-invite p:last-child {
-    margin: 0;
     font-size: 0.95rem;
-    line-height: 1.55;
     color: var(--text);
+    line-height: 1.45;
+    margin: 0 0 14px;
+    max-width: 38rem;
+  }
+
+  .sq-form {
+    min-height: 90px;
+    max-width: 38rem;
+    scroll-margin-top: 20px;
   }
 
   .sq-below {
@@ -262,7 +200,7 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 48px;
-    align-items: stretch;
+    align-items: start;
   }
 
   .sq-bio {
@@ -298,7 +236,7 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
   .sq-divider {
     width: 1px;
     background: var(--border);
-    flex-shrink: 0;
+    align-self: stretch;
   }
 
   .sq-case-label {
@@ -307,40 +245,78 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 14px;
+    color: var(--text);
+    margin: 0 0 14px;
+  }
+
+  .sq-inside {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sq-inside li {
+    padding-left: 28px;
+    position: relative;
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.45;
+  }
+
+  .sq-inside li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.42em;
+    width: 0.62em;
+    height: 0.34em;
+    border-left: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
+    transform: rotate(-45deg);
+  }
+
+  .sq-bonus {
+    margin: 18px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text);
+    max-width: 42rem;
   }
 
   .sq-why {
     background: var(--bg-subtle);
     border-top: 1px solid var(--border);
-    padding: 64px 24px;
+    padding: 56px 24px 64px;
   }
 
   .sq-why-container {
-    max-width: 720px;
+    max-width: 40rem;
     margin: 0 auto;
   }
 
   .sq-why-heading {
     font-family: var(--font);
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(1.45rem, 3vw, 1.85rem);
     font-weight: 800;
     color: var(--text);
-    margin-bottom: 28px;
-    line-height: 1.25;
+    margin: 0 0 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
   }
 
   .sq-why-container p {
-    font-size: 17px;
+    font-size: 1.05rem;
     color: var(--text-muted);
-    line-height: 1.75;
-    margin-bottom: 20px;
+    line-height: 1.7;
+    margin: 0 0 16px;
   }
 
   .sq-why-cta {
-    margin-top: 36px;
-    text-align: center;
+    margin-top: 28px;
   }
 
   .sq-why-btn {
@@ -371,27 +347,29 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
   }
 
   @media (max-width: 768px) {
+    .sq-section {
+      padding: 20px 20px 32px;
+    }
+
     .sq-container {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 28px;
     }
 
-    .sq-mockup-wrap { order: 2; }
-    .sq-copy { order: 1; }
+    .sq-copy,
+    .sq-mockup-wrap {
+      grid-column: auto;
+      grid-row: auto;
+    }
 
     .cover-card {
-      max-width: 280px;
+      max-width: 200px;
       transform: rotate(-1.5deg);
-    }
-
-    .sq-section {
-      padding: 40px 20px;
-      min-height: 0;
     }
 
     .sq-below-container {
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 28px;
     }
 
     .sq-divider {
@@ -399,11 +377,20 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
       height: 1px;
     }
 
-    .sq-invite { order: 4; }
-    .sq-form { order: 5; }
-    .sq-lead-in { order: 6; }
-    .sq-bullets { order: 7; }
-    .sq-trust { order: 8; }
+    .sq-why-cta {
+      text-align: left;
+    }
+  }
+
+  @media (max-height: 760px) and (min-width: 769px) {
+    .sq-section {
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+
+    .cover-card {
+      max-width: 220px;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
