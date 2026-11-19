@@ -39,7 +39,13 @@ const BEEHIIV_FORM_ID = '';
           <li>The AI prompt I'd use to draft a proposal and then edit it</li>
           <li>The messages I send once a client replies</li>
           <li>A way to look for adjacent work</li>
+          <li>One of my limited Grok Bot invites, a free 2-week Premium trial (I only have 10 to give away; a credit card is required to start the trial)</li>
         </ul>
+
+        <aside class="sq-invite">
+          <p class="sq-invite-label">Inside the kit</p>
+          <p>You get one of my limited Grok Bot invites, a free 2-week Premium trial (I only have 10 to give away; a credit card is required to start the trial). The invite link is in the kit after you sign up.</p>
+        </aside>
 
         <div class="sq-form">
           {BEEHIIV_FORM_ID ? (
@@ -83,6 +89,7 @@ const BEEHIIV_FORM_ID = '';
           <li>The messages I send once a client replies</li>
           <li>A way to look for adjacent work</li>
           <li>The prompt I'd paste into an agent today</li>
+          <li>One of my limited Grok Bot invites, a free 2-week Premium trial (I only have 10 to give away)</li>
         </ul>
       </div>
     </div>
@@ -250,8 +257,34 @@ const BEEHIIV_FORM_ID = '';
   .sq-subhead { order: 3; }
   .sq-lead-in { order: 4; }
   .sq-bullets { order: 5; }
-  .sq-form { order: 6; }
-  .sq-trust { order: 7; }
+  .sq-invite { order: 6; }
+  .sq-form { order: 7; }
+  .sq-trust { order: 8; }
+
+  .sq-invite {
+    margin: 0 0 1.25rem;
+    padding: 1rem 1.1rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius);
+  }
+
+  .sq-invite-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+  }
+
+  .sq-invite p:last-child {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text);
+  }
 
   .sq-below {
     background: #fff;
@@ -402,10 +435,11 @@ const BEEHIIV_FORM_ID = '';
       height: 1px;
     }
 
-    .sq-form { order: 4; }
-    .sq-lead-in { order: 5; }
-    .sq-bullets { order: 6; }
-    .sq-trust { order: 7; }
+    .sq-invite { order: 4; }
+    .sq-form { order: 5; }
+    .sq-lead-in { order: 6; }
+    .sq-bullets { order: 7; }
+    .sq-trust { order: 8; }
   }
 
   @media (prefers-reduced-motion: reduce) {
