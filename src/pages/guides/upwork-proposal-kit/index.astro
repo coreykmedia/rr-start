@@ -1,12 +1,8 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 
-// OWNER TODO: create a Beehiiv subscribe form before this page is used in production.
-// Tag or custom field: upwork-proposal-kit
 // Redirect after signup: https://start.redefiningretirement.io/guides/upwork-proposal-kit/thank-you/
-// Button label on the form: Send me the kit
-// Paste the form ID below. Leave it as an empty string until then.
-const BEEHIIV_FORM_ID = '';
+const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
 ---
 
 <Layout
@@ -48,18 +44,9 @@ const BEEHIIV_FORM_ID = '';
         </aside>
 
         <div class="sq-form">
-          {BEEHIIV_FORM_ID ? (
-            <>
-              <div data-beehiiv-form-id={BEEHIIV_FORM_ID}></div>
-              <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form={BEEHIIV_FORM_ID}></script>
-              <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
-            </>
-          ) : (
-            <div class="sq-form-placeholder" role="status">
-              <p class="sq-form-placeholder-label">Form ID needed</p>
-              <p>Beehiiv signup form goes here. Button label: Send me the kit.</p>
-            </div>
-          )}
+          <div data-beehiiv-form-id={BEEHIIV_FORM_ID}></div>
+          <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form={BEEHIIV_FORM_ID}></script>
+          <script is:inline type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
         </div>
 
         <p class="sq-trust">It's free when you join the newsletter. You'll also get the Gen eXit Playbook.</p>
@@ -226,29 +213,6 @@ const BEEHIIV_FORM_ID = '';
     color: var(--text-light);
     margin-top: 12px;
     text-align: center;
-  }
-
-  .sq-form-placeholder {
-    padding: 1.75rem;
-    border: 2px dashed var(--border);
-    border-radius: var(--radius);
-    background: #fff;
-    text-align: center;
-  }
-
-  .sq-form-placeholder-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text);
-    margin-bottom: 0.4rem;
-  }
-
-  .sq-form-placeholder p:last-child {
-    font-size: 15px;
-    color: var(--text-muted);
-    margin: 0;
   }
 
   .sq-copy { display: flex; flex-direction: column; }
