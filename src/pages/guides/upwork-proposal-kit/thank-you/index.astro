@@ -1,0 +1,81 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Your kit is ready | Redefining Retirement"
+  description="The Upwork Proposal Kit is ready. Open it here."
+  type="website"
+  noindex={true}
+  bare={true}
+>
+  <section class="section">
+    <div class="container ty-container">
+      <p class="ty-eyebrow">You're in</p>
+      <h1 class="ty-headline">Your kit is ready.</h1>
+      <p class="ty-subhead">The Upwork Proposal Kit is here. Open it and bookmark the kit so you can come back to it.</p>
+      <a class="btn ty-btn" href="/guides/upwork-proposal-kit/kit/">Open the kit</a>
+      <p class="ty-trust">It's free when you join the newsletter. You'll also get the Gen eXit Playbook.</p>
+      <p class="ty-signoff">Have a good one,<br />Corey</p>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  // This page is the Beehiiv signup redirect.
+  // subscriber_signup_confirmed is what GTM (GTM-KCV3GWZ) uses for the Meta Lead event.
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'subscriber_signup_confirmed' });
+</script>
+
+<style>
+  .ty-container {
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .ty-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+  }
+
+  .ty-headline {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .ty-subhead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .ty-btn {
+    height: 52px;
+    padding: 0 2rem;
+    font-size: 1.05rem;
+    color: #fff;
+  }
+
+  .ty-btn:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+  }
+
+  .ty-trust {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .ty-signoff {
+    margin-top: 2rem;
+    color: var(--text);
+  }
+</style>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1000" role="img" aria-label="Upwork Proposal Kit cover">
+  <rect width="720" height="1000" fill="#EAE6E5"/>
+  <rect width="720" height="16" fill="#09A1E7"/>
+  <text x="56" y="120" fill="#09A1E7" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">SUBSCRIBER EDITION</text>
+  <text x="56" y="250" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800">Upwork</text>
+  <text x="56" y="344" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800">Proposal</text>
+  <text x="56" y="438" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800">Kit</text>
+  <text x="56" y="520" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="28">A simple way to dip your toe in</text>
+  <text x="56" y="560" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="28">after 50.</text>
+  <rect x="56" y="640" width="320" height="190" rx="12" fill="#ffffff" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="84" y="710" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">Hello,</text>
+  <rect x="84" y="736" width="220" height="10" rx="5" fill="#E5E7EB"/>
+  <rect x="84" y="764" width="168" height="10" rx="5" fill="#09A1E7"/>
+  <rect x="84" y="792" width="196" height="10" rx="5" fill="#E5E7EB"/>
+  <text x="56" y="920" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Redefining Retirement</text>
+  <text x="56" y="956" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="18">Class of '90</text>
+</svg>
