@@ -15,13 +15,11 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     <div class="sq-container">
       <div class="sq-copy">
         <p class="sq-eyebrow">Free Guide</p>
-        <div class="sq-hooks">
-          <p>Tired of throwing your proposals into the vast Upwork void and hearing... crickets?</p>
-          <p>Wondering how to write an Upwork proposal that wins clients?</p>
-          <p>Been there, done that.</p>
-          <p>But then, things kinda clicked. I realized it's not just about showcasing skills. It's also about how you pitch.</p>
-        </div>
         <h1 class="sq-headline">Get the free Upwork Proposal Kit.</h1>
+        <p class="sq-subhead">Tired of throwing your proposals into the vast Upwork void and hearing... crickets?</p>
+        <p class="sq-subhead">Wondering how to write an Upwork proposal that wins clients?</p>
+        <p class="sq-subhead">Been there, done that.</p>
+        <p class="sq-subhead">But then, things kinda clicked. I realized it's not just about showcasing skills. It's also about how you pitch.</p>
         <p class="sq-subhead">An easy way to dip a toe into freelancing and consulting after 50. It's built on my Proposals That Pop guide and the conversational cover letter, now with the AI prompts I'd use for every step.</p>
         <div class="sq-form" id="signup">
           <div data-beehiiv-form-id={BEEHIIV_FORM_ID}></div>
@@ -80,21 +78,19 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
           <li>AI and Grok Bot prompts for every step: your profile, finding jobs, the cover letter, and replies.</li>
         </ul>
         <p class="sq-bonus">Also inside: one of my limited Grok Bot invites, a free 2-week Premium trial. I only have 10 to give away, and a credit card is required to start the trial. The link is in the kit after you sign up.</p>
+        <h2 class="sq-case-label">Who it's for</h2>
+        <ul class="sq-inside">
+          <li>Writers</li>
+          <li>Bookkeepers</li>
+          <li>Web Developers</li>
+          <li>Virtual assistants</li>
+          <li>Graphic designers</li>
+          <li>Data entry specialists</li>
+          <li>3D CAD Design and modeling</li>
+          <li>Really anyone wanting to freelance on Upwork</li>
+        </ul>
+        <p class="sq-bonus">Doesn't matter what niche you're in, it's the pitch that makes all the difference.</p>
       </div>
-    </div>
-    <div class="sq-who">
-      <h2 class="sq-who-heading">Who it's for</h2>
-      <ul class="sq-inside">
-        <li>Writers</li>
-        <li>Bookkeepers</li>
-        <li>Web Developers</li>
-        <li>Virtual assistants</li>
-        <li>Graphic designers</li>
-        <li>Data entry specialists</li>
-        <li>3D CAD Design and modeling</li>
-        <li>Really anyone wanting to freelance on Upwork</li>
-      </ul>
-      <p class="sq-who-note">Doesn't matter what niche you're in, it's the pitch that makes all the difference.</p>
     </div>
   </section>
 
@@ -127,7 +123,7 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
         <figcaption>Cory Tomesh, Employee turned Business Owner, Sprint Graphics</figcaption>
       </figure>
       <div class="sq-why-cta">
-        <p class="sq-free-line">It's free. Stop guessing, and start sending proposals that get a conversation going.</p>
+        <p>It's free. Stop guessing, and start sending proposals that get a conversation going.</p>
         <a href="#signup" class="sq-why-btn">Send me the kit</a>
         <figure class="sq-signoff">
           <blockquote>
@@ -210,20 +206,6 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     color: var(--blue);
     margin-bottom: 10px;
   }
-
-  .sq-hooks {
-    margin: 0 0 14px;
-    max-width: 38rem;
-  }
-
-  .sq-hooks p {
-    font-size: 1.02rem;
-    color: var(--text);
-    line-height: 1.45;
-    margin: 0 0 0.45rem;
-  }
-
-  .sq-hooks p:last-child { margin-bottom: 0; }
 
   .sq-headline {
     font-family: var(--font);
@@ -345,6 +327,10 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     margin: 0 0 14px;
   }
 
+  .sq-case-study .sq-case-label ~ .sq-case-label {
+    margin-top: 32px;
+  }
+
   .sq-inside {
     list-style: none;
     padding: 0;
@@ -380,31 +366,6 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
     line-height: 1.55;
     color: var(--text);
     max-width: 42rem;
-  }
-
-  .sq-who {
-    max-width: 960px;
-    margin: 40px auto 0;
-    padding-top: 36px;
-    border-top: 1px solid var(--border);
-  }
-
-  .sq-who-heading {
-    font-family: var(--font);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text);
-    margin: 0 0 14px;
-  }
-
-  .sq-who-note {
-    margin: 18px 0 0;
-    font-size: 1.05rem;
-    line-height: 1.55;
-    color: var(--text);
-    max-width: 40rem;
   }
 
   .sq-why {
@@ -488,11 +449,6 @@ const BEEHIIV_FORM_ID = 'ae34871b-daf0-440d-bbca-2e99eae62513';
 
   .sq-reader + .sq-reader {
     margin-top: 16px;
-  }
-
-  .sq-why-container .sq-free-line {
-    color: var(--text);
-    margin-bottom: 14px;
   }
 
   .sq-why-cta {
